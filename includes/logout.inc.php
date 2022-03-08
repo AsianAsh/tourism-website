@@ -1,0 +1,17 @@
+<?php 
+session_start();
+
+if (isset($_POST["logout"]) && isset($_GET["page"])) {
+    $lastPageQuery = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
+
+    // Get the last page the user was on before logging out
+    $lastPage = $lastPageQuery["page"];
+    // Get the query string from the last page the user was on before  logging out
+    // $queryString = $lastPageQuery["queryString"];
+    
+    session_unset();
+    session_destroy();
+
+    header("Location: ../$lastPage");
+    exit();
+}
