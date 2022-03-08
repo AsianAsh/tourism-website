@@ -64,7 +64,7 @@
                 </li>
                 <li class="rd-nav-item"><a class="rd-nav-link" href="about.php">About</a>
                 </li>
-                <li class="rd-nav-item"><a class="rd-nav-link" href="">Tours</a>
+                <li class="rd-nav-item"><a class="rd-nav-link" href="tours.php">Tours</a>
                 </li>
                 <li class="rd-nav-item"><a class="rd-nav-link" href="typography.php">Typography</a>
                 </li>
