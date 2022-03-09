@@ -4,7 +4,7 @@ session_start();
 $errorArray = [];
 $firstName = "";
 $lastName = "";
-$mobileNumber = "Placeholder";
+$mobileNumber = "";
 $dob = "";
 $email = "";
 $password = "";
