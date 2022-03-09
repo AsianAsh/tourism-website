@@ -393,4 +393,5 @@ require_once "./components/navbar.php";
         </div>
       </section>
 
-<?php require_once "./components/footer.php"; ?>
+<?php //require_once "./components/footer.php"; ?>
+<?php require_once "./components/scripts.php"; ?>

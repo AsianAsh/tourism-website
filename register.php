@@ -128,10 +128,12 @@ if (isset($_SESSION["accountCreationError"])) {
         </form>
     </div>
 
-    <!-- Javascript-->
+<?php require_once "./components/scripts.php"; ?>
+
+    <!-- Javascript
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/show_password.js"></script>
     <script src="js/current_date.js"></script>
   </body>
-</html>
+</html> -->

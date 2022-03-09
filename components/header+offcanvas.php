@@ -72,7 +72,7 @@ $userid = $_SESSION['user']['userID'] ?? null;
                             <div class="col-md-6 ps-3">
                                 <div class="form-check form-switch mt-2">
                                     <input class="form-check-input view-Login-Password" type="checkbox" id="flexSwitchCheckDefault">
-                                    <label class="form-check-label " for="flexSwitchCheckDefault">Show Password</label>
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Show Password</label>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +112,7 @@ $userid = $_SESSION['user']['userID'] ?? null;
                 </div> -->
                 <?php //endif; ?>
                 <div class="col-12 text-center">
-                    <a class="btn offcanvas-view-account rounded-pill px-5 mb-4" href="">View Account</a> <!-- href="profile.php" -->
+                    <a class="btn offcanvas-view-account rounded-pill px-5 mb-4" href="./profile.php">View Account</a> <!-- href="profile.php" -->
                 </div>
                 <form action="<?php echo './includes/login.inc.php?page=' . $currentPage //. '&queryString=' . $queryString; ?>"
                     class="row g-3 row-cols-1" method="POST">
