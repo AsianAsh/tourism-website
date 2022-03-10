@@ -1,3 +1,4 @@
+// Get the current date - to set a limit to the options for registration of date of birth
 let today = new Date();
 let dd = today.getDate();
 let mm = today.getMonth() + 1; //January is 0 so +1 fixes this issue

@@ -53,7 +53,7 @@ elseif (!preg_match($nameRegEx, $lastName)) {
 
 
 // Validate input mobile number
-$mobileRegEx = "/^[0-9]{7,10}$/";  
+$mobileRegEx = "/^[0-9]{8,11}$/";  
 str_replace("-","", $mobileNumber);
 if ($mobileNumber == ""){
     array_push($errorArray, "mobileNumberEmpty");
@@ -94,7 +94,7 @@ if (empty($dob)){
 
 
 // Validate input password
-$passwordRegEx = '/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9A-Za-z~!@#$%^&*-_?]{8,12}$/';
+$passwordRegEx = '/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9A-Za-z~!@#$%^&*-_?]{8,64}$/';
 if ($password == ""){
     array_push($errorArray, "passwordEmpty");
 } 
