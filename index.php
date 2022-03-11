@@ -6,7 +6,7 @@ require_once "./components/navbar.php";
       <!-- Swiper-->
       <section class="section swiper-container swiper-slider swiper-slider-corporate swiper-pagination-style-2" data-loop="true" data-autoplay="5000" data-simulate-touch="true" data-nav="false" data-direction="vertical">
         <div class="swiper-wrapper text-left">
-          <div class="swiper-slide context-dark" data-slide-bg="images/slider-4-slide-1-1920x678.jpg">
+          <div class="swiper-slide context-dark" data-slide-bg="images/Tourism-Slider-1.jpg">
             <div class="swiper-slide-caption section-md">
               <div class="container">
                 <div class="row">
@@ -18,7 +18,7 @@ require_once "./components/navbar.php";
               </div>
             </div>
           </div>
-          <div class="swiper-slide context-dark" data-slide-bg="images/slider-4-slide-2-1920x678.jpg">
+          <div class="swiper-slide context-dark" data-slide-bg="images/Tourism-Slider-2.jpeg">
             <div class="swiper-slide-caption section-md">
               <div class="container">
                 <div class="row">
@@ -30,7 +30,7 @@ require_once "./components/navbar.php";
               </div>
             </div>
           </div>
-          <div class="swiper-slide context-dark" data-slide-bg="images/slider-4-slide-3-1920x678.jpg">
+          <div class="swiper-slide context-dark" data-slide-bg="images/Tourism-Slider-3.jpeg">
             <div class="swiper-slide-caption section-md">
               <div class="container">
                 <div class="row">
@@ -54,21 +54,21 @@ require_once "./components/navbar.php";
               <div class="row justify-content-center">
                 <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="#"><img src="images/cta-1-368x420.jpg" alt="" width="368" height="420"/></a>
+                    <li><a href="#"><img src="images/Balloon-Flights.jpeg" alt="" width="368" height="420"/></a>
                       <h5 class="box-categories-title">Balloon Flights</h5>
                     </li>
                   </ul>
                 </div>
                 <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="#"><img src="images/cta-2-368x420.jpg" alt="" width="368" height="420"/></a>
+                    <li><a href="#"><img src="images/Mountain-Holidays.jpeg" alt="" width="368" height="420"/></a>
                       <h5 class="box-categories-title">Mountain Holiday</h5>
                     </li>
                   </ul>
                 </div>
                 <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="#"><img src="images/cta-3-368x420.jpg" alt="" width="368" height="420"/></a>
+                    <li><a href="#"><img src="images/Beach-Holidays.jpeg" alt="" width="368" height="420"/></a>
                       <h5 class="box-categories-title">Beach Holidays</h5>
                     </li>
                   </ul>
@@ -83,7 +83,7 @@ require_once "./components/navbar.php";
       <section class="section section-sm section-first bg-default text-md-left">
         <div class="container">
           <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
-            <div class="col-lg-6 text-center wow fadeInUp"><img src="images/index-3-556x382.jpg" alt="" width="556" height="382"/>
+            <div class="col-lg-6 text-center wow fadeInUp"><img src="images/Tourists-Malaysia.jpeg" alt="" width="556" height="382"/>
             </div>
             <div class="col-lg-6 wow fadeInRight" data-wow-delay=".1s">
               <div class="box-width-lg-470">
@@ -212,15 +212,15 @@ require_once "./components/navbar.php";
               <!-- Product Big-->
               <article class="product-big">
                 <div class="unit flex-column flex-md-row align-items-md-stretch">
-                  <div class="unit-left"><a class="product-big-figure" href="#"><img src="images/product-big-1-600x366.jpg" alt="" width="600" height="366"/></a></div>
+                  <div class="unit-left"><a class="product-big-figure" href="#"><img src="images/Melaka-index.jpeg" alt="" width="600" height="366"/></a></div>
                   <div class="unit-body">
                     <div class="product-big-body">
-                      <h5 class="product-big-title"><a href="#">Benidorm, Spain</a></h5>
+                      <h5 class="product-big-title"><a href="#">Malacca</a></h5>
                       <div class="group-sm group-middle justify-content-start">
                         <div class="product-big-rating"><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star_half"></span></div><a class="product-big-reviews" href="#">4 customer reviews</a>
                       </div>
-                      <p class="product-big-text">Benidorm is a buzzing resort with a big reputation for beach holidays. Situated in sunny Costa Blanca, the town is one of the original Spanish beach resorts...</p><a class="button button-black-outline button-ujarak" href="#">Buy This Tour</a>
-                      <div class="product-big-price-wrap"><span class="product-big-price">$790</span></div>
+                      <p class="product-big-text">Malacca is one of the most popular tourist destinations within Malaysia. Enjoy an exciting experience at A 'Famosa Malacca when you visit the famous theme...</p><a class="button button-black-outline button-ujarak" href="#">Buy This Tour</a>
+                      <div class="product-big-price-wrap"><span class="product-big-price">RM500</span></div>
                     </div>
                   </div>
                 </div>
@@ -230,15 +230,15 @@ require_once "./components/navbar.php";
               <!-- Product Big-->
               <article class="product-big">
                 <div class="unit flex-column flex-md-row align-items-md-stretch">
-                  <div class="unit-left"><a class="product-big-figure" href="#"><img src="images/product-big-2-600x366.jpg" alt="" width="600" height="366"/></a></div>
+                  <div class="unit-left"><a class="product-big-figure" href="#"><img src="images/Sarawak-index.jpeg" alt="" width="600" height="366"/></a></div>
                   <div class="unit-body">
                     <div class="product-big-body">
-                      <h5 class="product-big-title"><a href="#">Mauritius Island, Africa</a></h5>
+                      <h5 class="product-big-title"><a href="#">Sarawak</a></h5>
                       <div class="group-sm group-middle justify-content-start">
                         <div class="product-big-rating"><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star_half"></span></div><a class="product-big-reviews" href="#">5 customer reviews</a>
                       </div>
-                      <p class="product-big-text">The beautiful and inviting island nation of Mauritius is an ideal ‘flop and drop’ at the conclusion of your safari. Indulge in the delightful scents of the fragrant...</p><a class="button button-black-outline button-ujarak" href="#">Buy This Tour</a>
-                      <div class="product-big-price-wrap"><span class="product-big-price">$890</span></div>
+                      <p class="product-big-text">The State of Sarawak is divided into 3 geographic areas - coastal lowlands comprising peat swamp as well as narrow deltaic and alluvial plains. A large area of...</p><a class="button button-black-outline button-ujarak" href="#">Buy This Tour</a>
+                      <div class="product-big-price-wrap"><span class="product-big-price">RM800</span></div>
                     </div>
                   </div>
                 </div>
