@@ -5,8 +5,8 @@ session_start();
 require_once "../connection/db.php";
 // require_once "../helper/helpers.php";
 
-if(!isset($_POST["signup"])){
-    header("Location: ../admin.php");
+if(!isset($_POST["create-staff"])){
+    header("Location: ../admin_dashboard.php");
     exit();
 } else {
     $errorArray = [];
