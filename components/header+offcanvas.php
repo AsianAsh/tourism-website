@@ -1,6 +1,8 @@
 <?php    
 require_once "./connection/db.php";
-$loginErrorArray = [];
+if (!isset($loginErrorArray)){
+    $loginErrorArray = [];
+}
 
 // Get the current page
 $folder = $_SERVER["SCRIPT_NAME"];
@@ -103,7 +105,7 @@ $userid = $_SESSION['user']['userID'] ?? null;
                         class="img-fluid shadow rounded-circle userProfilePicture">
                 </div> -->
                 <h2 class="offcanvas-title mt-3" id="offcanvasExampleLabel">
-                    <?php echo $_SESSION['user']['firstName'] . " " . $_SESSION['user']['lastName']; ?> </h2>
+                    <?php if (isset($_SESSION['user']['firstName'])){echo $_SESSION['user']['firstName'] . " " . $_SESSION['user']['lastName'];} ?> </h2>
             </div>
             <div class="offcanvas-body mb-5">
                 <?php //if ($_SESSION["user"]["userRole"] === "STAFF"): ?> <!-- href="admin.php" -->

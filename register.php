@@ -58,12 +58,12 @@ if (isset($_SESSION["accountCreationError"])) {
             
             <!-- Mobile Number Input Field -->
             <div class="col-md-12">
-                <!-- <label for="inputTelephone" class="form-label">Mobile Number</label> -->
-                <!-- <div class="input-group"> -->
-                    <!-- <div class="input-group-text border-dark">+60</div> -->
-                    <input type="tel" class="form-control form-control-lg border-dark" id="inputTelephone" placeholder="Mobile number" 
+            <!-- <label for="inputTelephone" class="form-label">Mobile Number</label> -->
+                <div class="input-group">
+                    <div class="input-group-text border-dark">+60</div>
+                    <input type="tel" class="form-control form-control-lg border-dark" id="inputTelephone" placeholder="123456789" 
                     name="mobileNumber" value="<?php echo $mobileNumber ?>">
-                <!-- </div> -->
+                </div>
             </div>
             <?php if (in_array("mobileNumberEmpty", $errorArray)) : ?>
                 <p class="mt-1 text-danger mb-0 ps-3 d-block">Please fill out this field</p>

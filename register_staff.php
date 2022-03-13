@@ -6,89 +6,136 @@ require_once "./components/header+offcanvas.php";
 <div style="max-width: 35%;" class="container my-5 px-5 py-5 bg-none border shadow">
     <h3 class="text-center">Create Staff Account</h3>
     <form class="row mt-3 g-4" id="register-form" action="./includes/register_staff.inc.php" method="POST" novalidate> <!-- novalidate stops Google's own browser validation of Form Submissions-->
-    
         <div class="col-md-12">
-            <!-- <label for="inputFirstName" class="form-label">First Name</label> -->
-            <input type="text" class="form-control form-control-lg border-dark" id="inputFirstName" placeholder="First name" 
-            name="firstName" value="">
-            <?php /*if (in_array("firstNameEmpty", $errorArray)) : ?>
-                    <p class="mt-1 text-danger mb-0  ps-1 d-block">Please fill out this field</p>
-            <?php elseif (in_array("firstName", $errorArray)) :  ?>
-                    <p class="mt-1 text-danger mb-0  ps-1 d-block">Please enter a valid name</p>
-            <?php endif; */?>
+            <?php
+                if(isset($_GET["first"])){
+                    // <label for="inputFirstName" class="form-label">First Name</label>
+                    $first = $_GET["first"];
+                    echo '<input type="text" class="form-control form-control-lg border-dark" id="inputFirstName" name="firstName" placeholder="First name" value="'.$first.'">';
+                } else{
+                    echo '<input type="text" class="form-control form-control-lg border-dark" id="inputFirstName" name="firstName" placeholder="First name">';
+                }
+            ?> 
         </div>
-
+        
         <div class="col-md-12">
-            <!-- <label for="inputLastName" class="form-label">Last Name</label> -->
-            <input type="text" class="form-control form-control-lg border-dark" id="inputLastName" placeholder="Last name" 
-            name="lastName" value="">
-            <?php /*if (in_array("lastNameEmpty", $errorArray)) : ?>
-                    <p class="mt-1 text-danger mb-0 ps-1 d-block">Please fill out this field</p>
-            <?php elseif (in_array("lastName", $errorArray)) :  ?>
-                    <p class="mt-1 text-danger mb-0 ps-1 d-block">Please enter a valid name</p>
-            <?php endif; */?>                
-        </div>
+            <?php
+                if(isset($_GET["last"])){
+                    // <label for="inputFirstName" class="form-label">First Name</label>
+                    $last = $_GET["last"];
+                    echo '<input type="text" class="form-control form-control-lg border-dark" id="inputLastName" placeholder="Last name" 
+                    name="lastName" value="'.$last.'">';
+                } else{
+                    echo '<input type="text" class="form-control form-control-lg border-dark" id="inputLastName" placeholder="Last name" 
+                    name="lastName"';
+                }
+            ?> 
+        </div> 
 
-        <div class="col-md-12">
-            <!-- <label for="inputTelephone" class="form-label">Mobile Number</label> -->
-            <div class="input-group">
-                <div class="input-group-text border-dark">+60</div>
-                <input type="tel" class="form-control form-control-lg border-dark" id="inputTelephone" placeholder="123456789" 
-                name="mobileNumber" value="">
+        <div class="col-md-12 mt-4">
+            <?php
+                if(isset($_GET["mobilenumber"])){
+                    // <label for="inputFirstName" class="form-label">First Name</label>
+                    $number = $_GET["mobilenumber"];
+                    echo '<div class="input-group">
+                            <div class="input-group-text border-dark">+60</div>
+                            <input type="tel" class="form-control form-control-lg border-dark" id="inputTelephone" placeholder="123456789" 
+                            name="mobileNumber" value="'.$number.'">
+                        </div>';
+                } else{
+                    echo '<div class="input-group">
+                            <div class="input-group-text border-dark">+60</div>
+                            <input type="tel" class="form-control form-control-lg border-dark" id="inputTelephone" placeholder="123456789" 
+                            name="mobileNumber">
+                        </div>';
+                }
+            ?> 
+        </div> 
+            
+        <!-- Date of Birth (DOB) Input Field -->
+        <div class="col-md-12 mt-4">
+            <?php
+                if(isset($_GET["dob"])){
+                    // <label for="inputFirstName" class="form-label">First Name</label>
+                    $birthdate = $_GET["dob"];
+                    echo '<input type="date" class="form-control form-control-lg border-dark" id="registerDOB" name="DOB" min="1930-01-01" max="" value="'.$birthdate.'">';
+                } else{
+                    echo '<input type="date" class="form-control form-control-lg border-dark" id="registerDOB" name="DOB" min="1930-01-01" max="">';
+                }
+            ?> 
+        </div> 
 
-            </div>
-        </div>
-        <?php /*if (in_array("mobileNumberEmpty", $errorArray)) : ?>
-            <p class="mt-1 text-danger mb-0 ps-3 d-block">Please fill out this field</p>
-        <?php elseif (in_array("mobileNumber", $errorArray)) :  ?>
-            <p class="mt-1 text-danger mb-0 ps-3 d-block">Please enter a valid mobile number</p>
-        <?php endif; */?>
+        <div class="col-md-12 mt-4">
+            <?php
+                if(isset($_GET["email"])){
+                    // <label for="inputFirstName" class="form-label">First Name</label>
+                    $email = $_GET["email"];
+                    echo '<input type="email" class="form-control form-control-lg border-dark" id="registerEmail" placeholder="Email address" 
+                    name="email" value="'.$email.'">';
+                } else{
+                    echo '<input type="email" class="form-control form-control-lg border-dark" id="registerEmail" placeholder="Email address" 
+                    name="email"';
+                }
+            ?> 
+        </div> 
 
-
-        <div class="col-md-12">
-            <!-- <label for="registerEmail" class="form-label">Email*</label> -->
-            <input type="email" class="form-control form-control-lg border-dark" id="registerEmail" placeholder="Email address" 
-            name="email" value="">
-            <?php /*if (in_array("emailEmpty", $errorArray)) : ?>
-                <p class="mt-1 text-danger mb-0 ps-1 d-block">Please fill out this field</p>
-            <?php elseif (in_array("email", $errorArray)) :  ?>
-                <p class="mt-1 text-danger mb-0 ps-1 d-block">Please enter a valid email</p>
-            <?php elseif (in_array("emailTaken", $errorArray)) :  ?>
-                <p class="mt-1 text-danger mb-0 ps-1 d-block">Email has been taken</p>
-            <?php endif; */?> 
-        </div>
-
-        <div class="col-md-12">
-            <!-- <label for="registerPassword" class="form-label">Password</label> -->
-            <input type="password" class="form-control form-control-lg border-dark" id="registerPassword" placeholder="Password" name="password" required>
-            <div class="mt-1 <?php //if (in_array("password", $errorArray))  echo "border border-danger ps-1 rounded mt-1"; ?>">
-            <?php /*if (in_array("passwordEmpty", $errorArray)) : ?>
-                <p class="mt-1 text-danger mb-0 d-block">Please fill out this field</p>
-            <?php endif */?>
-                <small class="fs-8 fst-italic fw-lighter <?php //if (in_array("password", $errorArray))  echo "text-danger"; ?>">
+        <div class="col-md-12 mt-4">
+            <?php
+                if(isset($_GET["password"])){
+                    // <label for="inputFirstName" class="form-label">First Name</label>
+                    $password = $_GET["password"];
+                    echo '<input type="password" class="form-control form-control-lg border-dark" id="registerPassword" placeholder="Password" name="password" value="'.$password.'">';
+                } else{
+                    echo '<input type="password" class="form-control form-control-lg border-dark" id="registerPassword" placeholder="Password" name="password">';
+                }
+            ?> 
+            <div class="mt-1"> <!--border border-danger ps-1 rounded mt-1 -->
+                <small class="fs-8 fst-italic fw-lighter">
                 Length must be between 8-64 characters, combines uppercase, lowercase letters and numbers, 
                 and contains at least one symbol (~ ! @ # $ % ^ & * - _ ?)
                 </small>
             </div>
-        </div>
-
-        <div class="col-md-12">
-            <div class="form-check form-switch">
+            <div class="form-check form-switch mt-2">
                 <input class="form-check-input view-Password" type="checkbox" id="flexSwitchCheckDefault">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Show Password</label>
             </div>
-        </div>
+        </div> 
 
-        <div class="col-12 text-center">
+        <div class="col-12 text-center mt-2">
             <button type="submit" class="btn btn-primary" name="create-staff">Create Account</button>
         </div>
     </form>
+    
+    <?php
+        if(!isset($_GET["signup"])){
+            exit();
+        } else{
+            $signupCheck = $_GET["signup"];
+            
+            if($signupCheck == "empty"){
+                echo "<p class='mt-2 text-danger text-center mb-0 ps-1 d-block'>Please fill in all fields!</p>";
+                exit();
+            } elseif($signupCheck == "char"){
+                echo "<p class='mt-2 text-danger text-center mb-0 ps-1 d-block'>Please enter a valid name!</p>";
+                exit();
+            } elseif($signupCheck == "mobilenumber"){
+                echo "<p class='mt-2 text-danger text-center mb-0 ps-1 d-block'>Please enter a valid mobile number!</p>";
+                exit();
+            } elseif($signupCheck == "email"){
+                echo "<p class='mt-2 text-danger text-center mb-0 ps-1 d-block'>Please enter a valid email!</p>";
+                exit();
+            } elseif($signupCheck == "emailtaken"){
+                echo "<p class='mt-2 text-danger text-center mb-0 ps-1 d-block'>Email has been taken!</p>";
+                exit();
+            } elseif($signupCheck == "password"){
+                echo "<p class='mt-2 text-danger text-center mb-0 ps-1 d-block'>Please enter a valid password!</p>";
+                exit();
+            } elseif($signupCheck == "success"){
+                echo "<p class='mt-2 text-success text-center mb-0 ps-1 d-block'>Staff Registration Successful!</p>";
+                exit();
+            }
+        }
+    ?>
 </div>
 
-    <!-- Javascript-->
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/show_password.js"></script>
-    <script src="js/current_date.js"></script>
-  </body>
-</html>
+<?php require_once "./components/scripts.php"; ?>
