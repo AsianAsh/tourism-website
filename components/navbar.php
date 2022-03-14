@@ -21,17 +21,17 @@
                     <div class="unit unit-spacing-xs">
                     <div class="unit-left"><span class="icon fa fa-clock-o"></span></div>
                     <div class="unit-body">
-                        <p>09:00<span>am</span> — 08:00<span>pm</span></p>
+                        <p>09:00<span>am</span> — 09:00<span>pm</span></p>
                     </div>
                     </div>
                 </li>
                 <li>
                     <div class="unit unit-spacing-xs">
                     <div class="unit-left"><span class="icon fa fa-phone"></span></div>
-                    <div class="unit-body"><a class="link-phone" href="tel:#">+1 323-913-4688</a></div>
+                    <div class="unit-body"><a class="link-phone" href="tel:#">+603-1555-8030</a></div>
                     </div>
                 </li>
-                </ul><a class="button button-md button-default-outline-2 button-ujarak" href="#">Get a Free Quote</a>
+                </ul><a class="button button-md button-default-outline-2 button-ujarak" href="#">Contact Us</a>
             </div>
             </div>
         </div>

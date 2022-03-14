@@ -51,13 +51,9 @@ if (isset($_POST["signin"]) && isset($_GET["page"])) {
                 "firstName" => $row["first_name"],
                 "lastName" => $row["last_name"],
                 "email" => $row["email"],
-                "mobileNumber" => $row["mobile_number"]
-                // "addressLine" => $row["addressLine"],
-                // "city" => $row["city"],
-                // "state" => $row["userState"],
-                // "userPicture" => $row["imagePath"],
-                // "postcode" => $row["postcode"],
-                // "userRole" => $row["userRole"]
+                "mobileNumber" => $row["mobile_number"],
+                "dob" => $row["dob"],
+                "creationDate" => $row["creation_date"],
             );
             $_SESSION["alertMessage"][] = "Signin Successful";
         } else {

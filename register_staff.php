@@ -84,9 +84,9 @@ require_once "./components/header+offcanvas.php";
                 if(isset($_GET["password"])){
                     // <label for="inputFirstName" class="form-label">First Name</label>
                     $password = $_GET["password"];
-                    echo '<input type="password" class="form-control form-control-lg border-dark" id="registerPassword" placeholder="Password" name="password" value="'.$password.'">';
+                    echo '<input type="password" class="form-control form-control-lg border-dark registerPassword" id="registerPassword" placeholder="Password" name="password" value="'.$password.'">';
                 } else{
-                    echo '<input type="password" class="form-control form-control-lg border-dark" id="registerPassword" placeholder="Password" name="password">';
+                    echo '<input type="password" class="form-control form-control-lg border-dark registerPassword" id="registerPassword" placeholder="Password" name="password">';
                 }
             ?> 
             <div class="mt-1"> <!--border border-danger ps-1 rounded mt-1 -->

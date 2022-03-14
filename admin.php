@@ -20,7 +20,7 @@ require_once "./components/header+offcanvas.php";
 
         <div class="col-md-12">
             <!-- <label for="registerPassword" class="form-label">Password</label> -->
-            <input type="password" class="form-control form-control-lg border-dark" id="loginPassword" placeholder="Password" name="password" required>
+            <input type="password" class="form-control form-control-lg border-dark loginPassword" id="adminLoginPassword" placeholder="Password" name="password">
             <div class="mt-1 <?php if (in_array("password", $loginErrorArray))  echo "border border-danger ps-1 rounded mt-1"; ?>">
             <?php if (in_array("passwordEmpty", $loginErrorArray)) : ?>
                 <p class="mt-1 text-danger mb-0 d-block">Please fill out this field</p>

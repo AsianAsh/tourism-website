@@ -3,7 +3,7 @@
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/show_password.js"></script>
-    <script src="js/offcanvas_show_password.js"></script>
+    <script src="js/login_show_password.js"></script>
     <script src="js/current_date.js"></script>
   </body>
 </html>

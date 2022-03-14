@@ -3,10 +3,10 @@ session_start();
 require_once "./components/header+offcanvas.php"; 
 ?>
 
-<div class="btn-group btn-group-lg" role="group" aria-label="admin-button-group">
-    <a type="button" class="btn btn-primary" href="register_staff.php">Create Office Staff Account</a>
-    <button type="button" class="btn btn-primary" href="register_agent.php">Create Travel Agent Account</button>
-    <button type="button" class="btn btn-primary" href="sales.php">View Sales Report</button>
+<div class="d-flex justify-content-center">
+    <a type="button" class="btn-lg btn-primary mx-3" href="register_staff.php">Create Office Staff Account</a>
+    <a type="button" class="btn-lg btn-primary mx-3" href="register_agent.php">Create Travel Agent Account</a>
+    <a type="button" class="btn-lg btn-primary mx-3" href="sales.php">View Sales Report</a>
 </div>
 
 <?php require_once "./components/scripts.php"; ?>
