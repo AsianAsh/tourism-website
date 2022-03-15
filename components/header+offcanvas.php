@@ -28,6 +28,7 @@ $userid = $_SESSION['user']['userID'] ?? null;
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
     <!-- <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css"> -->
+    <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/style.css">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
@@ -51,24 +52,24 @@ $userid = $_SESSION['user']['userID'] ?? null;
                 <div>
                     <form class="row g-3 row-cols-1" action="<?php echo './includes/login.inc.php?page=' . $currentPage //. '&queryString=' . $queryString; ?>" method="POST" novalidate>                 
                         <div class="row g-3 justify-content-md-center">   
-                            <div class="col-md-10">
+                            <div class="form-wrap col-md-10">
                                 <!-- <label for="inputEmail" class="form-label"></label> -->
-                                <input type="email" class="form-control" id="inputEmail" placeholder="Email Address"
-                                    name="email" required>
-                                <?php if (in_array("emailEmpty", $loginErrorArray)) : ?>
+                                <input type="email" class="form-control" type="email" id="inputEmail" placeholder="Email Address"
+                                    name="email" data-constraints="@Email @Required">
+                                <?php /*if (in_array("emailEmpty", $loginErrorArray)) : ?>
                                 <small class="mt-1 ps-1 text-danger">Please fill out this field</small>
                                 <?php elseif (in_array("email", $loginErrorArray)) : ?>
                                 <small class="mt-1 ps-1 text-danger">Please enter a valid email</small>
-                                <?php endif; ?>
+                                <?php endif; */?>
                             </div>
                         
-                            <div class="col-md-10">
+                            <div class="form-wrap col-md-10">
                                 <!-- <label for="inputPassword" class="form-label"></label> -->
                                 <input type="password" class="form-control loginPassword" id="customerLoginPassword" placeholder="Password"
-                                    name="password" required>
-                                <?php if (in_array("passwordEmpty", $loginErrorArray)) : ?>
+                                    name="password" data-constraints="@Required">
+                                <?php /*if (in_array("passwordEmpty", $loginErrorArray)) : ?>
                                 <small class="mt-1 ps-1 text-danger">Please fill out this field</small>
-                                <?php endif; ?>
+                                <?php endif; */?>
                             </div>
 
                             <div class="col-md-6 ps-3">
@@ -100,23 +101,18 @@ $userid = $_SESSION['user']['userID'] ?? null;
             <div class="offcanvas-header flex-column">
                 <button type="button" class="btn-close text-reset align-self-end" data-bs-dismiss="offcanvas"
                     aria-label="Close"></button>
-                <!-- <div class="text-center mb-3">
-                    <img src="<?php //echo  $_SESSION["user"]["userPicture"] ?>" alt=""
+                <div class="text-center mb-3">
+                    <img src="<?php echo $_SESSION["user"]["profilePic"] ?>" alt=""
                         class="img-fluid shadow rounded-circle userProfilePicture">
-                </div> -->
+                </div>
                 <h2 class="offcanvas-title mt-3" id="offcanvasExampleLabel">
                     <?php if (isset($_SESSION['user']['firstName'])){echo $_SESSION['user']['firstName'] . " " . $_SESSION['user']['lastName'];} ?> </h2>
             </div>
             <div class="offcanvas-body mb-5">
-                <?php //if ($_SESSION["user"]["userRole"] === "STAFF"): ?> <!-- href="admin.php" -->
-                <!-- <div class="col-12 text-center">
-                    <a class="btn  offcanvas-view-account rounded-pill px-5 mb-4" href="">Admin Panel</a> 
-                </div> -->
-                <?php //endif; ?>
                 <div class="col-12 text-center">
                     <a class="btn offcanvas-view-account rounded-pill px-5 mb-4" href="./profile.php">View Account</a> <!-- href="profile.php" -->
                 </div>
-                <form action="<?php echo './includes/login.inc.php?page=' . $currentPage //. '&queryString=' . $queryString; ?>"
+                <form action="<?php echo './includes/logout.inc.php?page=' . $currentPage //. '&queryString=' . $queryString; ?>"
                     class="row g-3 row-cols-1" method="POST">
                     <div class="col-12 text-center">
                       <button type="submit" class="btn offcanvas-sign-in rounded-pill px-5" name="logout">Sign Out</button>

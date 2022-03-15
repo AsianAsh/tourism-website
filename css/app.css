@@ -1,0 +1,33 @@
+.profile-container{
+    min-height: 800px;
+  }
+  
+  .profile-container .nav-tabs{
+    border-bottom: none;
+    flex-basis: 100%;
+  }
+  .profile-tab button{
+    display: block;
+  } 
+   .profile-container >.row{
+    flex-basis: 100%;
+  } 
+   .profile-container  .nav-link{
+    color: #000!important;
+    font-weight: bold;
+  }
+  
+  .profile-container .nav-link.active{
+    background-color: rgb(146 141 141 / 22%)!important
+  }
+  
+  .nav-tab-container{
+    border-right: 1px solid #000;
+  }
+  
+  
+  .box{
+    width: 600px;
+    height: 600px;
+    border: 1px solid #000;
+  }

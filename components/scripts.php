@@ -5,5 +5,6 @@
     <script src="js/show_password.js"></script>
     <script src="js/login_show_password.js"></script>
     <script src="js/current_date.js"></script>
+    <script src="js/profile.js"></script>
   </body>
 </html>

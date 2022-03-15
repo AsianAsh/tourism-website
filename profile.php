@@ -3,13 +3,13 @@ require_once "./components/header+offcanvas.php";
 require_once "./components/navbar.php"; 
 ?>
 
-<div class="container border border-dark profile-container my-5  d-flex align-items-stretch">
+<div class="container border border-dark profile-container my-5 d-flex align-items-stretch">
     <div class="row align-items-stretch">
         <div class="col-3 px-0  pb-5 nav-tab-container d-flex flex-column justify-content-center">
             <div>
                 <!-- Profile Picture -->
                 <div class="text-center mb-5">
-                    <img src="<?php //echo $_SESSION["user"]["userPicture"] ?>" alt=""
+                    <img src="<?php echo $_SESSION["user"]["profilePic"] ?>" alt=""
                         class="img-fluid shadow rounded-circle userProfilePicture">
                 </div>
                 <!-- Tab Buttons -->
@@ -36,11 +36,11 @@ require_once "./components/navbar.php";
                     aria-labelledby="nav-profile-tab">
                     <form action="" class="row g-3 justify-content-center"
                         id="profile-form" method="POST">
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <input type="text" class="form-control" id="inputFirstName" placeholder="First Name"
                                 name="firstName" value="<?php echo $_SESSION["user"]["firstName"];?>">
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <input type="text" class="form-control" id="inputLastName" placeholder="Last Name"
                                 name="lastName" value="<?php echo $_SESSION["user"]["lastName"];?>">
                         </div>
@@ -48,12 +48,16 @@ require_once "./components/navbar.php";
                             <input type="email" class="form-control" id="email" placeholder="Email" name="email"
                                 value="<?php echo $_SESSION["user"]["email"];?>" readonly>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-6">
                             <input type="tel" class="form-control" id="inputTelephone" placeholder="123456789"
-                                name="mobileNumber" value="<?php echo $_SESSION["user"]["mobileNumber"]; ?>">
+                                name="mobileNumber" value="<?php echo $_SESSION["user"]["mobileNumber"]; ?>" readonly>
                             <?php /*if (isset($profileErrorArray) && in_array("mobileNumber", $profileErrorArray)) :  ?>
                             <p class="mt-1 text-danger mb-0 d-block">Please enter a valid mobile number</p>
                             <?php endif; */?>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="date" class="form-control" id="customerDOB" name="DOB"
+                                value="<?php echo $_SESSION["user"]["dob"];?>" readonly>
                         </div>
                         <div class="col-12 text-center"><button type="submit"
                                 class="btn offcanvas-save-profile rounded-pill mt-5 px-5"
@@ -117,6 +121,7 @@ require_once "./components/navbar.php";
                 <!-- Order History Tab -->
                 <div class="tab-pane fade" id="nav-order" role="tabpanel" aria-labelledby="nav-order-tab">
                     <div class="container review-container">
+                        <h2 class="text-center my-auto">No previous orders</h2>
                         <!-- Container for each Order -->
                         <?php /*if (empty($orderId)) : ?>
                         <h2 class="text-center my-auto">No previous orders.</h2>

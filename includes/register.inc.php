@@ -114,10 +114,12 @@ if (!empty($errorArray)) {
     $_SESSION["accountCreationError"] = $errorArray;
     header("Location:  ../register.php");
     exit();
-} else {    
+} else {
+    // The default image when user sign up for an account
+    $imagePath =  "./images/svg/profile-pic-default.svg"; 
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-    $stmt = $connection->prepare("INSERT INTO customer(first_name, last_name, email, customer_password, mobile_number, dob) VALUES (?, ?, ?, ?, ?, ?);");
-    $stmt->bind_param("ssssis", $firstName, $lastName, $email, $hashedPassword, $mobileNumber, $dob); 
+    $stmt = $connection->prepare("INSERT INTO customer(first_name, last_name, email, customer_password, mobile_number, dob, profile_pic) VALUES (?, ?, ?, ?, ?, ?, ?);");
+    $stmt->bind_param("ssssiss", $firstName, $lastName, $email, $hashedPassword, $mobileNumber, $dob, $imagePath); 
     $stmt->execute();
     $stmt->close();
     $_SESSION["alertMessage"][] = "Account Successfully Created";

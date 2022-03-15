@@ -31,7 +31,7 @@
                     <div class="unit-body"><a class="link-phone" href="tel:#">+603-1555-8030</a></div>
                     </div>
                 </li>
-                </ul><a class="button button-md button-default-outline-2 button-ujarak" href="#">Contact Us</a>
+                </ul><a class="button button-md button-default-outline-2 button-ujarak" href="contact-us.php">Contact Us</a>
             </div>
             </div>
         </div>

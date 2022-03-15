@@ -53,6 +53,7 @@ if (isset($_POST["signin"]) && isset($_GET["page"])) {
                 "email" => $row["email"],
                 "mobileNumber" => $row["mobile_number"],
                 "dob" => $row["dob"],
+                "profilePic" => $row["profile_pic"],
                 "creationDate" => $row["creation_date"],
             );
             $_SESSION["alertMessage"][] = "Signin Successful";
@@ -70,20 +71,21 @@ if (isset($_POST["signin"]) && isset($_GET["page"])) {
 
 
 
-if (isset($_POST["logout"]) && isset($_GET["page"])) {
-    $lastPageQuery = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
+// if (isset($_POST["logout"]) && isset($_GET["page"])) {
+//     $lastPageQuery = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
 
-    // Get the last page the user was on before logging out
-    $lastPage = $lastPageQuery["page"];
-    // Get the query string from the last page the user was on before  logging out
-    // $queryString = $lastPageQuery["queryString"];
+//     // Get the last page the user was on before logging out
+//     $lastPage = $lastPageQuery["page"];
+//     // Get the query string from the last page the user was on before  logging out
+//     // $queryString = $lastPageQuery["queryString"];
     
-    session_unset();
-    session_destroy();
+//     session_unset();
+//     session_destroy();
 
-    header("Location: ../$lastPage");
-    exit();
-}
+//     header("Location: ../$lastPage");
+//     exit();
+// }
+
 // if (!$queryString){
 //     header("Location: ../$lastPage");
 //     exit();

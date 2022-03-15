@@ -11,19 +11,19 @@
                       <li>
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-phone"></span></div>
-                          <div class="unit-body"><a class="link-phone" href="tel:#">+1 323-913-4688</a></div>
+                          <div class="unit-body"><a class="link-phone" href="tel:#">+603-1555-8030</a></div>
                         </div>
                       </li>
                       <li>
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
-                          <div class="unit-body"><a class="link-aemail" href="mailto:#">info@demolink.org</a></div>
+                          <div class="unit-body"><a class="link-aemail" href="mailto:#">traveltime@gmail.com</a></div>
                         </div>
                       </li>
                       <li>
                         <div class="unit">
                           <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
-                          <div class="unit-body"><a class="link-location" href="#">4730 Crystal Springs Dr, Los Angeles, CA 90027</a></div>
+                          <div class="unit-body"><a class="link-location" href="#">B-47, AOU Avenue, Bukit Springs, 43200 Kajang, Selangor, Malaysia</a></div>
                         </div>
                       </li>
                     </ul>
@@ -84,7 +84,7 @@
               </div>
               <div class="col-sm-6 col-md-4 order-sm-first">
                 <!-- Rights-->
-                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Wonder Tour</span>. All Rights Reserved. Design by <a href="https://www.templatemonster.com">TemplateMonster</a></p>
+                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Travel Time Tours</span>. All Rights Reserved. Design by <a href="https://www.templatemonster.com">TemplateMonster</a></p>
               </div>
               <div class="col-sm-6 col-md-4 text-md-right">
                 <p class="rights"><a href="#">Privacy Policy</a></p>
