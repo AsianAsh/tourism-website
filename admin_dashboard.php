@@ -8,17 +8,21 @@ if (!isset($_SESSION["admin"]["adminID"])) {
     exit();
 }
 ?>
-<<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" dir="ltr">
     <head>
         <meta charset="UTF-8">
 
-        <link rel="stylesheet" href="dashboard.css">
         <!-- Boxicons CDN Link -->
         <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="app.css">
     </head>
+    <style>
+
+
+    </style>
     <body>
     <div class="sidebar">
         <div class="logo-details">
@@ -34,19 +38,19 @@ if (!isset($_SESSION["admin"]["adminID"])) {
             </a>
             </li>
             <li>
-            <a href="#">
+            <a href="register_staff.php">
                 <i class='bx bx-user' ></i>
                 <span class="links_name">Create Staff Account</span>
             </a>
             </li>
             <li>
-            <a href="#">
+            <a href="register_agent.php">
                 <i class='bx bx-user' ></i>
                 <span class="links_name">Create Agent Account </span>
             </a>
             </li>
             <li>
-            <a href="#">
+            <a href="sales.php">
                 <i class='bx bx-coin-stack' ></i>
                 <span class="links_name">Sales Report</span>
             </a>
@@ -62,7 +66,7 @@ if (!isset($_SESSION["admin"]["adminID"])) {
         <nav>
         <div class="sidebar-button">
             <i class='bx bx-menu sidebarBtn'></i>
-            <span class="dashboard">Home</span>
+            <span class="dashboard">Admin Homepage</span>
         </div>
         
         </nav>
@@ -71,24 +75,20 @@ if (!isset($_SESSION["admin"]["adminID"])) {
         <div class="overview-boxes">
             <div class="box">
             <div class="right-side">
-                <div class="box-topic">Latest</div>
+                <div class="box-topic">Latest New In Malaysia</div>
                 <div class="number"></div>
-                <div class="indicator">
-            
-                <span class="text">News In malaysia</span>
-                </div>
             </div>
             </div>
-    
         </div>
 
-        <div class="sales-boxes">
-            <div class="recent-sales box">
+        <!-- <div class="sales-boxes">
+            <div class="recent-sales box"> -->
             <!-- <div class="title">Whats Hot?</div> -->
             
-            </div>
-            </div>
+            <!-- </div>
+            </div> -->
             
+    <!-- for sidebar interaction -->
     <script>
     let sidebar = document.querySelector(".sidebar");
     let sidebarBtn = document.querySelector(".sidebarBtn");
