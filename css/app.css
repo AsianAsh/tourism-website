@@ -9,10 +9,10 @@
   .profile-tab button{
     display: block;
   } 
-   .profile-container >.row{
-    flex-basis: 100%;
-  } 
-   .profile-container  .nav-link{
+    .profile-container >.row{
+      flex-basis: 100%;
+    } 
+    .profile-container  .nav-link{
     color: #000!important;
     font-weight: bold;
   }
@@ -31,3 +31,5 @@
     height: 600px;
     border: 1px solid #000;
   }
+  
+  
