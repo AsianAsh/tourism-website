@@ -51,8 +51,8 @@ if (isset($_POST["agent-login"])) {
                     header("Location: ../agent.php?login=password&email=$email");
                     exit();
                 } else{
-                    $_SESSION["user"] = array(
-                        "userID" => $row["agent_id"],
+                    $_SESSION["agent"] = array(
+                        "agentID" => $row["agent_id"],
                         "firstName" => $row["first_name"],
                         "lastName" => $row["last_name"],
                         "email" => $row["email"],

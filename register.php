@@ -73,7 +73,7 @@ if (isset($_SESSION["accountCreationError"])) {
             
             <!-- Date of Birth (DOB) Input Field -->
             <div class="col-md-12">
-                <input type="date" class="form-control form-control-lg border-dark" id="registerDOB" name="DOB" value="" min="1930-01-01" max="">
+                <input type="date" class="form-control form-control-lg border-dark registerDOB" id="registerDOB" name="DOB" value="" min="1930-01-01" max="">
             </div>
             <?php if (in_array("dobEmpty", $errorArray)) : ?>
                 <p class="mt-1 text-danger mb-0 ps-3 d-block">Please fill out this field</p>
@@ -96,7 +96,7 @@ if (isset($_SESSION["accountCreationError"])) {
             <!-- Password Input Field -->
             <div class="col-md-12">
                 <!-- <label for="registerPassword" class="form-label">Password</label> -->
-                <input type="password" class="form-control form-control-lg border-dark" id="registerPassword" placeholder="Password" name="password" required>
+                <input type="password" class="form-control form-control-lg border-dark registerPassword" id="registerPassword" placeholder="Password" name="password" required>
                 <div class="mt-1 <?php if (in_array("password", $errorArray))  echo "border border-danger ps-1 rounded mt-1"; ?>">
                 <?php if (in_array("passwordEmpty", $errorArray)) : ?>
                     <p class="mt-1 text-danger mb-0 d-block">Please fill out this field</p>

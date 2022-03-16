@@ -1,6 +1,12 @@
 <?php
 session_start();
 require_once "./components/header+offcanvas.php";
+
+// Return to index.php if not logged into account
+if (!isset($_SESSION["admin"]["adminID"])) {
+    header("Location: index.php");
+    exit();
+}
 ?>
 
 <div style="max-width: 35%;" class="container my-5 px-5 py-5 bg-none border shadow">
@@ -58,9 +64,9 @@ require_once "./components/header+offcanvas.php";
                 if(isset($_GET["dob"])){
                     // <label for="inputFirstName" class="form-label">First Name</label>
                     $birthdate = $_GET["dob"];
-                    echo '<input type="date" class="form-control form-control-lg border-dark" id="registerDOB" name="DOB" min="1930-01-01" max="" value="'.$birthdate.'">';
+                    echo '<input type="date" class="form-control form-control-lg border-dark registerDOB" id="registerDOB" name="DOB" min="1930-01-01" max="" value="'.$birthdate.'">';
                 } else{
-                    echo '<input type="date" class="form-control form-control-lg border-dark" id="registerDOB" name="DOB" min="1930-01-01" max="">';
+                    echo '<input type="date" class="form-control form-control-lg border-dark registerDOB" id="registerDOB" name="DOB" min="1930-01-01" max="">';
                 }
             ?> 
         </div> 
@@ -99,9 +105,9 @@ require_once "./components/header+offcanvas.php";
                 if(isset($_GET["password"])){
                     // <label for="inputFirstName" class="form-label">First Name</label>
                     $password = $_GET["password"];
-                    echo '<input type="password" class="form-control form-control-lg border-dark registerPassword" id="registerPassword" placeholder="Password" name="password" value="'.$password.'">';
+                    echo '<input type="password" class="form-control form-control-lg border-dark registerPassword" id="registerPassword" placeholder="Password" name="password" autocomplete="on" value="'.$password.'">';
                 } else{
-                    echo '<input type="password" class="form-control form-control-lg border-dark registerPassword" id="registerPassword" placeholder="Password" name="password">';
+                    echo '<input type="password" class="form-control form-control-lg border-dark registerPassword" id="registerPassword" placeholder="Password" name="password" autocomplete="on">';
                 }
             ?> 
             <div class="mt-1"> <!--border border-danger ps-1 rounded mt-1 -->
@@ -111,8 +117,8 @@ require_once "./components/header+offcanvas.php";
                 </small>
             </div>
             <div class="form-check form-switch mt-2">
-                <input class="form-check-input view-Password" type="checkbox" id="flexSwitchCheckDefault">
-                <label class="form-check-label" for="flexSwitchCheckDefault">Show Password</label>
+                <input class="form-check-input view-Password" type="checkbox" id="agentShowPassword">
+                <label class="form-check-label" for="agentShowPassword">Show Password</label>
             </div>
         </div> 
 

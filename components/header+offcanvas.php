@@ -66,7 +66,7 @@ $userid = $_SESSION['user']['userID'] ?? null;
                             <div class="form-wrap col-md-10">
                                 <!-- <label for="inputPassword" class="form-label"></label> -->
                                 <input type="password" class="form-control loginPassword" id="customerLoginPassword" placeholder="Password"
-                                    name="password" data-constraints="@Required">
+                                    name="password" autocomplete="on" data-constraints="@Required">
                                 <?php /*if (in_array("passwordEmpty", $loginErrorArray)) : ?>
                                 <small class="mt-1 ps-1 text-danger">Please fill out this field</small>
                                 <?php endif; */?>

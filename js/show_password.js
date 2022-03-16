@@ -7,10 +7,8 @@ if (viewPasswordBtn){
 	viewPasswordBtn.addEventListener("change",function(){
 		if(this.checked){
 			password.type = "text";
-			console.log("Hey You");
 		} else{
 			password.type = "password";
-			console.log("Hey You");
 		}
 	})
 }

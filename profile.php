@@ -1,8 +1,14 @@
 <?php session_start(); 
 require_once "./components/header+offcanvas.php"; 
 require_once "./components/navbar.php"; 
-?>
 
+// Return to index.php if not logged into account
+if (!isset($_SESSION["user"]["userID"])) {
+    header("Location: index.php");
+    exit();
+}
+
+?>
 <div class="container border border-dark profile-container my-5 d-flex align-items-stretch">
     <div class="row align-items-stretch">
         <div class="col-3 px-0  pb-5 nav-tab-container d-flex flex-column justify-content-center">

@@ -47,8 +47,8 @@ if (isset($_POST["admin-login"])) {
         // die; // false so far no matter the password right or not
         // if ($validLogin) { //for hashed password
         if ($validLogin == true) {
-            $_SESSION["user"] = array(
-                "userID" => $row["admin_id"],
+            $_SESSION["admin"] = array(
+                "adminID" => $row["admin_id"],
                 "username" => $row["username"],
             );
             $_SESSION["alertMessage"][] = "Signin Successful";

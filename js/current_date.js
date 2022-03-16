@@ -13,6 +13,6 @@ if (mm < 10) {
 } 
     
 today = yyyy + '-' + mm + '-' + dd;
-if(document.getElementById("registerDOB")){
-   document.getElementById("registerDOB").setAttribute("max", today);
+if(document.getElementsByClassName("registerDOB")){
+   document.getElementsByClassName("registerDOB").setAttribute("max", today);
 }

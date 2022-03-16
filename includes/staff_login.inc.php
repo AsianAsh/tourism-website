@@ -51,8 +51,8 @@ if (isset($_POST["staff-login"])) {
                     header("Location: ../staff.php?login=password&email=$email");
                     exit();
                 } else{
-                    $_SESSION["user"] = array(
-                        "userID" => $row["staff_id"],
+                    $_SESSION["staff"] = array(
+                        "staffID" => $row["staff_id"],
                         "firstName" => $row["first_name"],
                         "lastName" => $row["last_name"],
                         "email" => $row["email"],
