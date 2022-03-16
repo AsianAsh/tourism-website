@@ -64,7 +64,7 @@ if(isset($_POST["create-agent"])){
                                 // No validation errors so insert input into database
                                 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
                                 $stmt = $connection->prepare("INSERT INTO travel_agent(first_name, last_name, email, agent_password, mobile_number, dob, travel_agency, admin_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?);");
-                                $stmt->bind_param("ssssissi", $firstName, $lastName, $email, $hashedPassword, $mobileNumber, $dob, $agency, $_SESSION["user"]["userID"]); 
+                                $stmt->bind_param("ssssissi", $firstName, $lastName, $email, $hashedPassword, $mobileNumber, $dob, $agency, $_SESSION["admin"]["adminID"]); 
                                 $stmt->execute();
                                 $stmt->close();
                                 $_SESSION["alertMessage"][] = "Account Successfully Created";
