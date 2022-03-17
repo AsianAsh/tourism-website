@@ -10,6 +10,7 @@ if (!isset($_SESSION["admin"]["adminID"])) {
 ?>
 
 <div style="max-width: 35%;" class="container my-5 px-5 py-5 bg-none border shadow">
+    <a href="admin_dashboard.php" class="btn-back" >Go back</a>
     <h3 class="text-center">Create Staff Account</h3>
     <form class="row mt-3 g-4" id="register-form" action="./includes/register_staff.inc.php" method="POST" novalidate> <!-- novalidate stops Google's own browser validation of Form Submissions-->
         <div class="col-md-12">
