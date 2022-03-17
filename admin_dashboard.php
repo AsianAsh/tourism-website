@@ -1,6 +1,6 @@
 <?php 
 session_start();
-// require_once "./components/header+offcanvas.php"; 
+require_once "./components/header+offcanvas.php"; 
 
 // Return to index.php if not logged into account
 if (!isset($_SESSION["admin"]["adminID"])) {
@@ -17,7 +17,7 @@ if (!isset($_SESSION["admin"]["adminID"])) {
         <!-- Boxicons CDN Link -->
         <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/dash.css">
     </head>
     <style>
 
