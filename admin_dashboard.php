@@ -66,7 +66,7 @@ if (!isset($_SESSION["admin"]["adminID"])) {
         <nav>
         <div class="sidebar-button">
             <i class='bx bx-menu sidebarBtn'></i>
-            <span class="dashboard">Admin Homepage</span>
+            <span class="dashboard">Admin Dashboard</span>
         </div>
         
         </nav>
@@ -75,18 +75,38 @@ if (!isset($_SESSION["admin"]["adminID"])) {
         <div class="overview-boxes">
             <div class="box">
             <div class="right-side">
-                <div class="box-topic">Latest New In Malaysia</div>
+                <div class="box-topic">Recent Article</div>
                 <div class="number"></div>
             </div>
             </div>
         </div>
 
-        <!-- <div class="sales-boxes">
-            <div class="recent-sales box"> -->
-            <!-- <div class="title">Whats Hot?</div> -->
-            
-            <!-- </div>
-            </div> -->
+        <div class="article-box">
+            <div class="article-content">
+                
+                <img src="images/article_img2" alt="" width="100%" height="100%">
+            </div>
+        </div>
+
+        <div class="article-box">
+            <div class="article-content">
+                <img src="images/article3" alt="" width="100%" height="100%">
+            </div>
+        </div>
+
+        <div class="article-box">
+            <div class="article-content">
+                
+                <img src="images/article4" alt="" width="100%" height="100%">
+            </div>
+        </div>
+
+        <div class="article-box">
+            <div class="article-content">
+                <img src="images/article5" alt="" width="100%" height="100%">
+            </div>
+        </div>
+        
             
     <!-- for sidebar interaction -->
     <script>
