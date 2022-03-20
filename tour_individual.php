@@ -71,7 +71,9 @@ require_once "./components/navbar.php";
         <div class="container">
           <h5 class="oh-desktop"><span class="d-inline-block wow slideInDown">Description</span></h5>
           <p>Aliquam malesuada bibendum arcu vitae elementum curabitur. A erat nam at lectus urna duis convallis convallis tellus. Sit amet consectetur adipiscing elit pellentesque.</p>
-          <!--Insert check in and check out date-->
+          <div class="pt-3">Check in: <input type="date"></div>
+          <div class="pt-3">Adults: <input type="number" name="Quantity" id="Quantity" value="1" min="1" max="99" style="height: 30px;"></div>
+          <div class="pt-3">Children: <input type="number" name="Quantity" id="Quantity" value="1" min="1" max="99" style="height: 30px;"></div>
           <div class="pt-3"><button type="button" class="btn btn-primary">Book Now</button></div>
         </div>
 
