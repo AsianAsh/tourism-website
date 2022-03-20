@@ -247,7 +247,6 @@ require_once "./components/navbar.php";
           </div>
         </div>
       </section>
-      </section>
       <!-- Section Subscribe-->
       <section class="section bg-default text-center offset-top-50">
         <div class="parallax-container" data-parallax-img="images/parallax-1-1920x850.jpg">
