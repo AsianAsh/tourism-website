@@ -6,6 +6,7 @@ require_once "./components/navbar.php";
 <section class="section section-sm bg-default">
         <div class="container">
           <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">Tours</span></h3>
+          <h6 class="pt-2">Tours for you to check out!</h6>
           <div class="row row-sm row-40 row-md-50">
             <div class="col-sm-6 col-md-12 wow fadeInRight">
               <!-- Product Big-->

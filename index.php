@@ -247,75 +247,7 @@ require_once "./components/navbar.php";
           </div>
         </div>
       </section>
-      <!-- Section Subscribe-->
-      <section class="section bg-default text-center offset-top-50">
-        <div class="parallax-container" data-parallax-img="images/parallax-1-1920x850.jpg">
-          <div class="parallax-content section-xl section-inset-custom-1 context-dark bg-overlay-2-21">
-            <div class="container">
-              <h2 class="heading-2 oh font-weight-normal wow slideInDown"><span class="d-block font-weight-semi-bold">First-class Impressions</span><span class="d-block font-weight-light">are Waiting for You!</span></h2>
-              <p class="text-width-medium text-spacing-75 wow fadeInLeft" data-wow-delay=".1s">Our agency offers travelers various tours and excursions with destinations all over the world. Browse our website to find your dream tour!</p><a class="button button-secondary button-pipaluk" href="#">Book a Tour Now</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--	Instagrram wondertour-->
-      <section class="section section-sm section-top-0 section-fluid section-relative bg-gray-4">
-        <div class="container-fluid">
-          <h6 class="gallery-title">Gallery</h6>
-          <!-- Owl Carousel-->
-          <div class="owl-carousel owl-classic owl-dots-secondary" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-xl-items="5" data-xxl-items="6" data-stage-padding="15" data-xxl-stage-padding="0" data-margin="30" data-autoplay="true" data-nav="true" data-dots="true">
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-1-270x195.jpg" alt="" width="270" height="195"/>
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-1-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-1-270x195.jpg" alt="" width="270" height="195"/></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-2-270x195.jpg" alt="" width="270" height="195"/>
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-2-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-2-270x195.jpg" alt="" width="270" height="195"/></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-3-270x195.jpg" alt="" width="270" height="195"/>
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-3-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-3-270x195.jpg" alt="" width="270" height="195"/></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-4-270x195.jpg" alt="" width="270" height="195"/>
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-4-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-4-270x195.jpg" alt="" width="270" height="195"/></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-5-270x195.jpg" alt="" width="270" height="195"/>
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-5-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-5-270x195.jpg" alt="" width="270" height="195"/></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-6-270x195.jpg" alt="" width="270" height="195"/>
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-6-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-6-270x195.jpg" alt="" width="270" height="195"/></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-7-270x195.jpg" alt="" width="270" height="195"/>
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-7-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-7-270x195.jpg" alt="" width="270" height="195"/></a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
+      
 
 <?php //require_once "./components/footer.php"; ?>
 <?php require_once "./components/footer.php"; ?>
