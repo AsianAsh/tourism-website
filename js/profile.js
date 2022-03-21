@@ -9,7 +9,7 @@ const image = document.querySelector("#cropBox")
     const userProfilePicture = document.querySelector(".userProfilePicture")
 
     if (userProfilePicture.src !== userProfilePicture.baseURI && userProfilePicture.src.includes(
-            "/svg/profile-pic-default.svg") === false) {
+            "/images/svg/profile-pic-default.svg") === false) {
         removePicBtn.classList.remove("hidden")
     }
 
@@ -30,7 +30,7 @@ const image = document.querySelector("#cropBox")
         minCanvasHeight: 550
     })
 
-    // Destroy the Cropper object
+    // Destroy the Cropper object/Reset Button removes image in the cropbox
     resetImageBtn.addEventListener("click", function() {
         uploadPicBtn.classList.add("hidden")
         imageCrop.destroy()

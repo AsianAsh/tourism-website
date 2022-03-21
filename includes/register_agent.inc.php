@@ -67,7 +67,7 @@ if(isset($_POST["create-agent"])){
                                 $stmt->bind_param("ssssissi", $firstName, $lastName, $email, $hashedPassword, $mobileNumber, $dob, $agency, $_SESSION["admin"]["adminID"]); 
                                 $stmt->execute();
                                 $stmt->close();
-                                $_SESSION["alertMessage"][] = "Account Successfully Created";
+                                // $_SESSION["alertMessage"][] = "Account Successfully Created";
                                 header("Location: ../admin_dashboard.php?signup=success");
                                 exit();
                             }

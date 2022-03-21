@@ -64,18 +64,18 @@ if(isset($_POST["create-staff"])){
                         } else{
                             // No validation errors so insert input into database
                             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-                            var_dump($firstName);
-                            var_dump($lastName);
-                            var_dump($email);
-                            var_dump($hashedPassword);
-                            var_dump($mobileNumber);
-                            var_dump($dob);
+                            // var_dump($firstName);
+                            // var_dump($lastName);
+                            // var_dump($email);
+                            // var_dump($hashedPassword);
+                            // var_dump($mobileNumber);
+                            // var_dump($dob);
 
                             $stmt = $connection->prepare("INSERT INTO office_staff(first_name, last_name, email, staff_password, mobile_number, dob, admin_id) VALUES (?, ?, ?, ?, ?, ?, ?);");
                             $stmt->bind_param("ssssisi", $firstName, $lastName, $email, $hashedPassword, $mobileNumber, $dob, $_SESSION["admin"]["adminID"]); 
                             $stmt->execute();
                             $stmt->close();
-                            $_SESSION["alertMessage"][] = "Account Successfully Created";
+                            // $_SESSION["alertMessage"][] = "Account Successfully Created";
                             header("Location: ../admin_dashboard.php?signup=success");
                             exit();
                         }

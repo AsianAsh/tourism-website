@@ -4,10 +4,12 @@ session_start();
 if (isset($_POST["logout"]) && isset($_GET["page"])) {
     $lastPageQuery = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
     // Get the last page the user was on before logging out, or homepage if user was on profile/account page when logging out
+    // $authorizedPages = ["profile.php", ".php", ".php", ".php", ".php"]; // May not be necessary
     if ($lastPageQuery["page"] == "profile.php"){
         $lastPage = "index.php";
-    }
-    else{
+    } elseif($lastPageQuery["page"] == "admin_dashboard.php"){ // Same here
+        $lastPage = "index.php";
+    } else{
         $lastPage = $lastPageQuery["page"];
     }
 

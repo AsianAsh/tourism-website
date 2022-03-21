@@ -72,6 +72,7 @@ if (!isset($_SESSION["user"]["userID"])) {
                 </div>
                 <!-- End of Personal Info Tab -->
 
+
                 <!-- Profile Picture Tab -->
                 <div class="tab-pane fade" id="nav-pic" role="tabpanel" aria-labelledby="nav-pic-tab">
                     <div class="outer-crop-wrapper text-center">
@@ -84,20 +85,21 @@ if (!isset($_SESSION["user"]["userID"])) {
                     </div>
 
                     <div class="mt-5">
-                        <form action="" class="imageForm" method="POST">
+                        <form action="./includes/update_profile_pic.inc.php" class="imageForm" method="POST">
                             <input type="hidden" name="uploadPic" value="">
                             <input type="file" class="fileInput" accept="image/png, image/jpg, image/jpeg">
                             <button type="reset" class="btn btn-dark fileInputResetBtn">Reset</button>
                             <button class="hidden uploadPicBtn btn" type="button">Upload</button>
                         </form>
 
-                        <form action="" class="" method="POST">
+                        <form action="./includes/update_profile_pic.inc.php" class="" method="POST">
                             <button class="hidden btn btn-danger removePicBtn" type="submit"
                                 name="removeProfilePic">Remove Current Pic</button>
                         </form>
                     </div>
                 </div>
                 <!-- End of Profile Picture Tab -->
+
 
                 <!-- Password Tab -->
                 <div class="tab-pane fade" id="nav-privacy" role="tabpanel" aria-labelledby="nav-privacy-tab">
@@ -128,6 +130,7 @@ if (!isset($_SESSION["user"]["userID"])) {
                 <div class="tab-pane fade" id="nav-order" role="tabpanel" aria-labelledby="nav-order-tab">
                     <div class="container review-container">
                         <h2 class="text-center my-auto">No previous orders</h2>
+                        <!-- <button type="button" id="testBtn">Button</button> -->
                         <!-- Container for each Order -->
                         <?php /*if (empty($orderId)) : ?>
                         <h2 class="text-center my-auto">No previous orders.</h2>
