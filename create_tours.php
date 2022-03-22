@@ -50,14 +50,6 @@ require_once "./components/header+offcanvas.php";
                 }
             ?> 
         </div>
-
-        <!-- <div class="col-md-6">
-            <label for="inputTelephone" class="">Status</label>
-            <select class="form-select" aria-label="Default select example" name = "status" required>
-            <option value = "1" selected >Available</option>
-            <option value="0" >Not Available</option>
-            </select>
-        </div> -->
         
         <!-- Trip Duration Field -->
         <div class="col-md-6">
@@ -65,9 +57,9 @@ require_once "./components/header+offcanvas.php";
             <?php
                 if(isset($_GET["duration"])){
                     $duration = $_GET["duration"];
-                    echo '<input type="text" class="form-control" id="inputTripDuration" placeholder="2 Days 1 Night" name="tripDuration" value="'.$duration.'">';
+                    echo '<input type="text" class="form-control" id="inputTripDuration" placeholder="2D1N" name="tripDuration" value="'.$duration.'">';
                 } else{
-                    echo '<input type="text" class="form-control" id="inputTripDuration" placeholder="2 Days 1 Night" name="tripDuration">';
+                    echo '<input type="text" class="form-control" id="inputTripDuration" placeholder="2D1N" name="tripDuration">';
                 }
             ?> 
         </div>

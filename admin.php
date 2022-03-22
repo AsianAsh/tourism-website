@@ -1,5 +1,10 @@
 <?php
 session_start();
+// Redirect to admin_dashboard.php page if already logged in to Admin Account
+if (isset($_SESSION["admin"]["adminID"])) {
+    header("Location: admin_dashboard.php");
+    exit();
+}
 require_once "./components/header+offcanvas.php";
 ?>
 

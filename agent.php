@@ -1,5 +1,10 @@
 <?php
 session_start();
+// Redirect to agent_dashboard.php page if already logged in to Travel Agent Account
+if (isset($_SESSION["agent"]["agentID"])) {
+    header("Location: agent_dashboard.php");
+    exit();
+}
 require_once "./components/header+offcanvas.php";
 ?>
 

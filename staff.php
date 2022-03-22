@@ -1,5 +1,10 @@
 <?php
 session_start();
+// Redirect to staff_dashboard.php page if already logged in to Staff Account
+if (isset($_SESSION["staff"]["satffID"])) {
+    header("Location: staff_dashboard.php");
+    exit();
+}
 require_once "./components/header+offcanvas.php";
 ?>
 
