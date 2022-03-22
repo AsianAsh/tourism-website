@@ -30,6 +30,7 @@ $userid = $_SESSION['user']['userID'] ?? null;
     <link rel="stylesheet" href="css/fonts.css"> --> 
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dash.css">
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css"
         integrity="sha512-0SPWAwpC/17yYyZ/4HSllgaK7/gg9OlVozq8K7rf3J8LvCjYEEIfzzpnA2/SSjpGIunCSD18r3UhvDcu/xncWA=="
