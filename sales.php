@@ -20,4 +20,6 @@ if (!isset($_SESSION["admin"]["adminID"])) {
 
 
 
+
+
 <?php require_once "./components/scripts.php"; ?>

@@ -10,18 +10,18 @@ require_once "./components/navbar.php";
           <div class="container">
             <h2 class="breadcrumbs-custom-title">About</h2>
             <ul class="breadcrumbs-custom-path">
-              <li><a href="index.html">Home</a></li>
+              <li><a href="index.php">Home</a></li>
               <li class="active">About</li>
             </ul>
           </div>
-          <div class="box-position" style="background-image: url(images/breadcrumbs-bg.jpg);"></div>
+          <div class="box-position" style="background-image: url(images/aboutus.jpg);"></div>
         </div>
       </section>
       <!-- Why choose us-->
       <section class="section section-sm section-first bg-default text-md-left">
         <div class="container">
           <div class="row row-50 justify-content-center align-items-xl-center">
-            <div class="col-md-10 col-lg-5 col-xl-6"><img src="images/about-1-519x564.jpg" alt="" width="519" height="564"/>
+            <div class="col-md-10 col-lg-5 col-xl-6"><img src="images/questionmark.jpg" alt="" width="519" height="564"/>
             </div>
             <div class="col-md-10 col-lg-7 col-xl-6">
               <h1 class="text-spacing-25 font-weight-normal title-opacity-9">Why choose us</h1>
@@ -115,13 +115,13 @@ require_once "./components/navbar.php";
           <div class="owl-item">
             <!-- Thumbnail Classic-->
             <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-11-420x308.jpg" alt="" width="420" height="308"/>
+              <div class="thumbnail-mary-figure"><img src="images/france.jpg" alt="" width="420" height="308"/>
               </div>
               <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-11-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-11-420x308.jpg" alt="" width="420" height="308"/></a>
               </div>
             </article>
             <div class="thumbnail-mary-description">
-              <h5 class="thumbnail-mary-project"><a href="#">France</a></h5><span class="thumbnail-mary-decor"></span>
+              <h5 class="thumbnail-mary-project"><a href="#">The Barat</a></h5><span class="thumbnail-mary-decor"></span>
               <h5 class="thumbnail-mary-time">
               </h5>
             </div>
@@ -129,13 +129,13 @@ require_once "./components/navbar.php";
           <div class="owl-item">
             <!-- Thumbnail Classic-->
             <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-12-420x308.jpg" alt="" width="420" height="308"/>
+              <div class="thumbnail-mary-figure"><img src="images/pulau2.jpg" alt="" width="420" height="308"/>
               </div>
               <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-12-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-12-420x308.jpg" alt="" width="420" height="308"/></a>
               </div>
             </article>
             <div class="thumbnail-mary-description">
-              <h5 class="thumbnail-mary-project"><a href="#">Italy</a></h5><span class="thumbnail-mary-decor"></span>
+              <h5 class="thumbnail-mary-project"><a href="#">Pulau Lakei</a></h5><span class="thumbnail-mary-decor"></span>
               <h5 class="thumbnail-mary-time">
               </h5>
             </div>
@@ -143,13 +143,13 @@ require_once "./components/navbar.php";
           <div class="owl-item">
             <!-- Thumbnail Classic-->
             <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-13-420x308.jpg" alt="" width="420" height="308"/>
+              <div class="thumbnail-mary-figure"><img src="images/pulau3.jpg" alt="" width="420" height="308"/>
               </div>
               <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-13-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-13-420x308.jpg" alt="" width="420" height="308"/></a>
               </div>
             </article>
             <div class="thumbnail-mary-description">
-              <h5 class="thumbnail-mary-project"><a href="#">Egypt</a></h5><span class="thumbnail-mary-decor"></span>
+              <h5 class="thumbnail-mary-project"><a href="#">Perhentian</a></h5><span class="thumbnail-mary-decor"></span>
               <h5 class="thumbnail-mary-time">
               </h5>
             </div>
@@ -206,31 +206,31 @@ require_once "./components/navbar.php";
           <div class="owl-carousel owl-modern" data-items="1" data-stage-padding="15" data-margin="30" data-dots="true" data-animation-in="fadeIn" data-animation-out="fadeOut" data-autoplay="true">
             <!-- Quote Lisa-->
             <article class="quote-lisa">
-              <div class="quote-lisa-body"><a class="quote-lisa-figure" href="#"><img class="img-circles" src="images/user-16-100x100.jpg" alt="" width="100" height="100"/></a>
+              <div class="quote-lisa-body"><a class="quote-lisa-figure" href="#"><img class="img-circles" src="images/connor.jpg" alt="" width="100" height="100"/></a>
                 <div class="quote-lisa-text">
                   <p class="q">Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum. Diam phasellus vestibulum lorem sed risus ultricies. Aenean et tortor at risus viverra adipiscing. Aliquet enim tortor at auctor urna. Tortor aliquam nulla facilisi cras fermentum. Malesuada pellentesque elit eget gravida cum sociis natoque.</p>
                 </div>
-                <h5 class="quote-lisa-cite"><a href="#">Catherine Williams</a></h5>
+                <h5 class="quote-lisa-cite"><a href="#">Connor williams</a></h5>
                 <p class="quote-lisa-status">Regular Client</p>
               </div>
             </article>
             <!-- Quote Lisa-->
             <article class="quote-lisa">
-              <div class="quote-lisa-body"><a class="quote-lisa-figure" href="#"><img class="img-circles" src="images/user-17-100x100.jpg" alt="" width="100" height="100"/></a>
+              <div class="quote-lisa-body"><a class="quote-lisa-figure" href="#"><img class="img-circles" src="images/kratos.jpg" alt="" width="100" height="100"/></a>
                 <div class="quote-lisa-text">
                   <p class="q">Sodales ut etiam sit amet nisl purus. Maecenas accumsan lacus vel facilisis volutpat est. Suscipit adipiscing bibendum est ultricies integer quis auctor. Viverra aliquet eget sit amet tellus cras adipiscing. Posuere ac ut consequat semper viverra nam libero justo laoreet. Iaculis eu non diam phasellus vestibulum lorem sed risus ultricies.</p>
                 </div>
-                <h5 class="quote-lisa-cite"><a href="#">Rupert Wood</a></h5>
+                <h5 class="quote-lisa-cite"><a href="#">Sir Kratos</a></h5>
                 <p class="quote-lisa-status">Regular Client</p>
               </div>
             </article>
             <!-- Quote Lisa-->
             <article class="quote-lisa">
-              <div class="quote-lisa-body"><a class="quote-lisa-figure" href="#"><img class="img-circles" src="images/user-18-100x100.jpg" alt="" width="100" height="100"/></a>
+              <div class="quote-lisa-body"><a class="quote-lisa-figure" href="#"><img class="img-circles" src="images/samuel.jpg" alt="" width="100" height="100"/></a>
                 <div class="quote-lisa-text">
                   <p class="q">Lacus vestibulum sed arcu non odio euismod lacinia. Pellentesque elit ullamcorper dignissim cras. Ultrices eros in cursus turpis massa tincidunt dui. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Commodo odio aenean sed adipiscing diam. Sed euismod nisi porta lorem mollis aliquam.</p>
                 </div>
-                <h5 class="quote-lisa-cite"><a href="#">Samantha Brown</a></h5>
+                <h5 class="quote-lisa-cite"><a href="#">Samuel Brown</a></h5>
                 <p class="quote-lisa-status">Regular Client</p>
               </div>
             </article>
@@ -240,7 +240,7 @@ require_once "./components/navbar.php";
       <!--Counters-->
       <!-- Counter Classic-->
       <section class="section section-fluid bg-default">
-        <div class="parallax-container" data-parallax-img="images/bg-counter-2.jpg">
+        <div class="parallax-container" data-parallax-img="images/lookcliff.png">
           <div class="parallax-content section-xl context-dark bg-overlay-26">
             <div class="container">
               <div class="row row-50 justify-content-center border-classic">
