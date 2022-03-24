@@ -1,7 +1,7 @@
 <?php
 session_start();
 // Redirect to staff_dashboard.php page if already logged in to Staff Account
-if (isset($_SESSION["staff"]["satffID"])) {
+if (isset($_SESSION["staff"]["staffID"])) {
     header("Location: staff_dashboard.php");
     exit();
 }

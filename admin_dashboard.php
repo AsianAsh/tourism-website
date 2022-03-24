@@ -55,7 +55,7 @@ if (!isset($_SESSION["admin"]["adminID"])) {
             </a>
             </li>
             <li>
-            <a href="#">
+            <a href="./includes/logout.inc.php">
                 <i class='bx bx-log-out' ></i>
                 <span class="links_name">Log Out</span>
             </a>

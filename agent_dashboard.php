@@ -9,7 +9,7 @@ if (!isset($_SESSION["agent"]["agentID"])) {
     // Get array of tours created by the travel agent ($agentTours)
     $agentID = $_SESSION["agent"]["agentID"];
     $agentTours = [];
-    $sql = "SELECT * FROM tour_packages WHERE agent_id = ?;";
+    $sql = "SELECT * FROM tour_packages WHERE agent_id = ? ORDER BY tour_id DESC;";
     $stmt = $connection->prepare($sql);
     $stmt->bind_param("i", $agentID);
     $stmt->execute();
@@ -28,7 +28,6 @@ require_once "./components/header+offcanvas.php";
 ?>
 
 <!DOCTYPE html>
-
 <html lang="en" dir="ltr">
     <head>
         <meta charset="UTF-8">
@@ -61,12 +60,12 @@ require_once "./components/header+offcanvas.php";
                     <span class="links_name">Create Tour Package</span>
                 </a>
             </li>
-            <li>
+            <!-- <li>
                 <a href="#">
                     <i class='bx bx-book-alt' ></i>
                     <span class="links_name">Created Tour history</span>
                 </a>
-            </li>
+            </li> -->
             <li>
                 <a href="#">
                     <i class='bx bx-user' ></i>
@@ -85,19 +84,19 @@ require_once "./components/header+offcanvas.php";
 
     <section class="home-section">
         <nav>
-        <div class="sidebar-button">
-            <i class='bx bx-menu sidebarBtn'></i>
-            <span class="dashboard">Welcome Travel Agent </span> 
-        </div>
-        
+            <div class="sidebar-button">
+                <i class='bx bx-menu sidebarBtn'></i>
+                <span class="dashboard">Welcome Travel Agent </span> 
+            </div>
         </nav>
 
         <div class="home-content">
             <div class="overview-boxes">
                 <h3 class="my-3">Manage Your Tours</h3>
-                <table class="table table-striped">
+                <table class="table table-responsive table-striped">
                     <thead>
                     <tr>
+                        <th scope="col">ID</th>
                         <th scope="col">Tour Name</th>
                         <th scope="col">Price (per person)</th>
                         <th scope="col">Location</th>
@@ -108,6 +107,7 @@ require_once "./components/header+offcanvas.php";
                     <tbody>
                     <?php foreach ($agentTours as $tour) : ?>
                         <tr class="align-middle">
+                            <td><?php echo $tour["tour_id"]?></td>
                             <td><?php echo $tour["name"]?></td>
                             <td>RM<?php echo $tour["price"]?></td>
                             <td><?php echo $tour["location"]?></td>
@@ -123,7 +123,7 @@ require_once "./components/header+offcanvas.php";
                     <?php endforeach; ?>
                     </tbody>
                 </table>   
-            </div>
+            
             
             <!-- <div class="overview-boxes">
                 <div class="box">
@@ -158,12 +158,13 @@ require_once "./components/header+offcanvas.php";
                     <img src="images/article3" alt="" width="100%" height="100%">
                 </div>
             </div> -->
+            </div>
         </div>
     </section>
         
             
     <!-- for sidebar interaction -->
-    <script>
+<script>
     let sidebar = document.querySelector(".sidebar");
     let sidebarBtn = document.querySelector(".sidebarBtn");
     sidebarBtn.onclick = function() {
@@ -173,6 +174,6 @@ require_once "./components/header+offcanvas.php";
     }else
     sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
     }
-    </script>
+</script>
 
 <?php require_once "./components/scripts.php"; ?>

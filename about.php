@@ -246,28 +246,28 @@ require_once "./components/navbar.php";
               <div class="row row-50 justify-content-center border-classic">
                 <div class="col-sm-6 col-md-5 col-lg-3">
                   <div class="counter-classic">
-                    <div class="counter-classic-number"><span class="counter">11</span>
+                    <div class="counter-classic-number"><span class="counter">2</span>
                     </div>
                     <h5 class="counter-classic-title">Awards</h5>
                   </div>
                 </div>
                 <div class="col-sm-6 col-md-5 col-lg-3">
                   <div class="counter-classic">
-                    <div class="counter-classic-number"><span class="counter">194</span>
+                    <div class="counter-classic-number"><span class="counter">12</span><span class="symbol">+</span>
                     </div>
                     <h5 class="counter-classic-title">Tours</h5>
                   </div>
                 </div>
                 <div class="col-sm-6 col-md-5 col-lg-3">
                   <div class="counter-classic">
-                    <div class="counter-classic-number"><span class="counter">2</span><span class="symbol">k</span>
+                    <div class="counter-classic-number"><span class="counter">1</span><span class="symbol">k</span>
                     </div>
                     <h5 class="counter-classic-title">Travelers</h5>
                   </div>
                 </div>
                 <div class="col-sm-6 col-md-5 col-lg-3">
                   <div class="counter-classic">
-                    <div class="counter-classic-number"><span class="counter">25</span>
+                    <div class="counter-classic-number"><span class="counter">5</span>
                     </div>
                     <h5 class="counter-classic-title">Team members</h5>
                   </div>

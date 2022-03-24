@@ -39,7 +39,7 @@ if (!isset($_SESSION["agent"]["agentID"]) && !isset($_SESSION["staff"]["staffID"
         <!-- Description Field -->
         <div class="col-md-12">
             <label for="editDescription" class="input-label">Description</label>
-            <textarea class="form-control" id="editDescription" rows="10" name="description"><?php echo $tourDetails["description"];?></textarea>
+            <textarea class="form-control" id="editDescription" rows="15" name="description"><?php echo $tourDetails["description"];?></textarea>
         </div>       
         <!-- Trip Duration Field -->
         <div class="col-md-6">

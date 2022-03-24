@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "../helpers/helpers.php";
+// require_once "../helpers/helpers.php";
 require_once "../connection/db.php";
 
 if (isset($_POST["createTour"])){
