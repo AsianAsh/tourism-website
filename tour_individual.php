@@ -67,6 +67,7 @@ require_once "./components/navbar.php";
         </div>
       </section>
 <!--Description-->
+<!-- echo nl2br(str_replace('[NEWLINE]', "\n", $tour['description'])); -->
 <section class="section section-sm bg-default">
         <div class="container border border-light">
           <h5 class="oh-desktop"><span class="d-inline-block wow slideInDown">Description</span></h5>
