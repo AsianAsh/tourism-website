@@ -157,13 +157,13 @@ require_once "./components/navbar.php";
           <div class="owl-item">
             <!-- Thumbnail Classic-->
             <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-14-420x308.jpg" alt="" width="420" height="308"/>
+              <div class="thumbnail-mary-figure"><img src="images/Stadthuys.jpeg" alt="" width="420" height="308"/>
               </div>
               <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-14-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-14-420x308.jpg" alt="" width="420" height="308"/></a>
               </div>
             </article>
             <div class="thumbnail-mary-description">
-              <h5 class="thumbnail-mary-project"><a href="#">Dubai</a></h5><span class="thumbnail-mary-decor"></span>
+              <h5 class="thumbnail-mary-project"><a href="#">Stadthuys</a></h5><span class="thumbnail-mary-decor"></span>
               <h5 class="thumbnail-mary-time">
               </h5>
             </div>
@@ -171,13 +171,13 @@ require_once "./components/navbar.php";
           <div class="owl-item">
             <!-- Thumbnail Classic-->
             <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-15-420x308.jpg" alt="" width="420" height="308"/>
+              <div class="thumbnail-mary-figure"><img src="images/Batu-Caves.jpeg" alt="" width="420" height="308"/>
               </div>
               <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-15-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-15-420x308.jpg" alt="" width="420" height="308"/></a>
               </div>
             </article>
             <div class="thumbnail-mary-description">
-              <h5 class="thumbnail-mary-project"><a href="#">Spain</a></h5><span class="thumbnail-mary-decor"></span>
+              <h5 class="thumbnail-mary-project"><a href="#">Batu Caves</a></h5><span class="thumbnail-mary-decor"></span>
               <h5 class="thumbnail-mary-time">
               </h5>
             </div>
@@ -185,13 +185,13 @@ require_once "./components/navbar.php";
           <div class="owl-item">
             <!-- Thumbnail Classic-->
             <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-16-420x308.jpg" alt="" width="420" height="308"/>
+              <div class="thumbnail-mary-figure"><img src="images/Cameron-Highlands.jpeg" alt="" width="420" height="308"/>
               </div>
               <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-16-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-16-420x308.jpg" alt="" width="420" height="308"/></a>
               </div>
             </article>
             <div class="thumbnail-mary-description">
-              <h5 class="thumbnail-mary-project"><a href="#">Africa</a></h5><span class="thumbnail-mary-decor"></span>
+              <h5 class="thumbnail-mary-project"><a href="#">Cameron Highlands</a></h5><span class="thumbnail-mary-decor"></span>
               <h5 class="thumbnail-mary-time">
               </h5>
             </div>

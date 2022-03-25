@@ -5,86 +5,167 @@ require_once "./components/navbar.php";
 
 
 
-<section class="section section-sm bg-default">
+<!--Tour Display and Gallery-->
+<section class="section section-sm section-fluid bg-default">
         <div class="container">
-          <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">Tour Name</span></h3>
-          <div class="row row-sm row-40 row-md-50">
-            <div class="col-sm-6 col-md-12 wow fadeInRight">
-            <!--Owl Carousel-->
-            <div class="owl-carousel owl-classic owl-dots-secondary" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-xl-items="5" data-xxl-items="6" data-stage-padding="15" data-xxl-stage-padding="0" data-margin="30" data-autoplay="true" data-nav="true" data-dots="true">
+          <h3>/Tour Name/</h3>
+        </div>
+        <!-- Owl Carousel-->
+        <div class="owl-carousel owl-classic owl-timeline" data-items="1" data-md-items="2" data-lg-items="3" data-xl-items="4" data-margin="30" data-autoplay="false" data-nav="true" data-dots="true">
+          <div class="owl-item">
             <!-- Thumbnail Classic-->
             <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-1-270x195.jpg" alt="" width="270" height="195"/>
+              <div class="thumbnail-mary-figure"><img src="images/france.jpg" alt="" width="420" height="308"/>
               </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-1-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-1-270x195.jpg" alt="" width="270" height="195"/></a>
+              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-11-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-11-420x308.jpg" alt="" width="420" height="308"/></a>
               </div>
             </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-2-270x195.jpg" alt="" width="270" height="195"/>
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-2-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-2-270x195.jpg" alt="" width="270" height="195"/></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-3-270x195.jpg" alt="" width="270" height="195"/>
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-3-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-3-270x195.jpg" alt="" width="270" height="195"/></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-4-270x195.jpg" alt="" width="270" height="195"/>
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-4-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-4-270x195.jpg" alt="" width="270" height="195"/></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-5-270x195.jpg" alt="" width="270" height="195"/>
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-5-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-5-270x195.jpg" alt="" width="270" height="195"/></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-6-270x195.jpg" alt="" width="270" height="195"/>
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-6-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-6-270x195.jpg" alt="" width="270" height="195"/></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="images/gallery-image-7-270x195.jpg" alt="" width="270" height="195"/>
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-7-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-7-270x195.jpg" alt="" width="270" height="195"/></a>
-              </div>
-            </article>  
           </div>
-            </div>
+          <div class="owl-item">
+            <!-- Thumbnail Classic-->
+            <article class="thumbnail thumbnail-mary">
+              <div class="thumbnail-mary-figure"><img src="images/pulau2.jpg" alt="" width="420" height="308"/>
+              </div>
+              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-12-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-12-420x308.jpg" alt="" width="420" height="308"/></a>
+              </div>
+            </article>
+          </div>
+          <div class="owl-item">
+            <!-- Thumbnail Classic-->
+            <article class="thumbnail thumbnail-mary">
+              <div class="thumbnail-mary-figure"><img src="images/pulau3.jpg" alt="" width="420" height="308"/>
+              </div>
+              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-13-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-13-420x308.jpg" alt="" width="420" height="308"/></a>
+              </div>
+            </article>
+          </div>
+          <div class="owl-item">
+            <!-- Thumbnail Classic-->
+            <article class="thumbnail thumbnail-mary">
+              <div class="thumbnail-mary-figure"><img src="images/Stadthuys.jpeg" alt="" width="420" height="308"/>
+              </div>
+              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="images/gallery-image-14-1200x800-original.jpg" data-lightgallery="item"><img src="images/gallery-image-14-420x308.jpg" alt="" width="420" height="308"/></a>
+              </div>
+            </article>
           </div>
         </div>
       </section>
-<!--Description-->
+<!--Navbar for Tour Info, Description and Reviews-->
 <!-- echo nl2br(str_replace('[NEWLINE]', "\n", $tour['description'])); -->
-<section class="section section-sm bg-default">
-        <div class="container border border-light">
-          <h5 class="oh-desktop"><span class="d-inline-block wow slideInDown">Description</span></h5>
-          <p>Aliquam malesuada bibendum arcu vitae elementum curabitur. A erat nam at lectus urna duis convallis convallis tellus. Sit amet consectetur adipiscing elit pellentesque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo sapiente voluptate repellat cum nisi recusandae molestias asperiores. Accusamus provident quae repellendus natus minima nam et iste vel? Animi, deleniti labore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, sed eligendi beatae nam voluptatem perspiciatis sit pariatur ad quod, exercitationem fuga dignissimos dolores, earum nulla velit rem voluptates blanditiis reprehenderit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat optio facere magni possimus libero sapiente quae quaerat similique dolorem delectus reprehenderit nisi deserunt voluptates suscipit odio, reiciendis esse, sit odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sit possimus perferendis. Natus pariatur id sed nemo deleniti fugit, libero corporis voluptates provident nesciunt quaerat tempore quae officiis nam soluta.</p>
-        </div>
-</section>
+ <section class="container mt-5">
+        <nav class="specific-tabs-section">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class=" nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Info</button>
+                <button class=" nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Description</button>
+                <button class=" nav-link" id="nav-review-tab" data-bs-toggle="tab" data-bs-target="#nav-review" type="button" role="tab" aria-controls="nav-review" aria-selected="false">Review</button>
+                <button class=" nav-link" id="nav-booknow-tab" data-bs-toggle="tab" data-bs-target="#nav-booknow" type="button" role="tab" aria-controls="nav-booknow" aria-selected="false">Book Now</button>
+            </div>
+        </nav>
+        <div class="tab-content mt-3" id="nav-tabContent">
+            <!-- Info Tab Content-->
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+              <div class="specific-item-info">
+                <div>
+                  <p class="specific-item-property fw-bold">Tour Details</p>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+            <!-- End of Info Tab Content -->
 
-<!--Booking Function-->
-<section class="section section-sm bg-default">
-  <div class="container pt-3 border border-light">
-    <div class="pt-3"><h6>Check in: </h6><input type="date"></div>
-    <div class="pt-3"><h6>Adults: </h6><input type="number" name="Quantity" id="Quantity" value="1" min="1" max="99" style="height: 30px;"></div>
-    <div class="pt-3"><h6>Children: </h6><input type="number" name="Quantity" id="Quantity" value="1" min="1" max="99" style="height: 30px;"></div>
-  </div>
-  <div class="container pt-4"><button type="button" class="btn btn-primary">Book Now</button></div>
-</section>
+            <!-- Description Tab Content -->
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsa fugit dignissimos rerum maiores, quia ut aliquid, minus ex eius facilis illum itaque assumenda vel, nemo eos? Enim, quos facere.</p>
+            </div>
+            <!-- End of Description Tab Content -->
+            
+            <!-- Review Tab Content-->
+                <div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
+                    <div class="">
+                        <div class="review-inner-section">
+                            <div class="review-header-section">
+                                <div class="ratings align-self-start">
+                                    <h3>Ratings</h3>
+                                    <!-- 5 Star Icons & Total 5 Star Ratings-->
+                                    <div class="mb-2">
+                                        <img src="./svg/star-fill.svg" alt="">
+                                        <img src="./svg/star-fill.svg" alt="">
+                                        <img src="./svg/star-fill.svg" alt="">
+                                        <img src="./svg/star-fill.svg" alt="">
+                                        <img src="./svg/star-fill.svg" alt="">
+                                        <span class="ms-2">(0)</span>
+                                    </div>
+                                    <!-- End of 5 Star Icons & Total 5 Star Ratings-->
+                                    
+                                    <!-- 4 Star Icons & Total 4 Star Ratings-->
+                                    <div class="mb-2">
+                                        <img src="./svg/star-fill.svg" alt="">
+                                        <img src="./svg/star-fill.svg" alt="">
+                                        <img src="./svg/star-fill.svg" alt="">
+                                        <img src="./svg/star-fill.svg" alt="">
+                                        <img src="./svg/star-fill-white.svg" alt="">
+                                        <span class="ms-2">(0)</span>
+                                    </div>
+                                    <!-- End of 4 Star Icons & Total 4 Star Ratings-->
 
+                                    <!-- 3 Star Icons & Total 3 Star Ratings-->
+                                    <div class="mb-2">
+                                        <img src="./svg/star-fill.svg" alt="">
+                                        <img src="./svg/star-fill.svg" alt="">
+                                        <img src="./svg/star-fill.svg" alt="">
+                                        <img src="./svg/star-fill-white.svg" alt="">
+                                        <img src="./svg/star-fill-white.svg" alt="">
+                                        <span class="ms-2">(0)</span>
+                                    </div>
+                                    <!-- End of 3 Star Icons & Total 3 Star Ratings-->
+
+                                    <!-- 2 Star Icons & Total 2 Star Ratings-->
+                                    <div class="mb-2">
+                                        <img src="./svg/star-fill.svg" alt="">
+                                        <img src="./svg/star-fill.svg" alt="">
+                                        <img src="./svg/star-fill-white.svg" alt="">
+                                        <img src="./svg/star-fill-white.svg" alt="">
+                                        <img src="./svg/star-fill-white.svg" alt="">
+                                        <span class="ms-2">(0)</span>
+                                    </div>
+                                    <!-- End of 2 Star Icons & Total 2 Star Ratings-->
+
+                                    <!-- 1 Star Icons & Total 1 Star Ratings-->
+                                    <div class="mb-2">
+                                        <img src="./svg/star-fill.svg" alt="">
+                                        <img src="./svg/star-fill-white.svg" alt="">
+                                        <img src="./svg/star-fill-white.svg" alt="">
+                                        <img src="./svg/star-fill-white.svg" alt="">
+                                        <img src="./svg/star-fill-white.svg" alt="">
+                                        <span class="ms-2">(0)</span>
+                                    </div>
+                                    <!-- End of 1 Star Icons & Total 1 Star Ratings-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                            
+            <!-- End of Review Tab Content-->
+
+            <!--Book Now Tab Content-->
+            <div class="tab-pane fade" id="nav-booknow" role="tabpanel" aria-labelledby="nav-booknow-tab">
+              <div class="pt-3">
+                <h6>Check in: </h6><input type="date">
+              </div>
+              <div class="pt-3">
+                <h6>Adults: </h6><input type="number" name="Quantity" id="Quantity" value="1" min="1" max="99" style="height: 30px;">
+              </div>
+              <div class="pt-3">
+                <h6>Children: </h6><input type="number" name="Quantity" id="Quantity" value="1" min="1" max="99" style="height: 30px;">
+              </div>
+              <div class="container pt-4">
+                <button type="button" class="btn btn-primary">Book Now</button></div>
+              </div>
+            </div>
+
+    <!-- End of Nav and Tab for Info, Description, Review -->
 <!--More Tours-->
 <section class="section section-sm bg-default">
         <div class="container">
@@ -131,53 +212,7 @@ require_once "./components/navbar.php";
         </div>
 </section>
 
-<section class="section section-sm">
-        <div class="container">
-          <h3>Reviews</h3>
-          <h6 class="pt-2">Here's what our customers have to say about their experience!</h6>
-          <div class="row row-30">
-            <div class="col-sm-6 col-lg-4">
-              <article class="box-icon-classic">
-                <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                  <div class="unit-left">
-                    <div class="box-icon-classic-icon fl-bigmug-line-equalization3"></div>
-                  </div>
-                  <div class="unit-body">
-                    <h5 class="box-icon-classic-title">AshChar02</h5>
-                    <p class="box-icon-classic-text">Great place to visit. Love the historical landmarks there!</p>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <article class="box-icon-classic">
-                <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                  <div class="unit-left">
-                    <div class="box-icon-classic-icon fl-bigmug-line-circular220"></div>
-                  </div>
-                  <div class="unit-body">
-                    <h5 class="box-icon-classic-title">JohnSmith_TourLover</h5>
-                    <p class="box-icon-classic-text">Absolutely banging experience. My family and I had tons of fun on our tour.</p>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-sm-6 col-lg-4">
-              <article class="box-icon-classic">
-                <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                  <div class="unit-left">
-                    <div class="box-icon-classic-icon fl-bigmug-line-favourites5"></div>
-                  </div>
-                  <div class="unit-body">
-                    <h5 class="box-icon-classic-title">Mano</h5>
-                    <p class="box-icon-classic-text">I'd 100% recommend this tour to my family and friends!</p>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
 
 <?php require_once "./components/footer.php"; ?>
