@@ -8,9 +8,18 @@ if (!isset($_SESSION["admin"]["adminID"])) {
     exit();
 }
 ?>
+<!-- styling for back button -->
+<style>
+    .back{
+        text-align: center;
+        padding-top:10px;
+    }
+    .back:hover{
+        text-decoration:underline;
+    }
+</style>
 
 <div style="max-width: 35%;" class="container my-5 px-5 py-5 bg-none border shadow">
-    <a href="admin_dashboard.php" class="btn-back" >Go back</a>
     <h3 class="text-center">Create Staff Account</h3>
     <form class="row mt-3 g-4" id="register-form" action="./includes/register_staff.inc.php" method="POST" novalidate> <!-- novalidate stops Google's own browser validation of Form Submissions-->
         <div class="col-md-12">
@@ -110,6 +119,9 @@ if (!isset($_SESSION["admin"]["adminID"])) {
 
         <div class="col-12 text-center mt-2">
             <button type="submit" class="btn btn-primary" name="create-staff">Create Account</button>
+        </div>
+        <div class="back">
+            <a href="admin.php">Go back</a>
         </div>
     </form>
     

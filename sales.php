@@ -37,15 +37,18 @@ if (!isset($_SESSION["admin"]["adminID"])) {
     <title></title>
 </head>
 <style>
-
     .my-4{
         padding-left:7px
     }
-
     .back{
         width:45px;
         height:45px;
         /* padding:10px */
+    }
+    .back:hover{
+        width:48px;
+        height:48px;
+        transition: all 0.5s ease;
     }
 </style>
 <body>
@@ -85,14 +88,6 @@ if (!isset($_SESSION["admin"]["adminID"])) {
     
 </body>
 </html>
-
-
-
-
-
-
-
-
 
 
 <?php require_once "./components/scripts.php"; ?>
