@@ -11,9 +11,9 @@ require_once "./connection/db.php";
 require_once "./components/header+offcanvas.php";
 ?>
 
-<div class="container my-5 px-5">
-    <h1 class = "text-center mb-5 title-heading">Create New Tour Package</h1>
-    <form action="./includes/create_tours.inc.php" class = "row g-3" method="POST">
+<div class="container my-2 px-5">
+    <h2 class = "text-center title-heading">Create New Tour Package</h2>
+    <form action="./includes/create_tours.inc.php" enctype="multipart/form-data" class="row g-3" method="POST">
         <!-- Tour Name Field -->
         <div class="col-md-8">
             <label for="inputTourName" class="input-label">Name</label>
@@ -50,16 +50,39 @@ require_once "./components/header+offcanvas.php";
                 }
             ?> 
         </div>
-        
         <!-- Trip Duration Field -->
-        <div class="col-md-6">
-            <label for="inputTripDuration" class="input-label">Trip Duration(Days & Nights)</label>
+        <div class="col-md-2">
+            <label for="inputTripDuration" class="input-label">Duration(Days & Nights)</label>
             <?php
                 if(isset($_GET["duration"])){
                     $duration = $_GET["duration"];
                     echo '<input type="text" class="form-control" id="inputTripDuration" placeholder="2D1N" name="tripDuration" value="'.$duration.'">';
                 } else{
                     echo '<input type="text" class="form-control" id="inputTripDuration" placeholder="2D1N" name="tripDuration">';
+                }
+            ?> 
+        </div>
+        <!-- Min Pax Field -->
+        <div class="col-md-2">
+            <label for="minPax" class="input-label">Min Pax</label>
+            <?php
+                if(isset($_GET["min"])){
+                    $min = $_GET["min"];
+                    echo '<input type="number" min ="1" max="1000" class="form-control" id="minPax" placeholder="Minimum Pax" name="minPax" value="'.$min.'">';
+                } else{
+                    echo '<input type="number" min ="1" max="1000" class="form-control" id="minPax" placeholder="Minimum Pax" name="minPax">';
+                }
+            ?> 
+        </div>
+        <!-- Max Pax Field -->
+        <div class="col-md-2">
+            <label for="maxPax" class="input-label">Max Pax</label>
+            <?php
+                if(isset($_GET["max"])){
+                    $max = $_GET["max"];
+                    echo '<input type="number" min="1" max="1000" class="form-control" id="maxPax" placeholder="Maximum Pax" name="maxPax" value="'.$max.'">';
+                } else{
+                    echo '<input type="number" min="1" max="1000" class="form-control" id="maxPax" placeholder="Maximum Pax" name="maxPax">';
                 }
             ?> 
         </div>
@@ -74,30 +97,6 @@ require_once "./components/header+offcanvas.php";
                     echo '<input type="text" class="form-control" id="inputLocation" placeholder="Location" name="location">';
                 }
             ?>            
-        </div>
-        <!-- Min Pax Field -->
-        <div class="col-md-3">
-            <label for="minPax" class="input-label">Min Pax</label>
-            <?php
-                if(isset($_GET["min"])){
-                    $min = $_GET["min"];
-                    echo '<input type="number" min ="1" max="1000" class="form-control" id="minPax" placeholder="Minimum Pax" name="minPax" value="'.$min.'">';
-                } else{
-                    echo '<input type="number" min ="1" max="1000" class="form-control" id="minPax" placeholder="Minimum Pax" name="minPax">';
-                }
-            ?> 
-        </div>
-        <!-- Max Pax Field -->
-        <div class="col-md-3">
-            <label for="maxPax" class="input-label">Max Pax</label>
-            <?php
-                if(isset($_GET["max"])){
-                    $max = $_GET["max"];
-                    echo '<input type="number" min="1" max="1000" class="form-control" id="maxPax" placeholder="Maximum Pax" name="maxPax" value="'.$max.'">';
-                } else{
-                    echo '<input type="number" min="1" max="1000" class="form-control" id="maxPax" placeholder="Maximum Pax" name="maxPax">';
-                }
-            ?> 
         </div>
         <!-- Tour Start Time Field-->
         <div class="col-md-2">
@@ -123,6 +122,13 @@ require_once "./components/header+offcanvas.php";
                 }
             ?> 
         </div>
+        
+        <!-- Upload Main Image for Tour -->
+        <div class="col-md-8">
+            <label for="inputMainImage" class="mt-1 input-label">Main Tour Image:</label>
+            <input type="file" class="fileInput" id="inputMainImage" name="uploadMainImage" value="" accept="image/png, image/jpg, image/jpeg">
+        </div>
+
         <!-- Create Tour Button -->
         <button class="btn btn-primary" type="submit" name="createTour">Create Tour</button>
     </form>
@@ -141,6 +147,18 @@ require_once "./components/header+offcanvas.php";
                 exit();
             } elseif($creationCheck == "pax"){
                 echo "<p class='mt-2 text-danger text-center mb-0 ps-1 d-block'>Minimum pax cannot be more than maximum pax.</p>";
+                exit();
+            } elseif($creationCheck == "pax"){
+                echo "<p class='mt-2 text-danger text-center mb-0 ps-1 d-block'>Minimum pax cannot be more than maximum pax.</p>";
+                exit();
+            } elseif($creationCheck == "filetype"){
+                echo "<p class='mt-2 text-danger text-center mb-0 ps-1 d-block'>Image must be jpg, jpeg, or png file.</p>";
+                exit();
+            } elseif($creationCheck == "fileerror"){
+                echo "<p class='mt-2 text-danger text-center mb-0 ps-1 d-block'>There was an error with the file chosen.</p>";
+                exit();
+            } elseif($creationCheck == "filesize"){
+                echo "<p class='mt-2 text-danger text-center mb-0 ps-1 d-block'>File size of image is too big.</p>";
                 exit();
             } elseif($creationCheck == "success"){
                 echo "<p class='mt-2 text-success text-center mb-0 ps-1 d-block'>Tour Package Creation Successful!</p>";

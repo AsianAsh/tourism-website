@@ -11,7 +11,7 @@ require_once "./connection/db.php";
 // }
 // $sortBy = ""; 
 $tours = [];
-$sql = "SELECT * FROM tour_packages WHERE status = 1;"; // Change this to include images/Add image_type column to table 
+$sql = "SELECT t.*, i.* FROM tour_packages t LEFT JOIN trip_images i ON  t.tour_id = i.tour_id WHERE t.status = 1;"; // Change this to include images/Add image_type column to table 
 // Append ORDER BY Clause in SQL to sort the tours based on filter set by customer
 // switch ($filter) {
 // 	case "priceHigh":
@@ -119,7 +119,14 @@ require_once "./components/navbar.php";
 				<article class="product-big">
 					<div class="unit flex-column flex-md-row align-items-md-stretch">
 						<div class="unit-left">
-							<a class="product-big-figure img-fluid" href="#"><img src="images/Melaka-index.jpeg" alt="" width="600" height="366"/></a>
+							<a class="product-big-figure img-fluid" href="#">
+								<img src=
+								<?php if(!isset($tour["image"])){
+									echo "images/Melaka-index.jpeg";
+								} else{
+									$image = base64_encode($tour["image"]);
+									echo "'data:image/jpg;charset=utf8;base64, $image'"; //$image is a longblob(bunch of random symbols) so this converts it to image
+								}?> alt="" width="600" height="366"/></a>
 							<!-- <a class="product-big-figure img-fluid" href="#"><img src="<?php //echo "$tour[imagePath]"; ?>" alt="" width="600" height="366"/></a> -->
 						</div>
 						<div class="unit-body">
