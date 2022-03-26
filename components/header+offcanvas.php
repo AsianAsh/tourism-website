@@ -1,5 +1,6 @@
 <?php    
 require_once "./connection/db.php";
+require_once "./helpers/helpers.php";
 if (!isset($loginErrorArray)){
     $loginErrorArray = [];
 }

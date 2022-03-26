@@ -70,7 +70,7 @@ require_once "./components/navbar.php";
 									</div>
 									<a class="product-big-reviews" href="#">4.7/5 (235 customer reviews)</a>
 								</div>
-								<p class="product-big-text">Malacca is one of the most popular tourist destinations within Malaysia. Enjoy an exciting experience at A 'Famosa Malacca when you visit the famous theme...</p><a class="button button-black-outline button-ujarak" href="#">Buy This Tour</a>
+								<p class="product-big-text">Malacca is one of the most popular tourist destinations within Malaysia. Enjoy an exciting experience at A 'Famosa Malacca when you visit the famous theme...</p><a class="button button-black-outline button-ujarak" href="payment.php">Buy This Tour</a>
 								<div class="product-big-price-wrap">
 									<span class="product-big-price">RM500</span>
 								</div>
@@ -110,7 +110,7 @@ require_once "./components/navbar.php";
 				</article>
 			</div>
 
-			<p>Loop for All Available Tours start here (The proper images aren't displayed yet)</p>
+			<p>Loop for All Available Tours start here (The proper images aren't displayed yet</p>
 			<!-- Foreach Loop to Display all Available Tours one by one -->
 			<?php foreach ($tours as $tour) : ?>
 				<?php //echo $key ?>
@@ -144,7 +144,7 @@ require_once "./components/navbar.php";
 								</div>
 								<?php $description = str_replace('[NEWLINE]', "\n", $tour['description']) ?>
 								<?php $description = strlen($description) > 180 ? substr($description,0,180)."..." : $description; ?>
-								<p class="product-big-text"><?php echo $description; ?></p><a class="button button-black-outline button-ujarak" href="#">More Details</a>
+								<p class="product-big-text"><?php echo $description; ?></p><a class="button button-black-outline button-ujarak" href="payment.php">Buy This Tour</a>
 								<div class="product-big-price-wrap">
 									<span class="product-big-price">RM<?php echo "$tour[price]"; ?></span>
 								</div>
