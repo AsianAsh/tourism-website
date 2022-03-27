@@ -183,7 +183,7 @@ require_once "./components/navbar.php";
                       <div class="group-sm group-middle justify-content-start">
                         <div class="product-big-rating"><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star"></span><span class="icon material-icons-star_half"></span></div><a class="product-big-reviews" href="#">4.7/5 (235 customer reviews)</a>
                       </div>
-                      <p class="product-big-text">Malacca is one of the most popular tourist destinations within Malaysia. Enjoy an exciting experience at A 'Famosa Malacca when you visit the famous theme...</p><a class="button button-black-outline button-ujarak" href="#">Buy This Tour</a>
+                      <p class="product-big-text">Malacca is one of the most popular tourist destinations within Malaysia. Enjoy an exciting experience at A 'Famosa Malacca when you visit the famous theme...</p><a class="button button-black-outline button-ujarak" href="payment.php">Buy This Tour</a>
                       <div class="product-big-price-wrap"><span class="product-big-price">RM500</span></div>
                     </div>
                   </div>
