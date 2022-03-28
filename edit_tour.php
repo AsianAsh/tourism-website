@@ -10,7 +10,7 @@ if (!isset($_SESSION["agent"]["agentID"]) && !isset($_SESSION["staff"]["staffID"
     require_once "./components/header+offcanvas.php";
     $tourDetails = [];
     $id = $_GET["id"];
-    $sql = "SELECT * FROM tour_packages WHERE tour_id = ?;";
+    $sql = "SELECT t.*, i.* FROM tour_packages t LEFT JOIN trip_images i ON t.tour_id = i.tour_id WHERE t.tour_id = ?;";
     $stmt = $connection->prepare($sql);
     $stmt->bind_param("i", $id);
     $stmt->execute();
@@ -25,7 +25,24 @@ if (!isset($_SESSION["agent"]["agentID"]) && !isset($_SESSION["staff"]["staffID"
 
 <div class="container my-5 px-5">
     <h1 class = "text-center mb-5 title-heading">Edit Tour Package</h1>
-    <form action="./includes/edit_tour.inc.php?id=<?php echo $id ?>" class="row g-3" method="POST">
+    <form action="./includes/edit_tour.inc.php?id=<?php echo $id ?>" enctype="multipart/form-data" class="row g-3" method="POST">
+        <!-- Tour Image -->
+        <div class="unit flex-column flex-md-row align-items-md-stretch">
+            <div class="unit-left">
+                <img src=
+                <?php if(!isset($tourDetails["image"])){
+                    echo "images/Melaka-index.jpeg";
+                } else{
+                    $image = base64_encode($tourDetails["image"]);
+                    echo "'data:image/jpg;charset=utf8;base64, $image'"; //$image is a longblob(bunch of random symbols) so this converts it to image
+                }?> 
+                alt="" class="img-thumbnail" width="450" height="400">
+            </div>
+        </div>
+        <div class="col-md-8">
+            <label for="editMainImage" class="mt-1 input-label">Main Tour Image:</label>
+            <input type="file" class="fileInput" id="editMainImage" name="editMainImage" value="" accept="image/png, image/jpg, image/jpeg">
+        </div>
         <!-- Tour Name Field -->
         <div class="col-md-8">
             <label for="editTourName" class="input-label">Name</label>

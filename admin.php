@@ -32,10 +32,10 @@ require_once "./components/header+offcanvas.php";
             <?php endif ?>
             </div>
             
-            <div class="form-check form-switch mt-2">
+            <!-- <div class="form-check form-switch mt-2">
                 <input class="form-check-input view-Login-Password" type="checkbox" id="flexSwitchCheckDefault">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Show Password</label>
-            </div>
+            </div> -->
         </div>
 
         <div class="col-12 text-center">

@@ -30,7 +30,7 @@ if (isset($_POST["createTour"])){
         header("Location: ../create_tours.php?tour=empty&name=$tourName&price=$tourPrice&min=$minPax&max=$maxPax&duration=$tripDuration&location=$location&starttime=$startTime&endtime=$endTime");
         exit();
     } else{
-        if (strlen($description) > 1000){ // Description cannot be more than 1000 characters
+        if (strlen($_POST['description']) > 3000){ // Description cannot be more than 3000 characters
             header("Location: ../create_tours.php?tour=description&name=$tourName&price=$tourPrice&min=$minPax&max=$maxPax&duration=$tripDuration&location=$location&starttime=$startTime&endtime=$endTime");
             exit();            
         } else{

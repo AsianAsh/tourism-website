@@ -140,7 +140,7 @@ require_once "./components/header+offcanvas.php";
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Tour Name</th>
-                        <th scope="col">Price (per pax)</th>
+                        <th scope="col">Price</th>
                         <th scope="col">Location</th>
                         <th scope="col">Status</th>
                         <th scope="col">Last Updated</th>

@@ -11,7 +11,7 @@ require_once "./connection/db.php";
 // }
 // $sortBy = ""; 
 $tours = [];
-$sql = "SELECT t.*, i.* FROM tour_packages t LEFT JOIN trip_images i ON  t.tour_id = i.tour_id WHERE t.status = 1;"; // Change this to include images/Add image_type column to table 
+$sql = "SELECT t.*, i.* FROM tour_packages t LEFT JOIN trip_images i ON t.tour_id = i.tour_id WHERE t.status = 1;"; // Change this to include images/Add image_type column to table 
 // Append ORDER BY Clause in SQL to sort the tours based on filter set by customer
 // switch ($filter) {
 // 	case "priceHigh":
@@ -49,9 +49,8 @@ require_once "./components/navbar.php";
 		<h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">Tours</span></h3>
 		<h6 class="pt-2">Tours for you to check out!</h6>
 		<div class="row row-sm row-40 row-md-50">
-
-			<div class="col-sm-6 col-md-12 wow fadeInRight">
-				<!-- Product Big-->
+			
+			<!-- <div class="col-sm-6 col-md-12 wow fadeInRight">
 				<article class="product-big">
 					<div class="unit flex-column flex-md-row align-items-md-stretch">
 						<div class="unit-left">
@@ -81,7 +80,6 @@ require_once "./components/navbar.php";
 			</div>
 			
 			<div class="col-sm-6 col-md-12 wow fadeInLeft">
-				<!-- Product Big-->
 				<article class="product-big">
 					<div class="unit flex-column flex-md-row align-items-md-stretch">
 						<div class="unit-left">
@@ -108,16 +106,15 @@ require_once "./components/navbar.php";
 						</div>
 					</div>
 				</article>
-			</div>
+			</div> -->
 
-			<p>Loop for All Available Tours start here (The proper images aren't displayed yet</p>
 			<!-- Foreach Loop to Display all Available Tours one by one -->
 			<?php foreach ($tours as $tour) : ?>
-				<?php //echo $key ?>
 			<div class="col-sm-6 col-md-12 wow fadeInLeft">
 				<!-- Product Big-->
 				<article class="product-big">
 					<div class="unit flex-column flex-md-row align-items-md-stretch">
+						<!-- Tour Image -->
 						<div class="unit-left">
 							<a class="product-big-figure img-fluid" href="#">
 								<img src=
@@ -126,25 +123,20 @@ require_once "./components/navbar.php";
 								} else{
 									$image = base64_encode($tour["image"]);
 									echo "'data:image/jpg;charset=utf8;base64, $image'"; //$image is a longblob(bunch of random symbols) so this converts it to image
-								}?> alt="" width="600" height="366"/></a>
-							<!-- <a class="product-big-figure img-fluid" href="#"><img src="<?php //echo "$tour[imagePath]"; ?>" alt="" width="600" height="366"/></a> -->
+								}?> 
+								alt="" width="600" height="366"/>
+							</a>
 						</div>
 						<div class="unit-body">
 							<div class="product-big-body">
+								<!-- Tour Name -->
 								<h5 class="product-big-title pe-5"><a href="#"><?php echo "$tour[name]"; ?></a></h5>
-								<div class="group-sm group-middle justify-content-start">
-									<!-- <div class="product-big-rating">
-										<span class="icon material-icons-star"></span>
-										<span class="icon material-icons-star"></span>
-										<span class="icon material-icons-star"></span>
-										<span class="icon material-icons-star"></span>
-										<span class="icon material-icons-star_half"></span>
-									</div> -->
+								<!-- <div class="group-sm group-middle justify-content-start">
 									<a class="product-big-reviews" href="#">4.8/5 (375 customer reviews)</a>
-								</div>
+								</div> -->
 								<?php $description = str_replace('[NEWLINE]', "\n", $tour['description']) ?>
 								<?php $description = strlen($description) > 180 ? substr($description,0,180)."..." : $description; ?>
-								<p class="product-big-text"><?php echo $description; ?></p><a class="button button-black-outline button-ujarak" href="payment.php">Buy This Tour</a>
+								<p class="product-big-text"><?php echo $description; ?></p><a class="button button-black-outline button-ujarak" href="tour_individual.php?id=<?php echo $tour["tour_id"];?>">More Details</a>
 								<div class="product-big-price-wrap">
 									<span class="product-big-price">RM<?php echo "$tour[price]"; ?></span>
 								</div>

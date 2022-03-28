@@ -75,7 +75,7 @@ require_once "./components/navbar.php";
                 </div>
               </div>
             </div>
-          </div><a class="link-classic wow fadeInUp" href="#">Other Tours<span></span></a>
+          </div><a class="link-classic wow fadeInUp" href="tours.php">Other Tours<span></span></a>
           <!-- Owl Carousel-->
         </div>
       </section>
@@ -100,15 +100,15 @@ require_once "./components/navbar.php";
                   <div class="tab-content">
                     <div class="tab-pane fade show active" id="tabs-7-1">
                       <p>Wonder Tour is committed to bringing our clients the best in value and quality travel arrangements. We are passionate about travel and sharing the world's wonders with you.</p>
-                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Read More</a></div>
+                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.php">Get in Touch</a><a class="button button-black-outline button-md" href="about.php">Read More</a></div>
                     </div>
                     <div class="tab-pane fade" id="tabs-7-2">
                       <p>We are proud to offer excellent quality and value for money in our tours, which give you the chance to experience your chosen destination in an authentic and exciting way.</p>
-                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Read More</a></div>
+                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.php">Get in Touch</a><a class="button button-black-outline button-md" href="about.php">Read More</a></div>
                     </div>
                     <div class="tab-pane fade" id="tabs-7-3">
                       <p>Our mission is to provide the ultimate travel planning experience while becoming a one-stop shop for every travel service available in the industry.</p>
-                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Read More</a></div>
+                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.php">Get in Touch</a><a class="button button-black-outline button-md" href="about.php">Read More</a></div>
                     </div>
                   </div>
                 </div>

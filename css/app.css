@@ -45,6 +45,23 @@
 .hidden{
   display:none;
 }
+
+.specific-tabs-section button {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.specific-tabs-section .nav-link.active {
+  font-weight: bold;
+}
+
+.specific-item-info p {
+  display: inline-block;
+}
+
+.specific-item-property {
+  min-width: 200px;
+}
   
 
 

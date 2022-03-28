@@ -143,7 +143,7 @@ require_once "./components/header+offcanvas.php";
                 echo "<p class='mt-2 text-danger text-center mb-0 ps-1 d-block'>Please fill in all fields!</p>";
                 exit();
             } elseif($creationCheck == "description"){
-                echo "<p class='mt-2 text-danger text-center mb-0 ps-1 d-block'>Description has exceeded the 1000 character limit.</p>";
+                echo "<p class='mt-2 text-danger text-center mb-0 ps-1 d-block'>Description has exceeded the 3000 character limit.</p>";
                 exit();
             } elseif($creationCheck == "pax"){
                 echo "<p class='mt-2 text-danger text-center mb-0 ps-1 d-block'>Minimum pax cannot be more than maximum pax.</p>";

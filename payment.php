@@ -1,18 +1,21 @@
-<?php session_start();?>
+<?php session_start(); ?>
+<?php 
+// Return customer to index.php if not logged in
+if(!isset($_SESSION["user"]["userID"])){
+    header("Location: index.php");
+    exit();
+}
+// if (isset($userid)){
+//     $tourinfo = getTourInfo($tourid,$connection);
+// }
+$customerID = $_SESSION["user"]["userID"] ?? null;
+
+
+?>
 <?php require_once "./connection/db.php";?>
 <?php require_once "./components/header+offcanvas.php"; ?>
 <?php require_once "./helpers/helpers.php"?>
-<?php 
-    // Return customer to index.php if not logged in
-    $userid = $_SESSION["user"]["userID"] ?? null;
-    if(!isset($userid)){
-        header("Location: index.php");
-        exit();
-    }
-    // if (isset($userid)){
-    //     $tourinfo = getTourInfo($tourid,$connection);
-    // }
-?>
+
 
 
 <div class=" container-fluid p-5 m-3 ">
