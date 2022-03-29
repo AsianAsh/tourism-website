@@ -120,7 +120,6 @@ $description = str_replace('[NEWLINE]', "\n", $tourDetails["description"]);
 		<div class="nav nav-tabs" id="nav-tab" role="tablist">
 			<button class=" nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Info</button>
 			<button class=" nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Description</button>
-			<button class=" nav-link" id="nav-review-tab" data-bs-toggle="tab" data-bs-target="#nav-review" type="button" role="tab" aria-controls="nav-review" aria-selected="false">Review</button>
 			<button class=" nav-link" id="nav-booknow-tab" data-bs-toggle="tab" data-bs-target="#nav-booknow" type="button" role="tab" aria-controls="nav-booknow" aria-selected="false">Book Now</button>
 		</div>
 	</nav>
@@ -160,73 +159,6 @@ $description = str_replace('[NEWLINE]', "\n", $tourDetails["description"]);
 		</div>
 		<!-- End of Description Tab Content -->
 		
-		<!-- Review Tab Content-->
-		<div class="tab-pane fade" id="nav-review" role="tabpanel" aria-labelledby="nav-review-tab">
-			<div class="">
-				<div class="review-inner-section">
-					<div class="review-header-section">
-						<div class="ratings align-self-start">
-							<h3>Ratings</h3>
-							<!-- 5 Star Icons & Total 5 Star Ratings-->
-							<div class="mb-2">
-								<img src="./svg/star-fill.svg" alt="">
-								<img src="./svg/star-fill.svg" alt="">
-								<img src="./svg/star-fill.svg" alt="">
-								<img src="./svg/star-fill.svg" alt="">
-								<img src="./svg/star-fill.svg" alt="">
-								<span class="ms-2">(0)</span>
-							</div>
-							<!-- End of 5 Star Icons & Total 5 Star Ratings-->
-							
-							<!-- 4 Star Icons & Total 4 Star Ratings-->
-							<div class="mb-2">
-								<img src="./svg/star-fill.svg" alt="">
-								<img src="./svg/star-fill.svg" alt="">
-								<img src="./svg/star-fill.svg" alt="">
-								<img src="./svg/star-fill.svg" alt="">
-								<img src="./svg/star-fill-white.svg" alt="">
-								<span class="ms-2">(0)</span>
-							</div>
-							<!-- End of 4 Star Icons & Total 4 Star Ratings-->
-
-							<!-- 3 Star Icons & Total 3 Star Ratings-->
-							<div class="mb-2">
-								<img src="./svg/star-fill.svg" alt="">
-								<img src="./svg/star-fill.svg" alt="">
-								<img src="./svg/star-fill.svg" alt="">
-								<img src="./svg/star-fill-white.svg" alt="">
-								<img src="./svg/star-fill-white.svg" alt="">
-								<span class="ms-2">(0)</span>
-							</div>
-							<!-- End of 3 Star Icons & Total 3 Star Ratings-->
-
-							<!-- 2 Star Icons & Total 2 Star Ratings-->
-							<div class="mb-2">
-								<img src="./svg/star-fill.svg" alt="">
-								<img src="./svg/star-fill.svg" alt="">
-								<img src="./svg/star-fill-white.svg" alt="">
-								<img src="./svg/star-fill-white.svg" alt="">
-								<img src="./svg/star-fill-white.svg" alt="">
-								<span class="ms-2">(0)</span>
-							</div>
-							<!-- End of 2 Star Icons & Total 2 Star Ratings-->
-
-							<!-- 1 Star Icons & Total 1 Star Ratings-->
-							<div class="mb-2">
-								<img src="./svg/star-fill.svg" alt="">
-								<img src="./svg/star-fill-white.svg" alt="">
-								<img src="./svg/star-fill-white.svg" alt="">
-								<img src="./svg/star-fill-white.svg" alt="">
-								<img src="./svg/star-fill-white.svg" alt="">
-								<span class="ms-2">(0)</span>
-							</div>
-							<!-- End of 1 Star Icons & Total 1 Star Ratings-->
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- End of Review Tab Content-->
 
 		<!--Book Now Tab Content-->
 		<div class="tab-pane fade" id="nav-booknow" role="tabpanel" aria-labelledby="nav-booknow-tab">
@@ -252,6 +184,55 @@ $description = str_replace('[NEWLINE]', "\n", $tourDetails["description"]);
 		<!-- End of Nav and Tab for Info, Description, Review -->
 	</div>
 </section>
+
+<!--Reviews Section-->
+<section class="section section-sm">
+        <div class="container">
+          <h3>Reviews</h3>
+          <h6 class="pt-2">Here's what our customers have to say about their experience!</h6>
+          <div class="row row-30">
+            <div class="col-sm-6 col-lg-4">
+              <article class="box-icon-classic">
+                <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
+                  <div class="unit-left">
+                    <div class="box-icon-classic-icon fl-bigmug-line-equalization3"></div>
+                  </div>
+                  <div class="unit-body">
+                    <h5 class="box-icon-classic-title">AshChar02</h5>
+                    <p class="box-icon-classic-text">Great place to visit. Love the historical landmarks there!</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <article class="box-icon-classic">
+                <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
+                  <div class="unit-left">
+                    <div class="box-icon-classic-icon fl-bigmug-line-circular220"></div>
+                  </div>
+                  <div class="unit-body">
+                    <h5 class="box-icon-classic-title">JohnSmith_TourLover</h5>
+                    <p class="box-icon-classic-text">Absolutely banging experience. My family and I had tons of fun on our tour.</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+              <article class="box-icon-classic">
+                <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
+                  <div class="unit-left">
+                    <div class="box-icon-classic-icon fl-bigmug-line-favourites5"></div>
+                  </div>
+                  <div class="unit-body">
+                    <h5 class="box-icon-classic-title">Mano</h5>
+                    <p class="box-icon-classic-text">I'd 100% recommend this tour to my family and friends!</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
 
 <!--More Tours-->
 <section class="section section-sm bg-default">
