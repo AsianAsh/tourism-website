@@ -105,8 +105,25 @@ $description = str_replace('[NEWLINE]', "\n", $tourDetails["description"]);
 						<?php echo "RM " . $tourDetails["price"]; ?>
 					</p>
 				</div>
-			</div>
+				<form class="" id="booking-form" action="./payment.php?id=<?php echo $id; ?>" method="POST" novalidate>
+				<div class="pt-5">
+					<label for="inputCheckInDate" class="mt-1 input-label">Check In: </label>
+					<input type="date" name=checkInDate id="inputCheckInDate" value="" min="" max="">
+				</div>
+				<div class="pt-1">
+					<label for="inputAdult" class="mt-1 me-3 input-label">Adults: </label>
+					<input type="number" name="totalAdults" id="inputAdult" value="" min="1" max="1000">
+				</div>
+				<div class="pt-1">
+					<label for="inputChild" class="mt-1 input-label">Children: </label>
+					<input type="number" name="totalChildren" id="inputChild" value="" min="0" max="1000">
+				</div>
+				<div class="pt-1">
+					<button type="submit" class="btn btn-primary">Book Now</button></div>
+				</div>
+			</form>
 
+			</div>
 		</div>
 		
 	</div>
@@ -120,7 +137,6 @@ $description = str_replace('[NEWLINE]', "\n", $tourDetails["description"]);
 		<div class="nav nav-tabs" id="nav-tab" role="tablist">
 			<button class=" nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Info</button>
 			<button class=" nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Description</button>
-			<button class=" nav-link" id="nav-booknow-tab" data-bs-toggle="tab" data-bs-target="#nav-booknow" type="submit" name="btn-pay" role="tab" aria-controls="nav-booknow" aria-selected="false">Book Now</button>
 		</div>
 	</nav>
 	<div class="tab-content mt-3" id="nav-tabContent">
@@ -158,29 +174,6 @@ $description = str_replace('[NEWLINE]', "\n", $tourDetails["description"]);
 				<p><?php echo nl2br($description); ?></p>
 		</div>
 		<!-- End of Description Tab Content -->
-		
-
-		<!--Book Now Tab Content-->
-		<div class="tab-pane fade" id="nav-booknow" role="tabpanel" aria-labelledby="nav-booknow-tab">
-			<form class="" id="booking-form" action="./payment.php?id=<?php echo $id; ?>" method="POST" novalidate>
-				<div class="pt-1">
-					<label for="inputCheckInDate" class="mt-1 input-label">Check In Date:</label>
-					<input type="date" name=checkInDate id="inputCheckInDate" value="" min="" max="">
-				</div>
-				<div class="pt-1">
-					<label for="inputAdult" class="mt-1 input-label">Adults: </label>
-					<input type="number" name="totalAdults" id="inputAdult" value="" min="1" max="1000">
-				</div>
-				<div class="pt-1">
-					<label for="inputChild" class="mt-1 input-label">Children: </label>
-					<input type="number" name="totalChildren" id="inputChild" value="" min="0" max="1000">
-				</div>
-				<div class="pt-1">
-					<button type="submit" class="btn btn-primary">Book Now</button></div>
-				</div>
-			</form>
-		</div>
-		<!--End of Book Now Tab Content-->
 		<!-- End of Nav and Tab for Info, Description, Review -->
 	</div>
 </section>
