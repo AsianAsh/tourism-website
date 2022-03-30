@@ -5,157 +5,170 @@ if(!isset($_SESSION["user"]["userID"])){
     header("Location: index.php");
     exit();
 }
-// if (isset($userid)){
-//     $tourinfo = getTourInfo($tourid,$connection);
-// }
-$customerID = $_SESSION["user"]["userID"] ?? null;
 
+require_once "./connection/db.php";
+require_once "./components/header+offcanvas.php"; 
+
+
+// $customerID = $_SESSION["user"]["userID"] ?? null;
+$tourID = $_GET["id"];
+$sql = "SELECT t.*, i.* FROM tour_packages t LEFT JOIN trip_images i ON t.tour_id = i.tour_id WHERE t.tour_id = ?;";
+$stmt = $connection->prepare($sql);
+$stmt->bind_param("i", $tourID);
+$stmt->execute();
+$result = $stmt->get_result();
+$tourinfo = $result->fetch_assoc();
+$stmt->close();
+?>
+<?php
+
+$price = $tourinfo['price'];
+$total = ($price * 0.017) + $price
 
 ?>
-<?php require_once "./connection/db.php";?>
-<?php require_once "./components/header+offcanvas.php"; ?>
-<?php require_once "./helpers/helpers.php"?>
+
+<style>
+.box-space{
+padding-bottom:30px;
+padding-top:25px;
+}
+.container{
+padding-top:80px;
+}
+.btn-purchase{
+display:flex;
+justify-content:center;
+padding-top:30px;
+}
+.back{
+text-align: center;
+padding-top:10px;
+}
 
 
+</style>
 
-<div class=" container-fluid p-5 m-3 ">
-    <div class="row mx-lg-5 justify-content-around">
-        <!-- cart details -->
-        <section class="col-md-7 py-3 px-lg-5 border bg-light rounded-3 d-flex justify-content-end flex-column">
-            <div class="h4 mt-3 mb-4">Tour Package</div>
-            <section class="container">
-                <div class="row border-bottom mb-4">
-                    <div class="col-1"></div>
-                    <h6 class=" col-6 text-center">Package Name</h6>
-                    <!-- <h6 class=" col-3 text-center">Quantity</h6> -->
-                    <h6 class=" col-2 text-end">Total Price</h6>
-                </div>
-            </section>
-            <section class="cart-container container overflow-auto">
-            
-            </section>
-        
-</div>
-
-
-
-
-
-
-
-
-<div>
-    
-    <!-- payment -->
-    <section class="col-md-4 py-2 px-lg-2 border bg-light rounded-3  d-flex align-items-center flex-column justify-content-center">
+<div class="container">
+    <div class="row m-0">
+        <div class="col-lg-7 pb-5 pe-lg-5">
             <div class="row">
-                <h3 class="m-4">Payment Info</h3>
+                <div class="row m-0 bg-light">
+                    <div class="box-space">
+                            <img src=
+                            <?php if(!isset($tourinfo["image"])){
+                                    echo "images/Melaka-index.jpeg";
+                                } else{
+                                    $image = base64_encode($tourinfo["image"]);
+                                    echo "'data:image/jpg;charset=utf8;base64, $image'"; //$image is a longblob(bunch of random symbols) so this converts it to image
+                                }?>  
+                                alt="" class="img-thumbnail" width="550" height="400">
+                    </div>
+                    <div class="box-space">
+                        <p class="h5 m-0">Package Name</p>
+                        <p class="text-muted"><?php echo $tourinfo['name']; ?></p>
+                    </div>
+                    <div class="box-space">
+                        <p class="h5 m-0">Description</p>
+                        <p class="text-muted"><?php echo $tourinfo['description']; ?></p>
+                    </div>
+                    <div class="col-md-4 col-6 ps-30 my-4">
+                        <p class="h5 m-0">Trip Duration</p>
+                        <p class="text-muted"><?php echo $tourinfo['trip_duration']; ?></p>
+                    </div>
+                    
+                    <div class="col-md-4 col-6 ps-30 my-4">
+                        <p class="h5 m-0">Start Time</p>
+                        <p class="text-muted"><?php echo $tourinfo['start_time']; ?></p>
+                    </div>
+                    <div class="col-md-4 col-6 ps-30 my-4">
+                        <p class="h5 m-0">End Time</p>
+                        <p class="text-muted"><?php echo $tourinfo['end_time']; ?></p>
+                    </div>
+                    <div class="col-md-4 col-6 ps-30 my-4">
+                        <p class="h5 m-0">Adult</p>
+                        <p class="text-muted"><?php echo $tourinfo['end_time']; ?></p>
+                    </div>
+                    <div class="col-md-4 col-6 ps-30 my-4">
+                        <p class="h5 m-0">Children</p>
+                        <p class="text-muted"><?php echo $tourinfo['end_time']; ?></p>
+                    </div>
+                    <div class="col-m">
+                    <p class="text-muted"></p>
+                        <p class="h5 m-0"></p>
+                    </div>
+                </div>
             </div>
-            <div class="container">
-                <div class="card mb-3">
-                    <!-- Payment Method -->
-                    <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
-                        <li class="nav-item credit-card" role="presentation">
-                            <button class="nav-link active" id="credit-card-tab" data-bs-toggle="pill" data-bs-target="#credit-card-method" type="button" role="tab" aria-controls="credit-card-method" aria-selected="true">
-                                <i class="far fa-credit-card fa-md p-2"></i>
-                                Credit Card
-                            </button>
-                        </li>
-                        <li class="nav-item online-banking" role="presentation">
-                            <button class="nav-link" id="online-banking-tab" data-bs-toggle="pill" data-bs-target="#online-banking-method" type="button" role="tab" aria-controls="online-banking-method" aria-selected="false">
-                                <i class="fas fa-university fa-md p-2"></i>
-                                FPX Online Banking
-                            </button>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="pills-tabContent">
-                        <div class="tab-pane fade show active m-4" id="credit-card-method" role="tabpanel" aria-labelledby="credit-card-tab">
-                            <form action="" method="POST">
-                                <input type="hidden" name="paymentMethod" value="Credit Card">
-                                <input type="hidden" name="total" class="paymentTotal" value="">
-                                <input type="hidden" name="deliveryMethod" class="orderDelivery" value="">
-                                <div class="form-group m-3">
-                                    <label for="cardType" class="pb-1">Select Your Card Type</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="cardType" id="visa-card" value="VISA Card" checked>
-                                        <label class="form-check-label" for="visa-card">
-                                            <i class="fab fa-cc-visa fa-lg me-2"></i>VISA
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="cardType" id="mastercard" value="MasterCard">
-                                        <label class="form-check-label" for="mastercard">
-                                            <i class="fab fa-cc-mastercard fa-lg me-2"></i>MasterCard
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="form-group m-3">
-                                    <label for="holderName">Card Holder Name (As stated on card)</label>
-                                    <input type="text" class="form-control" name="holderName" id="holderName" pattern="([A-z0-9À-ž\s]){2,}" required>
-                                </div>
-                                <div class="form-group m-3">
-                                    <label for="cardNumber">Card Number</label>
-                                    <input type="number" class="form-control" placeholder="XXXX-XXXX-XXXX-XXXX" name="cardNumber" id="cardNumber" required>
-                                </div>
-                                <div class="form-group m-3">
-                                    <label>Card Expiry Date</label>
-                                    <div class="input-group">
-                                        <input type="number" class="form-control" placeholder="MM" name="expiryMonth" required>
-                                        <input type="number" class="form-control" placeholder="YY" name="expiryYear" required>
-                                    </div>
-                                </div>
-                                <div class="form-group m-3">
-                                    <label for="cvv">CVV</label>
-                                    <input type="number" class="form-control" name="cvv" id="cvv" required>
-                                </div>
-                                <div class="form-group text-center m-3">
-                                    <button class="btn btn-primary payment-btn disabled" type="submit" name="cardPaymentBtn">Confirm</button>
-                                </div>
-                            </form>
+        </div>
+        
+        <div class="col-lg-5 p-0 ps-lg-4 bg-light">
+            <div class="row m-0">
+                <div class="col-12 px-4">
+                    <div class="d-flex align-items-end mt-4 mb-2">
+                        <p class="h4 m-0"><span class="pe-1">INFO</span</p>
+                        
+                    </div>
+                    
+                    <div class="d-flex justify-content-between mb-2">
+                        <p class="textmuted">Package price</p>
+                        <p class="fs-14 fw-bold"><span class="fas fa-dollar-sign mt-1 pe-1 fs-14 ">RM</span><span class="h6"><?php echo $tourinfo['price']; ?></span></p>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <p class="textmuted">Quantity</p>
+                        <p class="fs-14 fw-bold">1</p>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <p class="textmuted">Promo code</p>
+                        <p class="fs-14 fw-bold"><span class="fas fa-dollar-sign px-1"></span>No Promo  Available</p>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <p class="textmuted">Service Charge</p>
+                        <p class="fs-14 fw-bold">1.7%</p>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                        <p class="textmuted fw-bold">Total</p>
+                        <div class="d-flex align-text-top "> <span class="fas fa-dollar-sign mt-1 pe-1 fs-14 ">RM</span><span class="h4"><?php echo $total; ?></span> </div>
+                    </div>
+                </div>
+                <div class="h-50 col-12 px-1">
+                    <div class="row bg-light m-0">
+                        <div class="col-12 px-4 my-4">
+                            <p class="fw-bold">Payment detail</p>
                         </div>
-                        <!-- End of Credit Card -->
-                        <div class="tab-pane fade" id="online-banking-method" role="tabpanel" aria-labelledby="online-banking-tab">
-                            <form action="" method="POST">
-                                <input type="hidden" name="paymentMethod" value="Banking">
-                                <input type="hidden" name="total" class="paymentTotal" value="">
-                                <input type="hidden" name="deliveryMethod" class="orderDelivery" value="">
-                                <div class="form-group m-3">
-                                    <label for="paymentMethod" class="pb-1">Select Your Bank</label>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="bank" id="maybank" value="Maybank" checked>
-                                        <label class="form-check-label" for="maybank">
-                                            Maybank2u
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="bank" id="cimb-bank" value="CIMB Bank">
-                                        <label class="form-check-label" for="cimb-bank">
-                                            CIMB Bank
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="bank" id="public-bank" value="Public Bank">
-                                        <label class="form-check-label" for="public-bank">
-                                            Public Bank
-                                        </label>
-                                    </div>
+                        <div class="col-12 px-4">
+                            <div class="form-group m-3">
+                                <label for="cardNumber">Card Number</label>
+                                <input type="number" class="form-control" placeholder="**** **** **** ****" name="cardNumber" id="cardNumber" required>
+                            </div>
+                            <div class="form-group m-3">
+                                <label for="holderName">Card Holder Name (As stated on card)</label>
+                                <input type="text" class="form-control" name="holderName" id="holderName" pattern="([A-z0-9À-ž\s]){2,}" required placeholder="Name">
+                            </div>
+    
+                            <div class="form-group m-3">
+                                <label>Card Expiry Date</label>
+                                <div class="input-group">
+                                    <input type="number" class="form-control" placeholder="MM" name="expiryMonth" required>
+                                    <input type="number" class="form-control" placeholder="YY" name="expiryYear" required>
                                 </div>
-                                <div class="form-group m-3">
-                                    <label for="bank-account">Account Name</label>
-                                    <input type="text" class="form-control" placeholder="" name="bank-account" id="bank-account" required>
+                            </div>
+                            <div class="form-group m-3">
+                                    <label for="cvv">CVV</label>
+                                    <input type="number" class="form-control" name="cvv" id="cvv" placeholder= "***"required>
                                 </div>
-                                <div class="form-group m-3">
-                                    <label for="bank-password">Password</label>
-                                    <input type="password" class="form-control" placeholder="" name="bank-password" id="bank-password" required>
-                                </div>
-                                <div class="form-group text-center m-3">
-                                    <button class="btn btn-primary payment-btn disabled" type="submit" name="bankingPaymentBtn">Confirm</button>
-                                </div>
-                            </form>
+                            <div class="btn-purchase">
+                                <div class="btn btn-primary">Purchase<span class="fas fa-arrow-right ps-2">
+                                </span> 
+                            </div>
                         </div>
                     </div>
-        </section>
-        <!-- end of payment -->
+                    <div class="back">
+                        <a href="tour_individual.php">Browse Other Tours</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
     
 
