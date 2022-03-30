@@ -164,11 +164,11 @@ $description = str_replace('[NEWLINE]', "\n", $tourDetails["description"]);
 		<div class="tab-pane fade" id="nav-booknow" role="tabpanel" aria-labelledby="nav-booknow-tab">
 			<form class="" id="booking-form" action="./payment.php?id=<?php echo $id; ?>" method="POST" novalidate>
 				<div class="pt-1">
-					<label for="inputCheckInDate" class="mt-1 input-label">Check In Date:</label>
+					<label for="inputCheckInDate" class="mt-1 input-label">Check In: </label>
 					<input type="date" name=checkInDate id="inputCheckInDate" value="" min="" max="">
 				</div>
 				<div class="pt-1">
-					<label for="inputAdult" class="mt-1 input-label">Adults: </label>
+					<label for="inputAdult" class="mt-1 me-3 input-label">Adults: </label>
 					<input type="number" name="totalAdults" id="inputAdult" value="" min="1" max="1000">
 				</div>
 				<div class="pt-1">
