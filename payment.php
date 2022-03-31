@@ -23,8 +23,12 @@ $stmt->close();
 <?php
 
 $price = $tourinfo['price'];
-$total = ($price * 0.017) + $price
+$total = ($price * 0.017) + $price;
+$checkIn = $_POST['checkInDate'];
 
+
+
+// if (isset('purchaseTour'))
 ?>
 
 <style>
@@ -47,6 +51,11 @@ padding-top:10px;
 
 
 </style>
+
+<form action="./includes/payment.inc.php?id=<?php $_GET['id']?>&checkIn=<?php $_GET['checkIn']?>&adult=<?php $_GET['adult']?>&childeren=<?php $_GET['children']?>"method="POST" enctype="multipart/form">
+<input type="hidden" name="totalChildren" id="inputChild" value="" min="0" max="1000" disabled>
+<input type="hidden" name="totalAdult" id="inputChild" value="" min="0" max="1000" disabled>
+<input type="hidden" name="checkIndate" id="inputChild" value="" min="0" max="1000" disabled>
 
 <div class="container">
     <div class="row m-0">
@@ -156,7 +165,7 @@ padding-top:10px;
                                     <input type="number" class="form-control" name="cvv" id="cvv" placeholder= "***"required>
                                 </div>
                             <div class="btn-purchase">
-                                <div class="btn btn-primary">Purchase<span class="fas fa-arrow-right ps-2">
+                                <div class="btn btn-primary" type="submit" name="purchaseTour">Purchase<span class="fas fa-arrow-right ps-2">
                                 </span> 
                             </div>
                         </div>
@@ -169,6 +178,14 @@ padding-top:10px;
         </div>
     </div>
 </div>
+</form>
+
+<?php
+
+// if (!isset)
+
+
+?>
 
     
 

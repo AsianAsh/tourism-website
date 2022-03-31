@@ -105,10 +105,10 @@ $description = str_replace('[NEWLINE]', "\n", $tourDetails["description"]);
 						<?php echo "RM " . $tourDetails["price"]; ?>
 					</p>
 				</div>
-				<form class="" id="booking-form" action="./payment.php?id=<?php echo $id; ?>" method="POST" novalidate>
+				<form class="" id="booking-form" action="./tour_individual.inc.php?id=<?php echo $id; ?>" method="POST" novalidate>
 				<div class="pt-5">
 					<label for="inputCheckInDate" class="mt-1 input-label">Check In: </label>
-					<input type="date" name=checkInDate id="inputCheckInDate" value="" min="" max="">
+					<input type="date" name="checkInDate" id="inputCheckInDate" value="" min="" max="" >
 				</div>
 				<div class="pt-1">
 					<label for="inputAdult" class="mt-1 me-3 input-label">Adults: </label>
@@ -119,7 +119,7 @@ $description = str_replace('[NEWLINE]', "\n", $tourDetails["description"]);
 					<input type="number" name="totalChildren" id="inputChild" value="" min="0" max="1000">
 				</div>
 				<div class="pt-1">
-					<button type="submit" class="btn btn-primary">Book Now</button></div>
+					<button type="submit" class="btn btn-primary" name="booknow">Book Now</button></div>
 				</div>
 			</form>
 
