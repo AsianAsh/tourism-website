@@ -162,7 +162,7 @@ $child_num = $_GET['children']
                                     <input type="number" class="form-control" name="cvv" id="cvv" placeholder= "***"required>
                                 </div>
                                 <div class="col-12 text-center mt-2">
-                                    <button type="submit" class="btn btn-primary" name="create-staff">Purchase</button>
+                                    <button type="submit" class="btn btn-primary" name="purchaseTour">Purchase</button>
                                 </div>
                         </div>
                     </div>

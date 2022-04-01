@@ -1,5 +1,6 @@
 <?php
 session_start();
+// import
 require_once "../connection/db.php";
 
 if(isset($_POST["purchaseTour"])){
@@ -26,14 +27,31 @@ if(isset($_POST["purchaseTour"])){
     $expYear = $_POST['expiryYear'];
     $cvv = $_POST['cvv'];
 
+    // echo "$totalPrice";
+    // echo "$checkIn";
+
+    $stmt = $connection->prepare("INSERT INTO orders(customer_id, tour_id, adult_num, child_num, check_in_date, total_price ) VALUES ($customerID, $tourID, $adult,$child,$checkIn,$totalPrice)");
+    // echo $stmt->error;
+    // $stmt->bind_param("iiiisi", $customerID, $tourID, $adult, $child, $checkIn, $totalPrice);
+    $stmt->execute();
+    $stmt->close();
+
+    header("Location: ../index.php?payment=success");
+    echo '<script>alert("Thank you for Purchasing!")</script>';
+    exit();
 
 
 
+
+
+
+}else{
+    header("Location: ../index.php?payment=unsuccesful");
+    exit();
 }
-// if(isset($_POST['booknow'])){
 
 
 
-// }
+
 
 ?>

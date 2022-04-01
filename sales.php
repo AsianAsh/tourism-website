@@ -79,7 +79,7 @@ if (!isset($_SESSION["admin"]["adminID"])) {
                         <td><?php echo $sale["customer_id"]?></td>
                         <td><?php echo $sale["adult_num"]?></td>
                         <td><?php echo $sale["child_num"]?></td>
-                        <td><?php echo $sale["total_price"]?></td>
+                        <td><span>RM</span><?php echo $sale["total_price"]?></td>
                         <?php endforeach; ?>
                 </tbody>
             </table>
