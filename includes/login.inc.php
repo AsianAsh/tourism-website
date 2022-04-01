@@ -56,13 +56,13 @@ if (isset($_POST["signin"]) && isset($_GET["page"])) {
                 "profilePic" => $row["profile_pic"],
                 "creationDate" => $row["creation_date"],
             );
-            $_SESSION["alertMessage"][] = "Signin Successful";
-        } else {
-            $_SESSION["alertMessage"][] = "Incorrect Login Details";
-        }
+            // $_SESSION["alertMessage"][] = "Signin Successful";
+        } //else {
+        //     $_SESSION["alertMessage"][] = "Incorrect Login Details";
+        // }
     } else {
         $_SESSION["loginErrorArray"] = $loginErrorArray;
-        $_SESSION["alertMessage"][] = "Invalid Details";
+        // $_SESSION["alertMessage"][] = "Invalid Details";
     }
 
     header("Location: ../$lastPage");
