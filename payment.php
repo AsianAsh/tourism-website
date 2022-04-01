@@ -24,7 +24,9 @@ $stmt->close();
 
 $price = $tourinfo['price'];
 $total = ($price * 0.017) + $price;
-$checkIn = $_POST['checkInDate'];
+$checkIn = $_GET['checkin'];
+$adult_num = $_GET['adult'];
+$child_num = $_GET['children']
 
 
 
@@ -32,30 +34,23 @@ $checkIn = $_POST['checkInDate'];
 ?>
 
 <style>
-.box-space{
-padding-bottom:30px;
-padding-top:25px;
-}
-.container{
-padding-top:80px;
-}
-.btn-purchase{
-display:flex;
-justify-content:center;
-padding-top:30px;
-}
-.back{
-text-align: center;
-padding-top:10px;
-}
-
-
+    .box-space{
+    padding-bottom:30px;
+    padding-top:25px;
+    }
+    .container{
+    padding-top:80px;
+    }
+    .btn-purchase{
+    display:flex;
+    justify-content:center;
+    padding-top:30px;
+    }
+    .back{
+    text-align: center;
+    padding-top:10px;
+    }
 </style>
-
-<form action="./includes/payment.inc.php?id=<?php $_GET['id']?>&checkIn=<?php $_GET['checkIn']?>&adult=<?php $_GET['adult']?>&childeren=<?php $_GET['children']?>"method="POST" enctype="multipart/form">
-<input type="hidden" name="totalChildren" id="inputChild" value="" min="0" max="1000" disabled>
-<input type="hidden" name="totalAdult" id="inputChild" value="" min="0" max="1000" disabled>
-<input type="hidden" name="checkIndate" id="inputChild" value="" min="0" max="1000" disabled>
 
 <div class="container">
     <div class="row m-0">
@@ -95,11 +90,15 @@ padding-top:10px;
                     </div>
                     <div class="col-md-4 col-6 ps-30 my-4">
                         <p class="h5 m-0">Adult</p>
-                        <p class="text-muted"><?php echo $tourinfo['end_time']; ?></p>
+                        <p class="text-muted"><?php echo $adult_num; ?></p>
                     </div>
                     <div class="col-md-4 col-6 ps-30 my-4">
                         <p class="h5 m-0">Children</p>
-                        <p class="text-muted"><?php echo $tourinfo['end_time']; ?></p>
+                        <p class="text-muted"><?php echo $child_num; ?></p>
+                    </div>
+                    <div class="col-md-4 col-6 ps-30 my-4">
+                        <p class="h5 m-0">Check In Date</p>
+                        <p class="text-muted"><?php echo $checkIn; ?></p>
                     </div>
                     <div class="col-m">
                     <p class="text-muted"></p>
@@ -108,7 +107,6 @@ padding-top:10px;
                 </div>
             </div>
         </div>
-        
         <div class="col-lg-5 p-0 ps-lg-4 bg-light">
             <div class="row m-0">
                 <div class="col-12 px-4">
@@ -116,7 +114,6 @@ padding-top:10px;
                         <p class="h4 m-0"><span class="pe-1">INFO</span</p>
                         
                     </div>
-                    
                     <div class="d-flex justify-content-between mb-2">
                         <p class="textmuted">Package price</p>
                         <p class="fs-14 fw-bold"><span class="fas fa-dollar-sign mt-1 pe-1 fs-14 ">RM</span><span class="h6"><?php echo $tourinfo['price']; ?></span></p>
@@ -138,6 +135,7 @@ padding-top:10px;
                         <div class="d-flex align-text-top "> <span class="fas fa-dollar-sign mt-1 pe-1 fs-14 ">RM</span><span class="h4"><?php echo $total; ?></span> </div>
                     </div>
                 </div>
+            <form action="./includes/payment.inc.php?id=<?php echo $tourID ?>&checkIn=<?php echo $checkIn ?>&adult=<?php echo $adult_num?>&children=<?php echo $child_num?>&totalprice=<?php echo $total?>" method="POST" enctype="multipart/form">
                 <div class="h-50 col-12 px-1">
                     <div class="row bg-light m-0">
                         <div class="col-12 px-4 my-4">
@@ -152,33 +150,32 @@ padding-top:10px;
                                 <label for="holderName">Card Holder Name (As stated on card)</label>
                                 <input type="text" class="form-control" name="holderName" id="holderName" pattern="([A-z0-9À-ž\s]){2,}" required placeholder="Name">
                             </div>
-    
                             <div class="form-group m-3">
                                 <label>Card Expiry Date</label>
                                 <div class="input-group">
                                     <input type="number" class="form-control" placeholder="MM" name="expiryMonth" required>
-                                    <input type="number" class="form-control" placeholder="YY" name="expiryYear" required>
+                                    <input type="number" class="form-control" placeholder="YYYY" name="expiryYear" required>
                                 </div>
                             </div>
                             <div class="form-group m-3">
                                     <label for="cvv">CVV</label>
                                     <input type="number" class="form-control" name="cvv" id="cvv" placeholder= "***"required>
                                 </div>
-                            <div class="btn-purchase">
-                                <div class="btn btn-primary" type="submit" name="purchaseTour">Purchase<span class="fas fa-arrow-right ps-2">
-                                </span> 
-                            </div>
+                                <div class="col-12 text-center mt-2">
+                                    <button type="submit" class="btn btn-primary" name="create-staff">Purchase</button>
+                                </div>
                         </div>
                     </div>
                     <div class="back">
                         <a href="tour_individual.php">Browse Other Tours</a>
                     </div>
                 </div>
+            </form>
             </div>
         </div>
     </div>
 </div>
-</form>
+    
 
 <?php
 

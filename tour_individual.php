@@ -18,6 +18,9 @@ $tourDetails = $result->fetch_assoc();
 $stmt->close();
 $description = str_replace('[NEWLINE]', "\n", $tourDetails["description"]);
 
+// $minpax = $tourDetails["min_pax"];
+// $maxpax = $tourDetails["max_pax"];
+
 ?>
 
 
@@ -105,7 +108,7 @@ $description = str_replace('[NEWLINE]', "\n", $tourDetails["description"]);
 						<?php echo "RM " . $tourDetails["price"]; ?>
 					</p>
 				</div>
-				<form class="" id="booking-form" action="./tour_individual.inc.php?id=<?php echo $id; ?>" method="POST" novalidate>
+				<form class="" id="booking-form" action="./includes/tour_individual.inc.php?id=<?php echo $id; ?> "method="POST" novalidate>
 				<div class="pt-5">
 					<label for="inputCheckInDate" class="mt-1 input-label">Check In: </label>
 					<input type="date" name="checkInDate" id="inputCheckInDate" value="" min="" max="" >
