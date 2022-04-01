@@ -73,14 +73,16 @@ if (!isset($_SESSION["admin"]["adminID"])) {
                 </thead>
                 <tbody>
                     <?php foreach ($sales as $sale):?>
-                        <td><?php echo $sale["order_id"]?></td>
-                        <td><?php echo $sale["order_date"]?></td>
-                        <td><?php echo $sale["tour_id"]?></td>
-                        <td><?php echo $sale["customer_id"]?></td>
-                        <td><?php echo $sale["adult_num"]?></td>
-                        <td><?php echo $sale["child_num"]?></td>
-                        <td><span>RM</span><?php echo $sale["total_price"]?></td>
-                        <?php endforeach; ?>
+                        <tr class="align-middle">
+                            <td><?php echo $sale["order_id"]?></td>
+                            <td><?php echo $sale["order_date"]?></td>
+                            <td><?php echo $sale["tour_id"]?></td>
+                            <td><?php echo $sale["customer_id"]?></td>
+                            <td><?php echo $sale["adult_num"]?></td>
+                            <td><?php echo $sale["child_num"]?></td>
+                            <td><span>RM</span><?php echo $sale["total_price"]?></td>
+                            <?php endforeach; ?>
+                        </tr>
                 </tbody>
             </table>
         </div>
