@@ -11,7 +11,7 @@ require_once "./connection/db.php";
 // }
 // $sortBy = ""; 
 $tours = [];
-$sql = "SELECT t.*, i.* FROM tour_packages t LEFT JOIN trip_images i ON t.tour_id = i.tour_id WHERE t.status = 1;"; // Change this to include images/Add image_type column to table 
+$sql = "SELECT t.*, i.* FROM tour_packages t LEFT JOIN trip_images i ON t.tour_id = i.tour_id WHERE t.status = 1;";
 // Append ORDER BY Clause in SQL to sort the tours based on filter set by customer
 // switch ($filter) {
 // 	case "priceHigh":
@@ -34,12 +34,6 @@ while ($row = $result->fetch_assoc()) {
 }
 $stmt->close(); 
 
-// View the contents of $tours array
-// echo "<pre>";
-//     var_dump($tours);
-// echo "</pre>";
-// die;
-
 require_once "./components/header+offcanvas.php"; 
 require_once "./components/navbar.php"; 
 ?>
@@ -59,18 +53,18 @@ require_once "./components/navbar.php";
 
 <section class="section section-sm bg-default">
 	<div class="container">
-		<h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">Tours</span></h3>
-		<h6 class="pt-2">Tours for you to check out!</h6>
-		<form action="" method="POST">
-		<div class="input-group rounded">
-			<input type="search" class="form-control rounded" placeholder="Search Tours" aria-label="Search" aria-describedby="search-addon" name="search" />
-			<input type="submit" class="input-group-text border-0" id="search-addon" value="Search" name="submit">
-				<!-- <i class="fas fa-search"></i> -->
-			</span>
-		</div>
+		<h3 class="oh-desktop"><span class="d-inline-block wow slideInDown pb-2">Tours</span></h3>
+		<form class="py-2" action="" method="POST">
+			<div class="input-group rounded">
+				<input type="search" class="form-control rounded" placeholder="Search Tours" aria-label="Search" aria-describedby="search-addon" name="search" />
+				<input type="submit" class="input-group-text border-0" id="search-addon" value="Search" name="submit">
+					<!-- <i class="fas fa-search"></i> -->
+				</span>
+			</div>
 		</form>
-		<div class="row row-sm row-40 row-md-50">
-			
+		<h6 class="pt-3">Tours for you to check out!</h6>
+
+		<div class="row row-sm row-40 row-md-50">			
 			<!-- Foreach Loop to Display all Available Tours one by one -->
 			<?php foreach ($tours as $tour) : ?>
 			<div class="col-sm-6 col-md-12 wow fadeInLeft">

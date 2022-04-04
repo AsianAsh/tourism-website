@@ -40,14 +40,6 @@ $userid = $_SESSION['user']['userID'] ?? null;
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/dash.css">
         <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
-        <!-- <script>
-            $(document).ready(function(){
-                $("#testBtn").click(function(){
-                    alert("test")
-                });
-
-            });
-        </script> -->
     </head>
   
   <body>

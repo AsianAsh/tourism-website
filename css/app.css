@@ -8,6 +8,10 @@
   font-size: 16px;
 }
 
+#booking-form{
+  max-width: 300px;
+}
+
 #profile-form, #profile-pic-form, #password-form{
   max-width: 700px;
   margin: 0 auto;

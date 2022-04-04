@@ -34,7 +34,7 @@ if (isset($_POST["updateTour"]) && isset($_GET["id"])){
     $stmt->close();
 
     // Edit Tour Image
-    if (isset($_FILES["editMainImage"])){
+    if (!empty($_FILES["editMainImage"])){
         $fileName = basename($_FILES["editMainImage"]["name"]);
         $fileType = pathinfo($fileName, PATHINFO_EXTENSION);
         $fileError = $_FILES["editMainImage"]["error"];
@@ -60,13 +60,34 @@ if (isset($_POST["updateTour"]) && isset($_GET["id"])){
         $stmt->execute();
         $stmt->close();
     }
-    header("Location: ../agent_dashboard.php?tourupdate=success");
-    exit();
+    if ($_SESSION["agent"]["agentID"]){
+        header("Location: ../agent_dashboard.php?tourupdate=success");
+        exit();
+    } elseif($_SESSION["staff"]["staffID"]){
+        header("Location: ../staff_dashboard.php?tourupdate=success");
+        exit();
+    } else{
+        header("Location: index.php");
+        exit();
+    }
 
-} elseif(!isset($_GET["id"])){
-    header("Location: ../agent_dashboard.php?tourupdate=error");
-    exit();
-} else{
-    header("Location: ../edit_tour.php?id=$id");
-    exit();
+} elseif(!isset($_GET["id"])){ // If there is no id in the URL, redirect to the appropriate page based on user role
+    if ($_SESSION["agent"]["agentID"]){
+        header("Location: ../agent_dashboard.php?tourupdate=error");
+        exit();
+    } elseif($_SESSION["staff"]["staffID"]){
+        header("Location: ../staff_dashboard.php?tourupdate=error");
+        exit();
+    } else{
+        header("Location: index.php");
+        exit();
+    }
+} else{ // Redirect to the appropriate page based on user role
+    if (isset($_SESSION["agent"]["agentID"]) || isset($_SESSION["staff"]["staffID"])){
+        header("Location: ../edit_tour.php?id=$id");
+        exit();
+    } else{
+        header("Location: index.php");
+        exit();
+    }
 }

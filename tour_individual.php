@@ -102,30 +102,29 @@ $description = str_replace('[NEWLINE]', "\n", $tourDetails["description"]);
 			</div>
 
 			<div class="col-12 col-lg-6 col-xl-6 item-inner-section order-5 ps-5">
-				<h3 class="mb-3"><span><?php echo $tourDetails["name"]; ?></span></h3>
+				<h3 class="pt-3 mb-3"><span><?php echo $tourDetails["name"]; ?></span></h3>
 				<div class="d-flex justify-content-between align-items-baseline">
 					<p class="d-inline mt-2 item-info-price lead fs-3">
 						<?php echo "RM " . $tourDetails["price"]; ?>
 					</p>
 				</div>
-				<form class="" id="booking-form" action="./includes/tour_individual.inc.php?id=<?php echo $id; ?> "method="POST" novalidate>
-				<div class="pt-5">
-					<label for="inputCheckInDate" class="mt-1 input-label">Check In: </label>
-					<input type="date" name="checkInDate" id="inputCheckInDate" value="" min="" max="" >
-				</div>
-				<div class="pt-1">
-					<label for="inputAdult" class="mt-1 me-3 input-label">Adults: </label>
-					<input type="number" name="totalAdults" id="inputAdult" value="" min="1" max="1000">
-				</div>
-				<div class="pt-1">
-					<label for="inputChild" class="mt-1 input-label">Children: </label>
-					<input type="number" name="totalChildren" id="inputChild" value="" min="0" max="1000">
-				</div>
-				<div class="pt-1">
-					<button type="submit" class="btn btn-primary" name="booknow">Book Now</button></div>
-				</div>
-			</form>
-
+				<form class="fw-bold" id="booking-form" action="./includes/tour_individual.inc.php?id=<?php echo $id; ?> "method="POST" novalidate>
+					<div class="pt-3">
+						<label for="inputCheckInDate" class="mt-1 input-label">Check In: </label>
+						<input type="date" class="form-control" name="checkInDate" id="inputCheckInDate" value="" min="" max="" >
+					</div>
+					<div class="pt-1">
+						<label for="inputAdult" class="mt-1 me-3 input-label">Adults: </label>
+						<input type="number" class="form-control" name="totalAdults" id="inputAdult" value="" min="1" max="1000">
+					</div>
+					<div class="pt-1">
+						<label for="inputChild" class="mt-1 input-label">Children: </label>
+						<input type="number" class="form-control" name="totalChildren" id="inputChild" value="" min="0" max="1000">
+					</div>
+					<div class="pt-1">
+						<button type="submit" class="btn btn-primary mt-3" name="booknow">Book Now</button></div>
+					</div>
+				</form>
 			</div>
 		</div>
 		

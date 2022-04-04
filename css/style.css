@@ -10068,7 +10068,7 @@ h5 + .list-popular-product {
 	}
 	@supports (object-fit: cover) {
 		.desktop .product-big-figure img {
-			transform: scale(1.1);
+			transform: scale(1.05);
 		}
 	}
 	.desktop .product-big:hover .product-big-figure img {
@@ -12149,7 +12149,7 @@ html [class*='section-'].section-top-0 {
 		padding: 100px 0;
 	}
 	.desktop .section-top-1 {
-		padding-top: 0;
+		/* padding-top: 0; */
 	}
 }
 

@@ -12,7 +12,7 @@
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                 <!-- RD Navbar Brand-->
                 <div class="rd-navbar-brand">
-                <!--Brand--><a class="brand" href="index.html"><img src="images/traveltime_logo.png" alt="" width="225" height="15"/></a>
+                <!--Brand--><a class="brand" href="index.php"><img src="images/traveltime_logo.png" alt="" width="225" height="15"/></a>
                 </div>
             </div>
             <div class="rd-navbar-aside-right rd-navbar-collapse">
@@ -66,8 +66,8 @@
                 </li>
                 <li class="rd-nav-item"><a class="rd-nav-link" href="tours.php">Tours</a>
                 </li>
-                <li class="rd-nav-item"><a class="rd-nav-link" href="typography.php">Typography</a>
-                </li>
+                <!-- <li class="rd-nav-item"><a class="rd-nav-link" href="typography.php">Typography</a>
+                </li> -->
                 <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.php">Contact Us</a>
                 </li>
                 </ul>

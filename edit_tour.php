@@ -17,6 +17,7 @@ if (!isset($_SESSION["agent"]["agentID"]) && !isset($_SESSION["staff"]["staffID"
     $result = $stmt->get_result();
     $tourDetails = $result->fetch_assoc();
     $stmt->close();
+    $description = str_replace('[NEWLINE]', "\n", $tourDetails['description']);
 
     // var_dump($tourDetails);
     // die;
@@ -56,7 +57,7 @@ if (!isset($_SESSION["agent"]["agentID"]) && !isset($_SESSION["staff"]["staffID"
         <!-- Description Field -->
         <div class="col-md-12">
             <label for="editDescription" class="input-label">Description</label>
-            <textarea class="form-control" id="editDescription" rows="15" name="description"><?php echo $tourDetails["description"];?></textarea>
+            <textarea class="form-control" id="editDescription" rows="15" name="description"><?php echo $description;?></textarea>
         </div>       
         <!-- Trip Duration Field -->
         <div class="col-md-6">
