@@ -66,12 +66,12 @@ require_once "./components/header+offcanvas.php";
                     <span class="links_name">Created Tour history</span>
                 </a>
             </li> -->
-            <li>
+            <!-- <li>
                 <a href="#">
                     <i class='bx bx-user' ></i>
                     <span class="links_name">View Account</span>
                 </a>
-            </li>
+            </li> -->
             <li>
                 <a href="./includes/logout.inc.php">
                     <i class='bx bx-log-out' ></i>

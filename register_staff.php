@@ -111,10 +111,10 @@ if (!isset($_SESSION["admin"]["adminID"])) {
                 and contains at least one symbol (~ ! @ # $ % ^ & * - _ ?)
                 </small>
             </div>
-            <div class="form-check form-switch mt-2">
+            <!-- <div class="form-check form-switch mt-2">
                 <input class="form-check-input view-Password" type="checkbox" id="flexSwitchCheckDefault">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Show Password</label>
-            </div>
+            </div> -->
         </div> 
 
         <div class="col-12 text-center mt-2">
