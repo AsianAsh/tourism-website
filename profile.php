@@ -28,6 +28,7 @@ if (isset($_SESSION["errorsArray"])) {
     }
     $stmt->close();
 ?>
+
 <div class="container border border-dark profile-container my-5 d-flex align-items-stretch">
     <div class="row align-items-stretch">
         <div class="col-3 px-0  pb-5 nav-tab-container d-flex flex-column justify-content-center">
@@ -205,7 +206,7 @@ if (isset($_SESSION["errorsArray"])) {
                                     <tbody>
                                     <?php foreach ($orderHistory as $order):?>
                                         <tr class="align-middle">
-                                            <td><?php echo $order["order_id"]?></td>
+                                            <td><?php echo $order["tour_id"]?></td>
                                             <td><?php echo $order["order_date"]?></td>
                                             <td><?php echo $order["adult_num"]?></td>
                                             <td><?php echo $order["child_num"]?></td>
