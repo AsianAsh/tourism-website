@@ -15,6 +15,19 @@ if (isset($_SESSION["errorsArray"])) {
     unset($_SESSION["errorsArray"]);
 }
 ?>
+<?php
+    require_once "./connection/db.php";
+    $userID = $_SESSION["user"]["userID"];
+    $orderHistory= [];
+    $sql = "SELECT * FROM orders WHERE customer_id = $userID";
+    $stmt = $connection->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    while ($row = $result->fetch_assoc()){
+        array_push($orderHistory,$row);
+    }
+    $stmt->close();
+?>
 <div class="container border border-dark profile-container my-5 d-flex align-items-stretch">
     <div class="row align-items-stretch">
         <div class="col-3 px-0  pb-5 nav-tab-container d-flex flex-column justify-content-center">
@@ -35,9 +48,9 @@ if (isset($_SESSION["errorsArray"])) {
                     <button class=" nav-link <?php if(isset($_GET["profilepwd"])){echo "active";}?>" id="nav-privacy-tab" data-bs-toggle="tab"
                         data-bs-target="#nav-privacy" type="button" role="tab" aria-controls="nav-privacy"
                         aria-selected="false">Change Password</button>
-                    <!-- <button class=" nav-link" id="nav-order-tab" data-bs-toggle="tab" data-bs-target="#nav-order"
+                    <button class=" nav-link" id="nav-order-tab" data-bs-toggle="tab" data-bs-target="#nav-order"
                         type="button" role="tab" aria-controls="nav-order" aria-selected="false">Order
-                        History</button> -->
+                        History</button>
                 </div>
             </div>
         </div>
@@ -169,9 +182,42 @@ if (isset($_SESSION["errorsArray"])) {
                 <!-- Order History Tab -->
                 <div class="tab-pane fade" id="nav-order" role="tabpanel" aria-labelledby="nav-order-tab">
                     <div class="container review-container">
-                        <h2 class="text-center my-auto">No previous orders</h2>
-                        <!-- <button type="button" id="testBtn">Button</button> -->
-                        <!-- Container for each Order -->
+                        <!-- <h2 class="text-center my-auto">No previous orders</h2> -->
+                        <!-- <button type="button" id="testBtn">Button</button> --> 
+                        <!-- Container for each Order-->
+                        
+                        <!-- <h2 class="text-center my-auto">No previous orders.</h2> -->
+                        <div class="home-content">
+                            <div class="overview boxes">
+                                <table class="table table-responsive table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Tour id</th>
+                                            <th scope="col">Order Date</th>
+                                            <th scope="col">No. of Adult</th>
+                                            <th scope="col">No. of Children</th>
+                                            <!-- <th scope="col">Check Out Date</th> -->
+                                            <th scope="col">Total Price</th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php foreach ($orderHistory as $order):?>
+                                        <tr class="align-middle">
+                                            <td><?php echo $order["order_id"]?></td>
+                                            <td><?php echo $order["order_date"]?></td>
+                                            <td><?php echo $order["adult_num"]?></td>
+                                            <td><?php echo $order["child_num"]?></td>
+                                            <td><span>RM</span><?php echo $order["total_price"]?></td>
+                                            <?php endforeach; ?>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        
                         <?php /*if (empty($orderId)) : ?>
                         <h2 class="text-center my-auto">No previous orders.</h2>
                         <?php else:?>
