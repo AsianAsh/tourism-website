@@ -55,9 +55,4 @@ if (isset($_POST['booknow'])){
         // }
         }
     }
-
-
-
-
-
 ?>
