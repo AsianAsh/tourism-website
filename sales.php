@@ -9,7 +9,7 @@ if (!isset($_SESSION["admin"]["adminID"])) {
 }else{
     require_once "./connection/db.php";
     // Get array of sales from database
-    $adminID =$_SESSION["admin"]["adminID"];
+    $adminID = $_SESSION["admin"]["adminID"];
     $sales = [];
     $sql = "SELECT * FROM orders ORDER BY  order_date ASC;";
     $stmt = $connection->prepare($sql);
@@ -19,13 +19,7 @@ if (!isset($_SESSION["admin"]["adminID"])) {
         array_push($sales,$row);
     }
     $stmt->close();
-    // View the contents of $tours array
-    // echo "<pre>";
-    //     var_dump($tours);
-    // echo "</pre>";
-    // die;
 }
-// require_once  "./components/header+offcanvas.php"; 
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +37,6 @@ if (!isset($_SESSION["admin"]["adminID"])) {
     .back{
         width:45px;
         height:45px;
-        /* padding:10px */
     }
     .back:hover{
         width:48px;
@@ -52,7 +45,6 @@ if (!isset($_SESSION["admin"]["adminID"])) {
     }
 </style>
 <body>
-
     <div class="home-content">
         <div class="overview boxes">
             <h3 class="my-4"><span><a href="admin_dashboard.php"><img src="images/Goback.png " alt="#" class="back"></a></span>Sales Report</h3>
@@ -87,9 +79,7 @@ if (!isset($_SESSION["admin"]["adminID"])) {
             </table>
         </div>
     </div>
-    
 </body>
 </html>
-
 
 <?php require_once "./components/scripts.php"; ?>

@@ -1,6 +1,5 @@
 <?php
 session_start();
-// require_once "../helpers/helpers.php";
 require_once "../connection/db.php";
 
 if (isset($_POST["createTour"])){
@@ -20,9 +19,6 @@ if (isset($_POST["createTour"])){
     $fileError = $_FILES["uploadMainImage"]["error"];
     $fileSize = $_FILES["uploadMainImage"]["size"];
     $allowedTypes = ["jpg", "jpeg", "png"];
-    // var_dump($description);
-    // print_r($fileType);
-    // die;
 
     // Form Input Validation
     // Check for empty input fields

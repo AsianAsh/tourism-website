@@ -17,25 +17,11 @@ if (!isset($_SESSION["staff"]["staffID"])) {
         array_push($tours, $row);
     }
     $stmt->close(); 
-    // View the contents of $tours array
-    // echo "<pre>";
-    //     var_dump($tours);
-    // echo "</pre>";
-    // die;
 }
 require_once "./components/header+offcanvas.php"; 
 ?>
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="UTF-8">
 
-        <!-- Boxicons CDN Link -->
-        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
     <!-- Publish Tour Confirmation Modal from Publish Button -->
     <div class="modal fade" id="publishTourModal" tabindex="-1" aria-labelledby="publishTourModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -50,7 +36,6 @@ require_once "./components/header+offcanvas.php";
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary"  data-bs-dismiss="modal">Close</button>
                     <form action="./includes/tour_status.inc.php" method="POST">
-                        <!-- <input type="hidden" name = "type" value = "" id = "addItemTypeInput"> -->
                         <input type="hidden" name="tourID" id="publishTourIDInput" value = "">
                         <input type="hidden" name="staffID" id="publishTourStaffInput" value = ""> <!-- change this for staffID -->
                         <button type="submit" class="btn btn-success" name="publishTour">Publish</button>
@@ -97,26 +82,7 @@ require_once "./components/header+offcanvas.php";
                 <i class='bx bx-grid-alt' ></i>
                 <span class="links_name">Dashboard</span>
             </a>
-            </li>
-            <!-- <li>
-            <a href="tours.php">
-                <i class='bx bx-pie-chart-alt-2' ></i>
-                <span class="links_name">View Tour Packages</span>
-            </a>
-            </li>
-            <li>
-            <a href="#">
-                <i class='bx bx-pie-chart-alt-2' ></i>
-                <span class="links_name">Modify Tour Packages</span>
-            </a>
-            </li> -->
-            <!-- <li>
-            <a href="#">
-                <i class='bx bx-user' ></i>
-                <span class="links_name">View Account</span>
-            </a>
-            </li> -->
-            
+            </li>           
             <li>
             <a href="./includes/logout.inc.php">
                 <i class='bx bx-log-out' ></i>

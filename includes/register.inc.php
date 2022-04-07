@@ -1,9 +1,8 @@
 <?php
 session_start();
 
-//Import DB connection & helpers
+//Import DB connection
 require_once "../connection/db.php";
-// require_once "../helper/helpers.php";
 
 if(!isset($_POST["signup"])){
     header("Location: ../index.php");
@@ -18,23 +17,6 @@ if(!isset($_POST["signup"])){
     $email = $_POST['email'];
     $password = $_POST['password'];
 }
-
- 
-
-// $firstName = sanitizeText($_POST["firstName"]);
-// $lastName = sanitizeText($_POST["lastName"]);
-// $mobileNumber = validateMobileNumber($_POST["mobileNumber"]);
-// $password = validatePassword($_POST["password"]);
-// $email = validateEmail($_POST["email"]);
-
-
-
-// Check for any empty input fields
-// if (empty($firstName) || empty($lastName) || empty($mobileNumber) || empty($email) || empty($password)) {
-//     $_SESSION["messages"][] = "Please fill all required fields!";
-//     // exit;
-// } 
-
 
 // Validate First & Last Name
 $nameRegEx = "/^([a-zA-Z' ]+)$/";
@@ -102,14 +84,6 @@ elseif (!preg_match($passwordRegEx, $password)) {
     array_push($errorArray, "password");
 };
 
-
-
-// echo '<pre>';
-// var_dump($errorArray); // or print_r($var);
-// die;
-
-
-
 if (!empty($errorArray)) {
     $_SESSION["accountCreationError"] = $errorArray;
     header("Location:  ../register.php");
@@ -126,28 +100,3 @@ if (!empty($errorArray)) {
     header("Location: ../index.php");
     exit();
 }
-
-// $newUser = array(
-//     "firstName" => $firstName,
-//     "lastName" => $lastName,
-//     "mobileNumber" => $mobileNumber,
-//     "email" => $email,
-//     "password" => $password
-// );
-
-// foreach ($newUser as $key => $value) {
-//     if ($value === false) {
-//         array_push($errorArray, $key);
-//     }
-// }
-
-// if ($errorArray) {
-//     $_SESSION["accountCreationError"] = $errorArray;
-//     header("Location:  ../register.php");
-//     exit();
-// } else {
-//     createUser($newUser, $connection);
-//     $_SESSION["alertMessage"][] = "Account Successfully Created";
-//     header("Location:  ../index.php");
-//     exit();
-// }

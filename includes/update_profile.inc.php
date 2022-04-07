@@ -18,13 +18,9 @@ if (isset($_POST["saveProfile"])){
     // Check for any empty input fields
     if (empty($firstName) || empty($lastName)){
         array_push($errArray, "profileEmpty");
-        // header("Location: ../profile.php?profile=empty");
-        // exit();
     } elseif(!preg_match($nameRegEx, $firstName)){
         // Validate First & Last Name
         array_push($errArray, "firstName");
-        // header("Location: ../profile.php?profile=name");
-        // exit();
     } elseif(!preg_match($nameRegEx, $lastName)){
         array_push($errArray, "lastName");
     } else{

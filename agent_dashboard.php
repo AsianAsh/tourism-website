@@ -18,11 +18,6 @@ if (!isset($_SESSION["agent"]["agentID"])) {
         array_push($agentTours, $row);
     }
     $stmt->close(); 
-    // View the contents of $agentTours array
-    // echo "<pre>";
-    //     var_dump($agentTours);
-    // echo "</pre>";
-    // die;
 }
 require_once "./components/header+offcanvas.php"; 
 ?>
@@ -60,18 +55,6 @@ require_once "./components/header+offcanvas.php";
                     <span class="links_name">Create Tour Package</span>
                 </a>
             </li>
-            <!-- <li>
-                <a href="#">
-                    <i class='bx bx-book-alt' ></i>
-                    <span class="links_name">Created Tour history</span>
-                </a>
-            </li> -->
-            <!-- <li>
-                <a href="#">
-                    <i class='bx bx-user' ></i>
-                    <span class="links_name">View Account</span>
-                </a>
-            </li> -->
             <li>
                 <a href="./includes/logout.inc.php">
                     <i class='bx bx-log-out' ></i>
@@ -123,56 +106,21 @@ require_once "./components/header+offcanvas.php";
                     <?php endforeach; ?>
                     </tbody>
                 </table>   
-            
-            
-            <!-- <div class="overview-boxes">
-                <div class="box">
-                <div class="right-side">
-                    <div class="box-topic">Recent Articles</div>
-                    <div class="number"></div>
-                </div>
-                </div>
-            </div>
-
-            <div class="article-box">
-                <div class="article-content">
-                    
-                    <img src=" images/article5" alt="" width="100%" height="100%">
-                </div>
-            </div>
-
-            <div class="article-box">
-                <div class="article-content">
-                    <img src=" images/article4" alt="" width="100%" height="100%">
-                </div>
-            </div>
-
-            <div class="article-box">
-                <div class="article-content">   
-                    <img src="images/article_img2" alt="" width="100%" height="100%">
-                </div>
-            </div>
-
-            <div class="article-box">
-                <div class="article-content">
-                    <img src="images/article3" alt="" width="100%" height="100%">
-                </div>
-            </div> -->
             </div>
         </div>
     </section>
         
             
-    <!-- for sidebar interaction -->
+<!-- Sidebar Interaction -->
 <script>
     let sidebar = document.querySelector(".sidebar");
     let sidebarBtn = document.querySelector(".sidebarBtn");
     sidebarBtn.onclick = function() {
-    sidebar.classList.toggle("active");
-    if(sidebar.classList.contains("active")){
-    sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
-    }else
-    sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+        sidebar.classList.toggle("active");
+        if(sidebar.classList.contains("active")){
+            sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+        }else
+            sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
     }
 </script>
 

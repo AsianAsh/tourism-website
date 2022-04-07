@@ -31,9 +31,6 @@ if (isset($_POST["signin"]) && isset($_GET["page"])) {
         array_push($loginErrorArray, "passwordEmpty");
     } 
 
-    // print_r($loginErrorArray);
-    // die;
-
     if (!$loginErrorArray) {
         $stmt = $connection->prepare("SELECT * FROM customer WHERE email = ?;");
         $stmt->bind_param("s", $email);
@@ -44,8 +41,6 @@ if (isset($_POST["signin"]) && isset($_GET["page"])) {
         $verifyPassword = password_verify($password, $row["customer_password"]);
         $validLogin = ($verifyPassword === false) ? false : true;
         if ($validLogin) {
-            // var_dump($validLogin );
-            // die;
             $_SESSION["user"] = array(
                 "userID" => $row["customer_id"],
                 "firstName" => $row["first_name"],
@@ -56,40 +51,11 @@ if (isset($_POST["signin"]) && isset($_GET["page"])) {
                 "profilePic" => $row["profile_pic"],
                 "creationDate" => $row["creation_date"],
             );
-            // $_SESSION["alertMessage"][] = "Signin Successful";
-        } //else {
-        //     $_SESSION["alertMessage"][] = "Incorrect Login Details";
-        // }
+        } 
     } else {
         $_SESSION["loginErrorArray"] = $loginErrorArray;
-        // $_SESSION["alertMessage"][] = "Invalid Details";
     }
 
     header("Location: ../$lastPage");
     exit();
 }
-
-
-
-// if (isset($_POST["logout"]) && isset($_GET["page"])) {
-//     $lastPageQuery = filter_input_array(INPUT_GET, FILTER_SANITIZE_STRING);
-
-//     // Get the last page the user was on before logging out
-//     $lastPage = $lastPageQuery["page"];
-//     // Get the query string from the last page the user was on before  logging out
-//     // $queryString = $lastPageQuery["queryString"];
-    
-//     session_unset();
-//     session_destroy();
-
-//     header("Location: ../$lastPage");
-//     exit();
-// }
-
-// if (!$queryString){
-//     header("Location: ../$lastPage");
-//     exit();
-// } else {
-//     header("Location: ../$lastPage?$queryString");
-//     exit();
-// }

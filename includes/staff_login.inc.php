@@ -1,27 +1,13 @@
 <?php
 session_start();
 
-//Import DB connection & helpers
+//Import DB connection 
 if (isset($_POST["staff-login"])) {
     require_once "../connection/db.php";
 
-    // $loginErrorArray = [];   
     $email = $_POST["email"];
     $password = $_POST['password'];
 
-    // if (empty($username)){
-    //     array_push($loginErrorArray, "usernameEmpty");
-    // } 
-    // /*elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    //     array_push($loginErrorArray, "email");
-    // } */
-
-    // if ($password == ""){
-    //     array_push($loginErrorArray, "passwordEmpty");
-    // } 
-
-    // print_r($loginErrorArray);
-    // die;
     // Check for any empty input fields
     if (empty($email)) {
         header("Location: ../staff.php?login=emptyemail&password=$password");
@@ -42,11 +28,10 @@ if (isset($_POST["staff-login"])) {
                 $row = $result->fetch_assoc();
                 $stmt->close();
         
-                $verifyPassword = password_verify($password, $row["staff_password"]); // uncomment this when you change the password to hash version   
+                $verifyPassword = password_verify($password, $row["staff_password"]); 
                 $validLogin = ($verifyPassword === false) ? false : true;
                 $validLogin = $verifyPassword;
-                // var_dump($validLogin);
-                // die; 
+
                 if (!$validLogin) {
                     header("Location: ../staff.php?login=password&email=$email");
                     exit();

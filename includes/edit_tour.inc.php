@@ -1,6 +1,5 @@
 <?php
 session_start();
-// require_once "../helpers/helpers.php";
 require_once "../connection/db.php";
 
 if (isset($_POST["updateTour"]) && isset($_GET["id"])){
@@ -14,17 +13,6 @@ if (isset($_POST["updateTour"]) && isset($_GET["id"])){
     $location = ucwords($_POST['location']);
     $startTime = $_POST['startTime'];
     $endTime = $_POST['endTime'];
-
-    // var_dump($id);
-    // var_dump($tourName);
-    // var_dump($tourPrice);
-    // var_dump($minPax);
-    // var_dump($maxPax);
-    // var_dump($tripDuration);
-    // var_dump($location);
-    // var_dump($startTime);
-    // var_dump($endTime);
-    // die;
 
     // Insert Form Input into tour_packages to Create New Tour
     $stmt = $connection->prepare("UPDATE tour_packages SET name = ?, price = ?, description = ?, trip_duration = ?, 

@@ -5,7 +5,6 @@ if (!isset($_SESSION["agent"]["agentID"]) && !isset($_SESSION["staff"]["staffID"
     header("Location: index.php");
     exit();
 } else{
-    // require_once "./helpers/helpers.php";
     require_once "./connection/db.php";
     require_once "./components/header+offcanvas.php";
     $tourDetails = [];
@@ -18,9 +17,6 @@ if (!isset($_SESSION["agent"]["agentID"]) && !isset($_SESSION["staff"]["staffID"
     $tourDetails = $result->fetch_assoc();
     $stmt->close();
     $description = str_replace('[NEWLINE]', "\n", $tourDetails['description']);
-
-    // var_dump($tourDetails);
-    // die;
 }
 ?>
 
@@ -92,28 +88,6 @@ if (!isset($_SESSION["agent"]["agentID"]) && !isset($_SESSION["staff"]["staffID"
         <!-- Create Tour Button -->
         <button class="btn btn-primary" type="submit" name="updateTour">Confirm Changes</button>
     </form>
-
-    <?php /*
-        if(!isset($_GET["tour"])){
-            exit();
-        } else{
-            $creationCheck = $_GET["tour"];
-            
-            if($creationCheck == "empty"){
-                echo "<p class='mt-2 text-danger text-center mb-0 ps-1 d-block'>Please fill in all fields!</p>";
-                exit();
-            } elseif($creationCheck == "description"){
-                echo "<p class='mt-2 text-danger text-center mb-0 ps-1 d-block'>Description has exceeded the 1000 character limit.</p>";
-                exit();
-            } elseif($creationCheck == "pax"){
-                echo "<p class='mt-2 text-danger text-center mb-0 ps-1 d-block'>Minimum pax cannot be more than maximum pax.</p>";
-                exit();
-            } elseif($creationCheck == "success"){
-                echo "<p class='mt-2 text-success text-center mb-0 ps-1 d-block'>Tour Package Creation Successful!</p>";
-                exit();
-            }
-        }*/
-    ?>
 </div>
 
 <?php require_once "./components/scripts.php"; ?>

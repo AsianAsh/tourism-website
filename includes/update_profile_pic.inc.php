@@ -1,20 +1,13 @@
 <?php
 // Handle request to change user prpfile picture
-
 session_start();
 // POST received from profile.php (Profile Picture Tab) (Upload Button)
 if (isset($_SESSION["user"]["customer_id"], $_POST["uploadPic"])) {
-    //
     $hasImage = $_SESSION["user"]["profilePic"] === "" ? false : true;
-    // require_once "../helper/helpers.php";
     require_once "../connection/db.php";
-    //Get submitted image file from user
+    // Get submitted image file from user
     $dataURI = $_POST["newProfilePic"];
-    // var_dump($dataURI);
-    // die;
     $image = file_get_contents($dataURI);
-    //
-
 
     //validateImage Function from helpers
     $getImageString = getimagesizefromstring($image);
@@ -30,10 +23,7 @@ if (isset($_SESSION["user"]["customer_id"], $_POST["uploadPic"])) {
     return $mimeType;
     //End of validateImage function from helpers
 
-
-    // $imageMime = validateImage($image); //function from helpers
     $imageMime = $mimeType;
-    //
     if (!$imageMime) {
         $_SESSION["alertMessage"][] = "Invalid Image Type";
         header("Location: ../profile.php");
@@ -47,10 +37,6 @@ if (isset($_SESSION["user"]["customer_id"], $_POST["uploadPic"])) {
     
     $_SESSION["alertMessage"][] = "Image Updated";
 
-
-    // saveImage($imageMime, $image, $connection, $_SESSION["user"]["userID"], $hasImage); //function from helpers
-
-    //Function from helpers
     $userDir = "../images/User/user_" . $_SESSION["user"]["customer_id"];
     if (!is_dir($userDir)) {
         mkdir($userDir);
@@ -76,7 +62,6 @@ if (isset($_SESSION["user"]["customer_id"], $_POST["uploadPic"])) {
     $stmt->execute();
     $stmt->close();
     $_SESSION["user"]["profilePic"] = $saveToDbImage;
-    //End of function from helpers
     
     header("Location: ../profile.php");
     exit();
@@ -98,7 +83,6 @@ if (isset($_SESSION["user"]["customer_id"], $_POST["removeProfilePic"])) {
             unlink($file); // delete file
         }
     }
-    // $_SESSION["alertMessage"][] = "Image Updated";
     header("Location: ../profile.php");
     exit();
 }

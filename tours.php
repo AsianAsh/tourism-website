@@ -1,31 +1,16 @@
 <?php 
 session_start(); 
 require_once "./connection/db.php";
-// require_once "./helper/helpers.php";
-
 //Search Query for Tour
-// if (isset($_GET["q"])) {
-// 	$searchQuery = $_GET["q"];
-// } else{
-// 	$searchQuery = ""; 
-// }
-// $sortBy = ""; 
+if (isset($_GET["q"])) {
+	$searchQuery = $_GET["q"];
+} else{
+	$searchQuery = ""; 
+}
 $tours = [];
-$sql = "SELECT t.*, i.* FROM tour_packages t LEFT JOIN trip_images i ON t.tour_id = i.tour_id WHERE t.status = 1;";
-// Append ORDER BY Clause in SQL to sort the tours based on filter set by customer
-// switch ($filter) {
-// 	case "priceHigh":
-// 		$sql = substr_replace($sql, " ORDER BY price DESC;", -1, -1);
-// 		break;
-
-// 	case "priceLow":
-// 		$sql = substr_replace($sql, " ORDER BY price ASC;", -1, -1);
-// 		break;
-// }
+$sql = "SELECT t.*, i.* FROM tour_packages t LEFT JOIN trip_images i ON t.tour_id = i.tour_id WHERE t.status = 1 AND t.name LIKE '%$searchQuery%';";
 
 $stmt = $connection->prepare($sql);
-// $searchQuery = "%$searchQuery%";
-// $stmt->bind_param("s", $searchQuery);
 $stmt->execute();
 $result = $stmt->get_result();
 
@@ -38,27 +23,14 @@ require_once "./components/header+offcanvas.php";
 require_once "./components/navbar.php"; 
 ?>
 
-<?php
-// if(isset($_POST["submit"])){
-// 	$search = $_POST["search"];
-// 	$S_query = $connection->prepare('SELECT * FROM tour_packages WHERE location LIKE :keyword');
-// 	$S_query->bindvalue(':keyword','%'.$search.'%',PDO::PARAM_STR);
-// 	$S_query->execute();
-// 	$result2 = $S_query->fetchAll();
-// 	$row2 = $S_query->rowcount();
-// }
-
-
-?>
-
 <section class="section section-sm bg-default">
 	<div class="container">
 		<h3 class="oh-desktop"><span class="d-inline-block wow slideInDown pb-2">Tours</span></h3>
-		<form class="py-2" action="" method="POST">
+		<!-- Search Bar -->
+		<form class="py-2" method="GET">
 			<div class="input-group rounded">
-				<input type="search" class="form-control rounded" placeholder="Search Tours" aria-label="Search" aria-describedby="search-addon" name="search" />
-				<input type="submit" class="input-group-text border-0" id="search-addon" value="Search" name="submit">
-					<!-- <i class="fas fa-search"></i> -->
+				<input type="text" class="form-control rounded" placeholder="Search for Tours" aria-label="Search" aria-describedby="search-addon" name="q" value="<?php echo $searchQuery?>"/>
+				<button type="submit" class="btn btn-outline-secondary" id="search-addon">Search</button>
 				</span>
 			</div>
 		</form>
@@ -88,9 +60,6 @@ require_once "./components/navbar.php";
 							<div class="product-big-body">
 								<!-- Tour Name -->
 								<h5 class="product-big-title pe-5"><a href="#"><?php echo "$tour[name]"; ?></a></h5>
-								<!-- <div class="group-sm group-middle justify-content-start">
-									<a class="product-big-reviews" href="#">4.8/5 (375 customer reviews)</a>
-								</div> -->
 								<?php $description = str_replace('[NEWLINE]', "\n", $tour['description']) ?>
 								<?php $description = strlen($description) > 180 ? substr($description,0,180)."..." : $description; ?>
 								<p class="product-big-text"><?php echo $description; ?></p><a class="button button-black-outline button-ujarak" href="tour_individual.php?id=<?php echo $tour["tour_id"];?>">More Details</a>
@@ -106,10 +75,5 @@ require_once "./components/navbar.php";
 		</div>
 	</div>
 </section>
-
-
-
-
-
 
 <?php require_once "./components/footer.php"; ?>

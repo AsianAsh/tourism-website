@@ -59,8 +59,6 @@
                       <li><a href="about.php">About us</a></li>
                       <li><a href="tours.php">Our Tours</a></li>
                       <li><a href="about.php">Our Team</a></li>
-                      <!-- <li><a href="#">Gallery</a></li>
-                      <li><a href="#">Blog</a></li> -->
                     </ul>
                     <div class="group-md group-middle justify-content-sm-start"><a class="button button-lg button-primary button-ujarak" href="#">Get in touch</a></div>
                   </div>

@@ -1,16 +1,13 @@
-<?php session_start(); ?>
 <?php 
+session_start();
 // Return customer to index.php if not logged in
 if(!isset($_SESSION["user"]["userID"])){
     header("Location: index.php");
     exit();
 }
-
 require_once "./connection/db.php";
 require_once "./components/header+offcanvas.php"; 
 
-
-// $customerID = $_SESSION["user"]["userID"] ?? null;
 $tourID = $_GET["id"];
 $sql = "SELECT t.*, i.* FROM tour_packages t LEFT JOIN trip_images i ON t.tour_id = i.tour_id WHERE t.tour_id = ?;";
 $stmt = $connection->prepare($sql);
@@ -19,18 +16,12 @@ $stmt->execute();
 $result = $stmt->get_result();
 $tourinfo = $result->fetch_assoc();
 $stmt->close();
-?>
-<?php
 
 $price = $tourinfo['price'];
 $total = ($price * 0.017) + $price;
 $checkIn = $_GET['checkin'];
 $adult_num = $_GET['adult'];
 $child_num = $_GET['children']
-
-
-
-// if (isset('purchaseTour'))
 ?>
 
 <style>
@@ -58,14 +49,14 @@ $child_num = $_GET['children']
             <div class="row">
                 <div class="row m-0 bg-light">
                     <div class="box-space">
-                            <img src=
-                            <?php if(!isset($tourinfo["image"])){
-                                    echo "images/Melaka-index.jpeg";
-                                } else{
-                                    $image = base64_encode($tourinfo["image"]);
-                                    echo "'data:image/jpg;charset=utf8;base64, $image'"; //$image is a longblob(bunch of random symbols) so this converts it to image
-                                }?>  
-                                alt="" class="img-thumbnail" width="550" height="400">
+                        <img src=
+                        <?php if(!isset($tourinfo["image"])){
+                                echo "images/Melaka-index.jpeg";
+                            } else{
+                                $image = base64_encode($tourinfo["image"]);
+                                echo "'data:image/jpg;charset=utf8;base64, $image'"; //$image is a longblob(bunch of random symbols) so this converts it to image
+                            }?>  
+                        alt="" class="img-thumbnail" width="550" height="400">
                     </div>
                     <div class="box-space">
                         <p class="h5 m-0">Package Name</p>
@@ -175,14 +166,6 @@ $child_num = $_GET['children']
         </div>
     </div>
 </div>
-    
-
-<?php
-
-// if (!isset)
-
-
-?>
 
     
 

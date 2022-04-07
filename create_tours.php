@@ -5,8 +5,6 @@ if (!isset($_SESSION["agent"]["agentID"])) {
     header("Location: index.php");
     exit();
 }
-
-// require_once "./helpers/helpers.php";
 require_once "./connection/db.php";
 require_once "./components/header+offcanvas.php";
 ?>

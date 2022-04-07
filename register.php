@@ -1,6 +1,5 @@
 <?php
 session_start();
-// var_dump($_SESSION["accountCreationError"]);
 $errorArray = [];
 $firstName = "";
 $lastName = "";
@@ -22,8 +21,6 @@ if (isset($_SESSION["accountCreationError"])) {
     $errorArray =  $_SESSION["accountCreationError"];
     unset($_SESSION["accountCreationError"]);
 }
-
-// $title = "Register Account";
 ?>
 
 <?php require_once "./components/header+offcanvas.php"; ?>
@@ -34,7 +31,6 @@ if (isset($_SESSION["accountCreationError"])) {
         <form class="row mt-3 g-4" id="register-form" action="./includes/register.inc.php" method="POST" novalidate> <!-- novalidate stops Google's own browser validation of Form Submissions-->
             <!-- First Name Input Field -->
             <div class="col-md-12">
-                <!-- <label for="inputFirstName" class="form-label">First Name</label> -->
                 <input type="text" class="form-control form-control-lg border-dark" id="inputFirstName" placeholder="First name" 
                 name="firstName" value="">
                 <?php if (in_array("firstNameEmpty", $errorArray)) : ?>
@@ -46,7 +42,6 @@ if (isset($_SESSION["accountCreationError"])) {
             
             <!-- Last Name Input Field -->
             <div class="col-md-12">
-                <!-- <label for="inputLastName" class="form-label">Last Name</label> -->
                 <input type="text" class="form-control form-control-lg border-dark" id="inputLastName" placeholder="Last name" 
                 name="lastName" value="">
                 <?php if (in_array("lastNameEmpty", $errorArray)) : ?>
@@ -58,7 +53,6 @@ if (isset($_SESSION["accountCreationError"])) {
             
             <!-- Mobile Number Input Field -->
             <div class="col-md-12">
-            <!-- <label for="inputTelephone" class="form-label">Mobile Number</label> -->
                 <div class="input-group">
                     <div class="input-group-text border-dark">+60</div>
                     <input type="tel" class="form-control form-control-lg border-dark" id="inputTelephone" placeholder="123456789" 
@@ -81,7 +75,6 @@ if (isset($_SESSION["accountCreationError"])) {
             
             <!-- Email Input Field -->
             <div class="col-md-12">
-                <!-- <label for="registerEmail" class="form-label">Email*</label> -->
                 <input type="email" class="form-control form-control-lg border-dark" id="registerEmail" placeholder="Email address" 
                 name="email" value="">
                 <?php if (in_array("emailEmpty", $errorArray)) : ?>
@@ -95,7 +88,6 @@ if (isset($_SESSION["accountCreationError"])) {
             
             <!-- Password Input Field -->
             <div class="col-md-12">
-                <!-- <label for="registerPassword" class="form-label">Password</label> -->
                 <input type="password" class="form-control form-control-lg border-dark registerPassword" id="registerPassword" placeholder="Password" name="password" required>
                 <div class="mt-1 <?php if (in_array("password", $errorArray))  echo "border border-danger ps-1 rounded mt-1"; ?>">
                 <?php if (in_array("passwordEmpty", $errorArray)) : ?>
@@ -129,11 +121,3 @@ if (isset($_SESSION["accountCreationError"])) {
     </div>
 
 <?php require_once "./components/scripts.php"; ?>
-
-    <!-- Javascript
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/show_password.js"></script>
-    <script src="js/current_date.js"></script>
-  </body>
-</html> -->

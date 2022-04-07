@@ -57,21 +57,15 @@
 
                 <!-- Find a way to have the tab of the current page highlighted (rd-nav-item active) 
                 without having to cut & paste this entire <ul> code in each php file-->
-                <!-- <li class="rd-nav-item active"><a class="rd-nav-link" href="index.php">Home</a> 
-                </li> -->
-
                 <li class="rd-nav-item"><a class="rd-nav-link" href="index.php">Home</a>
                 </li>
                 <li class="rd-nav-item"><a class="rd-nav-link" href="about.php">About</a>
                 </li>
                 <li class="rd-nav-item"><a class="rd-nav-link" href="tours.php">Tours</a>
                 </li>
-                <!-- <li class="rd-nav-item"><a class="rd-nav-link" href="typography.php">Typography</a>
-                </li> -->
                 <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.php">Contact Us</a>
                 </li>
                 </ul>
-
             </div>
             </div>
         </div>

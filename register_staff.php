@@ -25,7 +25,6 @@ if (!isset($_SESSION["admin"]["adminID"])) {
         <div class="col-md-12">
             <?php
                 if(isset($_GET["first"])){
-                    // <label for="inputFirstName" class="form-label">First Name</label>
                     $first = $_GET["first"];
                     echo '<input type="text" class="form-control form-control-lg border-dark" id="inputFirstName" name="firstName" placeholder="First name" value="'.$first.'">';
                 } else{
@@ -37,7 +36,6 @@ if (!isset($_SESSION["admin"]["adminID"])) {
         <div class="col-md-12">
             <?php
                 if(isset($_GET["last"])){
-                    // <label for="inputFirstName" class="form-label">First Name</label>
                     $last = $_GET["last"];
                     echo '<input type="text" class="form-control form-control-lg border-dark" id="inputLastName" placeholder="Last name" 
                     name="lastName" value="'.$last.'">';
@@ -51,7 +49,6 @@ if (!isset($_SESSION["admin"]["adminID"])) {
         <div class="col-md-12 mt-4">
             <?php
                 if(isset($_GET["mobilenumber"])){
-                    // <label for="inputFirstName" class="form-label">First Name</label>
                     $number = $_GET["mobilenumber"];
                     echo '<div class="input-group">
                             <div class="input-group-text border-dark">+60</div>
@@ -72,7 +69,6 @@ if (!isset($_SESSION["admin"]["adminID"])) {
         <div class="col-md-12 mt-4">
             <?php
                 if(isset($_GET["dob"])){
-                    // <label for="inputFirstName" class="form-label">First Name</label>
                     $birthdate = $_GET["dob"];
                     echo '<input type="date" class="form-control form-control-lg border-dark registerDOB" id="registerDOB" name="DOB" min="1930-01-01" max="" value="'.$birthdate.'">';
                 } else{
@@ -84,7 +80,6 @@ if (!isset($_SESSION["admin"]["adminID"])) {
         <div class="col-md-12 mt-4">
             <?php
                 if(isset($_GET["email"])){
-                    // <label for="inputFirstName" class="form-label">First Name</label>
                     $email = $_GET["email"];
                     echo '<input type="email" class="form-control form-control-lg border-dark" id="registerEmail" placeholder="Email address" 
                     name="email" value="'.$email.'">';
@@ -98,7 +93,6 @@ if (!isset($_SESSION["admin"]["adminID"])) {
         <div class="col-md-12 mt-4">
             <?php
                 if(isset($_GET["password"])){
-                    // <label for="inputFirstName" class="form-label">First Name</label>
                     $password = $_GET["password"];
                     echo '<input type="password" class="form-control form-control-lg border-dark registerPassword" id="registerPassword" placeholder="Password" name="password" value="'.$password.'">';
                 } else{
@@ -111,10 +105,6 @@ if (!isset($_SESSION["admin"]["adminID"])) {
                 and contains at least one symbol (~ ! @ # $ % ^ & * - _ ?)
                 </small>
             </div>
-            <!-- <div class="form-check form-switch mt-2">
-                <input class="form-check-input view-Password" type="checkbox" id="flexSwitchCheckDefault">
-                <label class="form-check-label" for="flexSwitchCheckDefault">Show Password</label>
-            </div> -->
         </div> 
 
         <div class="col-12 text-center mt-2">

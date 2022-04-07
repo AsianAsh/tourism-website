@@ -241,9 +241,6 @@ $stmt->close();
 				<div class="product-big-body">
 					<!-- Tour Name -->
 					<h5 class="product-big-title pe-5"><a href="#"><?php echo "$tour[name]"; ?></a></h5>
-					<!-- <div class="group-sm group-middle justify-content-start">
-					<a class="product-big-reviews" href="#">4.8/5 (375 customer reviews)</a>
-					</div> -->
 					<?php $description = str_replace('[NEWLINE]', "\n", $tour['description']) ?>
 					<?php $description = strlen($description) > 180 ? substr($description,0,180)."..." : $description; ?>
 					<p class="product-big-text"><?php echo $description; ?></p><a class="button button-black-outline button-ujarak" href="tour_individual.php?id=<?php echo $tour["tour_id"];?>">More Details</a>
@@ -260,6 +257,4 @@ $stmt->close();
 	</div>
 </section>
       
-
-<?php //require_once "./components/footer.php"; ?>
 <?php require_once "./components/footer.php"; ?>

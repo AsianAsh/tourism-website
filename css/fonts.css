@@ -8,7 +8,7 @@
 * --------------------------------------------------
 */
 
-/*  //This is commenting everything
+  /* //This is commenting everything */
 
 @font-face {
 	font-family: 'FontAwesome';
@@ -32,9 +32,9 @@
 	font-family: 'FontAwesome';
 }
 
-/* makes the font 33% larger relative to the icon container */
+ /* makes the font 33% larger relative to the icon container  */
 
-/*
+
 .fa-lg {
 	font-size: 1.33333333em;
 	line-height: 0.75em;
@@ -106,7 +106,7 @@
 	margin-left: .3em;
 }
 
-// Deprecated as of 4.4.0 
+/* // Deprecated as of 4.4.0  */
 .pull-right {
 	float: right;
 }
@@ -227,8 +227,8 @@
 	color: #ffffff;
 }
 
-// Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
-//   readers do not read off random characters that represent icons //
+/* // Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+//   readers do not read off random characters that represent icons // */
 .fa-glass:before {
 	content: "\f000";
 }
@@ -3061,11 +3061,11 @@
 	clip: auto;
 }
 
-//
+/* //
 //*
 //* Material Design Icons
 //* --------------------------------------------------
-//
+// */
 @font-face {
 	font-family: "Material Design Icons";
 	src: url("../fonts/materialdesignicons-webfont.eot?v=1.4.57");
@@ -8944,12 +8944,12 @@
 	color: rgba(255, 255, 255, 0.3);
 }
 
-//**
+/* //**
  //* Title:  Bigmug Line Flaticon Pack
  //* Author: Catalin Fertu
  //* Source: http://www.flaticon.com/packs/bigmug-line
  //* License:  CC BY 3.0 (http://creativecommons.org/licenses/by/3.0/)
- //
+ // */
 @font-face {
 	font-family: "fl-bigmug-line";
 	src: url("../fonts/fl-bigmug-line.eot");
@@ -9852,7 +9852,7 @@
 	font-style: normal;
 	font-weight: 400;
 	src: url(../fonts/MaterialIcons-Regular.eot);
-	// For IE6-8 //
+	/* // For IE6-8 // */
 	src: local("Material Icons"), local("MaterialIcons-Regular"), url(../fonts/MaterialIcons-Regular.woff2) format("woff2"), url(../fonts/MaterialIcons-Regular.woff) format("woff"), url(../fonts/MaterialIcons-Regular.ttf) format("truetype");
 }
 
@@ -13043,4 +13043,4 @@
 .material-icons-zoom_out:before {
 	content: "\e900";
 }
-*/
+

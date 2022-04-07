@@ -14,19 +14,18 @@ if (isset($_SESSION["errorsArray"])) {
     $errArray =  $_SESSION["errorsArray"];
     unset($_SESSION["errorsArray"]);
 }
-?>
-<?php
-    require_once "./connection/db.php";
-    $userID = $_SESSION["user"]["userID"];
-    $orderHistory= [];
-    $sql = "SELECT * FROM orders WHERE customer_id = $userID";
-    $stmt = $connection->prepare($sql);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    while ($row = $result->fetch_assoc()){
-        array_push($orderHistory,$row);
-    }
-    $stmt->close();
+
+require_once "./connection/db.php";
+$userID = $_SESSION["user"]["userID"];
+$orderHistory= [];
+$sql = "SELECT * FROM orders WHERE customer_id = $userID";
+$stmt = $connection->prepare($sql);
+$stmt->execute();
+$result = $stmt->get_result();
+while ($row = $result->fetch_assoc()){
+    array_push($orderHistory,$row);
+}
+$stmt->close();
 ?>
 
 <div class="container border border-dark profile-container my-5 d-flex align-items-stretch">
@@ -43,9 +42,6 @@ if (isset($_SESSION["errorsArray"])) {
                     <button class=" nav-link <?php if(!isset($_GET["profilepwd"])){echo "active";}?>" id="nav-profile-tab" data-bs-toggle="tab"
                         data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
                         aria-selected="true">Personal Info</button>
-                    <!-- <button class=" nav-link" id="nav-pic-tab" data-bs-toggle="tab" data-bs-target="#nav-pic"
-                        type="button" role="tab" aria-controls="nav-pic" aria-selected="false">Profile
-                        Picture</button> -->
                     <button class=" nav-link <?php if(isset($_GET["profilepwd"])){echo "active";}?>" id="nav-privacy-tab" data-bs-toggle="tab"
                         data-bs-target="#nav-privacy" type="button" role="tab" aria-controls="nav-privacy"
                         aria-selected="false">Change Password</button>
@@ -114,35 +110,6 @@ if (isset($_SESSION["errorsArray"])) {
                 </div>
                 <!-- End of Personal Info Tab -->
 
-
-                <!-- Profile Picture Tab -->
-                <div class="tab-pane fade" id="nav-pic" role="tabpanel" aria-labelledby="nav-pic-tab">
-                    <div class="outer-crop-wrapper text-center">
-                        <!-- Image Box to preview new profile picture -->
-                        <div class="box mx-auto">
-                            <img src="" alt="" id="cropBox" style="display: block; max-width: 100%;">
-                        </div>
-                        <small class="imageExtensionMessage">Only jpg, png and jpeg are accepted</small>
-                        <!-- End of Image Box -->
-                    </div>
-
-                    <div class="mt-5">
-                        <!-- <form action="./includes/update_profile_pic.inc.php" class="imageForm" method="POST">
-                            <input type="hidden" name="uploadPic" value="">
-                            <input type="file" class="fileInput" accept="image/png, image/jpg, image/jpeg">
-                            <button type="reset" class="btn btn-dark fileInputResetBtn">Reset</button>
-                            <button class="hidden uploadPicBtn btn" type="button">Upload</button>
-                        </form>
-
-                        <form action="./includes/update_profile_pic.inc.php" class="" method="POST">
-                            <button class="hidden btn btn-danger removePicBtn" type="submit"
-                                name="removeProfilePic">Remove Current Pic</button>
-                        </form> -->
-                    </div>
-                </div>
-                <!-- End of Profile Picture Tab -->
-
-
                 <!-- Change Password Tab -->
                 <div class="tab-pane fade <?php if(isset($_GET["profilepwd"])){echo "active show";}?>" id="nav-privacy" role="tabpanel" aria-labelledby="nav-privacy-tab">
                     <form action="./includes/update_profile.inc.php" class="row g-3 justify-content-center"
@@ -179,15 +146,9 @@ if (isset($_SESSION["errorsArray"])) {
                 </div>
                 <!--  End of Change Password Tab-->
 
-
                 <!-- Order History Tab -->
                 <div class="tab-pane fade" id="nav-order" role="tabpanel" aria-labelledby="nav-order-tab">
                     <div class="container review-container">
-                        <!-- <h2 class="text-center my-auto">No previous orders</h2> -->
-                        <!-- <button type="button" id="testBtn">Button</button> --> 
-                        <!-- Container for each Order-->
-                        
-                        <!-- <h2 class="text-center my-auto">No previous orders.</h2> -->
                         <div class="home-content">
                             <div class="overview boxes">
                                 <table class="table table-responsive table-striped">
@@ -217,72 +178,6 @@ if (isset($_SESSION["errorsArray"])) {
                                 </table>
                             </div>
                         </div>
-                        
-                        
-                        <?php /*if (empty($orderId)) : ?>
-                        <h2 class="text-center my-auto">No previous orders.</h2>
-                        <?php else:?>
-                        <?php foreach ($orderId as $order):
-                        $total = getOrderTotal($order, $connection);
-                        $orderItems = getOrderItems($order, $connection);?>
-                        <div class="card mb-3 border rounded">
-                            <!-- Row for each Order Item in Order -->
-                            <?php foreach ($orderItems as $item):?>
-                            <div class="card border-0 bg-transparent">
-                                <div class="card-body border-bottom">
-                                    <div class="row">
-                                        <div class="col-md-2">
-                                            <img src="<?php echo "$item[image]";?>" alt="Item Image"
-                                                class="img-responsive img-thumbnail">
-                                        </div>
-                                        <div class="col-md-10">
-                                            <div class="row">
-                                                <p class="my-auto"><?php echo $item["name"];?></p>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <p>x<?php echo $item["quantity"];?></p>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <p class="text-end">
-                                                        RM<?php //echo number_format($item["subtotal"],2 , ".", "");?>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex justify-content-end">
-
-                                                <!-- Rate Button to toggle review form off-canvas -->
-                                                <!-- <?php $rateEligibility = rateEligibility($item["orderItemId"], $connection);
-                                                if ($item["itemType"] == "product"):
-                                                    if ($rateEligibility == 0):?>
-                                                <button class="btn btn-warning" data-bs-toggle="offcanvas"
-                                                    href="#reviewCanvas" id="<?php echo $item["orderItemId"]?>"
-                                                    onClick="clickForId(this.id)" name="toRate" role="button"
-                                                    aria-controls="reviewCanvasExample">Rate</button>
-                                                <?php else: ?>
-                                                <button class="btn btn-light border" role="button"
-                                                    aria-disabled="true" disabled>Rated</button>
-                                                <?php endif;?>
-                                                <?php endif;?> -->
-
-                                                <!-- End of Rate Button -->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php endforeach;?>
-                            <!-- End of Row for each Order Item in Order -->
-                            <div class="card-footer">
-                                <p class="text-end">
-                                    OrderID: <?php echo $order;?><br>
-                                    Order Total: RM<?php echo number_format($total, 2, '.', '');?>
-                                </p>
-                            </div>
-                        </div>
-                        <?php endforeach;?>
-                        <?php endif;*/?> 
-                        <!-- End of Container for each Order --> 
                     </div>
                 </div>
                 <!-- End of Order History Tab -->
@@ -290,6 +185,5 @@ if (isset($_SESSION["errorsArray"])) {
         </div>
     </div>
 </div>
-
 
 <?php require_once "./components/scripts.php"; ?>

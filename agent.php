@@ -14,7 +14,6 @@ require_once "./components/header+offcanvas.php";
     
         <div class="col-md-12">
             <?php
-            //<label for="inputFirstName" class="form-label">First Name</label>
             if(isset($_GET["email"])){
                 $email = $_GET["email"];
                 echo '<input type="email" class="form-control form-control-lg border-dark" id="agentLoginEmail" placeholder="Email Address" name="email" value="'.$email.'">';
@@ -26,7 +25,6 @@ require_once "./components/header+offcanvas.php";
 
         <div class="col-md-12">
             <?php
-            //<label for="registerPassword" class="form-label">Password</label>
             if(isset($_GET["password"])){
                 $password = $_GET["password"];
                 echo '<input type="password" class="form-control form-control-lg border-dark loginPassword" id="agentLoginPassword" placeholder="Password" name="password" value="'.$password.'">';
@@ -36,11 +34,6 @@ require_once "./components/header+offcanvas.php";
             ?>
         </div>
             
-        <!-- <div class="form-check form-switch mt-2">
-            <input class="form-check-input view-Login-Password" type="checkbox" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Show Password</label>
-        </div> -->
-
         <div class="col-12 text-center">
             <button type="submit" class="btn btn-primary" name="agent-login">Sign In</button>
         </div>

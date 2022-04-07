@@ -2,9 +2,8 @@
 session_start();
 
 if(isset($_POST["create-agent"])){
-    //Import DB connection & helpers
+    //Import DB connection 
     require_once "../connection/db.php";
-    // require_once "../helper/helpers.php";
 
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
@@ -27,7 +26,6 @@ if(isset($_POST["create-agent"])){
         } else {
             // Validate input mobile number
             $mobileRegEx = "/^[0-9]{8,11}$/";  
-            // str_replace("-","", $mobileNumber);
             if (!preg_match($mobileRegEx, $mobileNumber)) { // preg_match returns 0 if $mobileNumber does not match the pattern set by $mobileRegEx
                 header("Location: ../register_agent.php?signup=mobilenumber&first=$firstName&last=$lastName&dob=$dob&email=$email&agency=$agency&password=$password");
                 exit();                
@@ -67,7 +65,6 @@ if(isset($_POST["create-agent"])){
                                 $stmt->bind_param("ssssissi", $firstName, $lastName, $email, $hashedPassword, $mobileNumber, $dob, $agency, $_SESSION["admin"]["adminID"]); 
                                 $stmt->execute();
                                 $stmt->close();
-                                // $_SESSION["alertMessage"][] = "Account Successfully Created";
                                 header("Location: ../admin_dashboard.php?signup=success");
                                 exit();
                             }
@@ -81,9 +78,3 @@ if(isset($_POST["create-agent"])){
     header("Location: ../register_agent.php");
     exit();   
 }
-
-// $firstName = sanitizeText($_POST["firstName"]);
-// $lastName = sanitizeText($_POST["lastName"]);
-// $mobileNumber = validateMobileNumber($_POST["mobileNumber"]);
-// $password = validatePassword($_POST["password"]);
-// $email = validateEmail($_POST["email"]);
