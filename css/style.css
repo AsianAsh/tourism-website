@@ -14656,8 +14656,8 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-fixed .rd-navbar-brand img {
-	max-width: 120px;
-	max-height: 58px;
+	max-width: 100px;
+	max-height: 75px;
 	width: auto;
 	height: auto;
 }
@@ -15182,7 +15182,7 @@ html.rd-navbar-fixed-linked .page {
 	width: auto;
 	height: auto;
 	max-width: 200px;
-	max-height: 200px;
+	max-height: 75px;
 }
 
 .rd-navbar-sidebar .rd-navbar-nav-wrap {
@@ -15600,13 +15600,13 @@ html.rd-navbar-fixed-linked .page {
 	width: auto;
 	height: auto;
 	max-width: 140px;
-	max-height: 140px;
+	max-height: 75px;
 }
 
 @media (min-width: 1400px) {
 	.rd-navbar-classic.rd-navbar-static .rd-navbar-brand img {
 		max-width: 200px;
-		max-height: 200px;
+		max-height: 75px;
 	}
 }
 
@@ -15957,13 +15957,13 @@ html.rd-navbar-fixed-linked .page {
 	width: auto;
 	height: auto;
 	max-width: 140px;
-	max-height: 140px;
+	max-height: 75px;
 }
 
 @media (min-width: 1400px) {
 	.rd-navbar-modern.rd-navbar-static .rd-navbar-brand img {
 		max-width: 200px;
-		max-height: 170px;
+		max-height: 75px;
 	}
 }
 
@@ -16601,13 +16601,13 @@ html.rd-navbar-fixed-linked .page {
 	width: auto;
 	height: auto;
 	max-width: 140px;
-	max-height: 140px;
+	max-height: 75px;
 }
 
 @media (min-width: 1200px) {
 	.rd-navbar-creative.rd-navbar-static .rd-navbar-brand img {
 		max-width: 200px;
-		max-height: 170px;
+		max-height: 75px;
 	}
 }
 
@@ -17092,13 +17092,13 @@ html.rd-navbar-fixed-linked .page {
 	width: auto;
 	height: auto;
 	max-width: 200px;
-	max-height: 170px;
+	max-height: 75px;
 }
 
 @media (min-width: 1200px) {
 	.rd-navbar-corporate.rd-navbar-static .rd-navbar-brand img {
 		max-width: 225px;
-		max-height: 190px;
+		max-height: 75px;
 	}
 }
 
