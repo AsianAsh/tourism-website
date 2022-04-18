@@ -109,7 +109,7 @@ $stmt->close();
 				<!-- Tab panes-->
 				<div class="tab-content">
 				<div class="tab-pane fade show active" id="tabs-7-1">
-					<p>Wonder Tour is committed to bringing our clients the best in value and quality travel arrangements. We are passionate about travel and sharing the world's wonders with you.</p>
+					<p>Travel Time is committed to bringing our clients the best in value and quality travel arrangements. We are passionate about travel and sharing the world's wonders with you.</p>
 					<div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.php">Get in Touch</a><a class="button button-black-outline button-md" href="about.php">Read More</a></div>
 				</div>
 				<div class="tab-pane fade" id="tabs-7-2">

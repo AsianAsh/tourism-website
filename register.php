@@ -108,7 +108,7 @@ if (isset($_SESSION["accountCreationError"])) {
                 </div>
             </div>
 
-            <p>By creating an account, I agree to the "Website Name" Terms & Conditions and Privacy Statement.</p>
+            <p>By creating an account, I agree to the "TravelTime" Terms & Conditions and Privacy Statement.</p>
             
             <!-- Submit Form Button -->
             <div class="col-12 text-center">

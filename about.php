@@ -36,7 +36,7 @@ require_once "./components/navbar.php";
 		<!-- Tab panes-->
 		<div class="tab-content">
 			<div class="tab-pane fade show active" id="tabs-4-1">
-			<p>Aliquam malesuada bibendum arcu vitae elementum curabitur. A erat nam at lectus urna duis convallis convallis tellus. Sit amet consectetur adipiscing elit pellentesque.</p>
+			<p>Through travel, we connect people to positive experiences enabling them to see the world differently.</p>
 			<!-- Linear progress bar-->
 			<article class="progress-linear progress-secondary">
 				<div class="progress-header">
@@ -86,15 +86,14 @@ require_once "./components/navbar.php";
 			<div class="group-md group-middle"><a class="button button-width-xl-230 button-primary button-pipaluk" href="#">Get in touch</a><a class="button button-black-outline button-width-xl-230" href="#">Read more</a></div>
 			</div>
 			<div class="tab-pane fade" id="tabs-4-3">
-			<p>Orci nulla pellentesque dignissim enim sit. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus. Nibh mauris cursus mattis molestie a iaculis at erat pellentesque.</p>
+			<p>To create a world, where everyone is encouraged to travel.</p>
 			<div class="text-center text-sm-left offset-top-30 tab-height">
 				<ul class="row-16 list-0 list-custom list-marked list-marked-sm list-marked-secondary">
-				<li>Lorem ipsum</li>
-				<li>Consectetur adipiscing</li>
-				<li>Sed do eiusmod</li>
-				<li>Tempor incididunt</li>
-				<li>Sem fringilla</li>
-				<li>Ut venenatis</li>
+				<li>Reliable</li>
+				<li>Excellent customer service</li>
+				<li>Fine management</li>
+				<li>Easy to Use</li>
+				<li>Good Service</li>
 				</ul>
 			</div>
 			<div class="group-md group-middle"><a class="button button-width-xl-230 button-primary button-pipaluk" href="#">Get in touch</a><a class="button button-black-outline button-md" href="#">Download presentation</a></div>
@@ -208,9 +207,9 @@ require_once "./components/navbar.php";
 	<article class="quote-lisa">
 		<div class="quote-lisa-body"><a class="quote-lisa-figure" href="#"><img class="img-circles" src="images/connor.jpg" alt="" width="100" height="100"/></a>
 		<div class="quote-lisa-text">
-			<p class="q">Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum. Diam phasellus vestibulum lorem sed risus ultricies. Aenean et tortor at risus viverra adipiscing. Aliquet enim tortor at auctor urna. Tortor aliquam nulla facilisi cras fermentum. Malesuada pellentesque elit eget gravida cum sociis natoque.</p>
+			<p class="q">Good value package but quite excruciating to book. Had to keep going backwards and forwards selecting different dates and rooms to see which were included in the "bula bubble" package as this wasn't immediately discernible. Flights sometimes included and other times not.</p>
 		</div>
-		<h5 class="quote-lisa-cite"><a href="#">Connor williams</a></h5>
+		<h5 class="quote-lisa-cite"><a href="#">Connor Williams</a></h5>
 		<p class="quote-lisa-status">Regular Client</p>
 		</div>
 	</article>
@@ -218,7 +217,7 @@ require_once "./components/navbar.php";
 	<article class="quote-lisa">
 		<div class="quote-lisa-body"><a class="quote-lisa-figure" href="#"><img class="img-circles" src="images/kratos.jpg" alt="" width="100" height="100"/></a>
 		<div class="quote-lisa-text">
-			<p class="q">Sodales ut etiam sit amet nisl purus. Maecenas accumsan lacus vel facilisis volutpat est. Suscipit adipiscing bibendum est ultricies integer quis auctor. Viverra aliquet eget sit amet tellus cras adipiscing. Posuere ac ut consequat semper viverra nam libero justo laoreet. Iaculis eu non diam phasellus vestibulum lorem sed risus ultricies.</p>
+			<p class="q">Deals always tend to be hard to beat on travel online. We've booked with them for years for this reason. On this occasion, it took a long while (many days) on a few occasions for travel online to return phone calls, we had to chase them up, and some minor details were incorrect on itineraries received (we had to make an adjustments which lengthened the process). Overall I would book again and recommend on the basis the deals are hard to pass up.</p>
 		</div>
 		<h5 class="quote-lisa-cite"><a href="#">Sir Kratos</a></h5>
 		<p class="quote-lisa-status">Regular Client</p>
@@ -228,7 +227,7 @@ require_once "./components/navbar.php";
 	<article class="quote-lisa">
 		<div class="quote-lisa-body"><a class="quote-lisa-figure" href="#"><img class="img-circles" src="images/samuel.jpg" alt="" width="100" height="100"/></a>
 		<div class="quote-lisa-text">
-			<p class="q">Lacus vestibulum sed arcu non odio euismod lacinia. Pellentesque elit ullamcorper dignissim cras. Ultrices eros in cursus turpis massa tincidunt dui. Nunc pulvinar sapien et ligula ullamcorper malesuada proin. Commodo odio aenean sed adipiscing diam. Sed euismod nisi porta lorem mollis aliquam.</p>
+			<p class="q">Excellent! Very good service from beginning to end. Even with a COVID-related delay in the middle of it, Lisa stayed in contact with us and got us a reschedule with the utmost of ease. Thank you!</p>
 		</div>
 		<h5 class="quote-lisa-cite"><a href="#">Samuel Brown</a></h5>
 		<p class="quote-lisa-status">Regular Client</p>
